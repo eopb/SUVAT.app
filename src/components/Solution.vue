@@ -1,7 +1,7 @@
 <template>
   <div id="solution">
     <div>
-      <template v-if="letterValue() !== null || formular() !== null">
+      <template v-if="formular() !== null">
         <transition appear name="fade">
           <h1>ans = {{letterValue()}}</h1>
         </transition>
