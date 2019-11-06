@@ -20,4 +20,5 @@ build:
     - apt install nodejs -y
     - apt install yarn -y
     - yarn global add @vue/cli
+    - yarn global add @vue/cli-service-global
     - vue build
