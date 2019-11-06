@@ -1,0 +1,13 @@
+image: "vuejs/ci"
+
+cache:
+  paths:
+    - .stack-work/
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - vue build
