@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Ssutat2 from "./solutions/Ssutat2.vue";
+import Ssutat2 from "./solutions/s/Ssutat2.vue";
 
 export default {
   name: "Solution",
