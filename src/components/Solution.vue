@@ -1,28 +1,19 @@
 <template>
   <div id="solution">
-    <div>
-      <template v-if="formular() !== null">
-        <transition appear name="fade">
-          <h1>ans = {{letterValue()}}</h1>
-        </transition>
-        <transition appear name="fade">
-          <h2>Solution</h2>
-        </transition>
-        <div>
-          <math>
-            <mi>a</mi>
-            <mo>≠</mo>
-            <mn>{{formular()}}</mn>
-          </math>
-        </div>
-      </template>
-    </div>
+    <template v-if="formular() !== null">
+      <Ssutat2 :suvat="suvat" :letter="letter"></Ssutat2>
+    </template>
   </div>
 </template>
 
 <script>
+import Ssutat2 from "./solutions/Ssutat2.vue";
+
 export default {
   name: "Solution",
+  components: {
+    Ssutat2
+  },
   props: ["suvat", "letter"],
   data: () => ({
     creditLimit: ""
@@ -59,16 +50,16 @@ export default {
           break;
 
         case "u":
-          return this.suvat.u;
+          break;
 
         case "v":
-          return this.suvat.v;
+          break;
 
         case "a":
-          return this.suvat.a;
+          break;
 
         case "t":
-          return this.suvat.t;
+          break;
       }
       return null;
     }
@@ -77,7 +68,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="sass">
+<style lang="sass">
 
 
 #solution
@@ -108,7 +99,7 @@ export default {
       align-items: center
       justify-content: center
       math
-        font-size: 5em
+        font-size: 3em
 
 .fade-enter-active, .fade-leave-active 
   transition: opacity .5s
