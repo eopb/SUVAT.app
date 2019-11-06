@@ -6,15 +6,15 @@
     />
     <div id="grid-wrap">
       <LetterBox @letter-value-changed="bruh" letter="s" />
-      <Solution />
+      <Solution :suvat="suvat" letter="s" />
       <LetterBox @letter-value-changed="bruh" letter="u" />
-      <Solution />
+      <Solution :suvat="suvat" letter="u" />
       <LetterBox @letter-value-changed="bruh" letter="v" />
-      <Solution />
+      <Solution :suvat="suvat" letter="v" />
       <LetterBox @letter-value-changed="bruh" letter="a" />
-      <Solution />
+      <Solution :suvat="suvat" letter="a" />
       <LetterBox @letter-value-changed="bruh" letter="t" />
-      <Solution />
+      <Solution :suvat="suvat" letter="t" />
     </div>
     <!-- <h1>{{ suvat.s + 5}}</h1> -->
   </div>
