@@ -17,4 +17,5 @@ build:
     - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
     - apt update
     - apt install yarn -y
+    - yarn global add @vue/cli
     - vue build
