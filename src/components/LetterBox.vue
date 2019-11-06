@@ -16,7 +16,7 @@ export default class LetterBox extends Vue {
       console.log(this.letterValue);
     };
   }
-}\
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
