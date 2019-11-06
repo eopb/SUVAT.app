@@ -71,23 +71,27 @@ export default {
 </script>
 
 <style lang="sass">
-body 
+body
   margin: 0
   *,
   *::after,
   *::before
     box-sizing: inherit
 
-#app 
+#app
   font-family: Roboto, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
   color: #2c3e50
 
-#grid-wrap 
+#grid-wrap
   display: grid
   grid-template-columns: 300px 1fr
   grid-template-rows: repeat(5, 1fr)
   height: 100vh
+  background-color: #eee
+  *:nth-child(4n),
+  *:nth-child(4n - 1)
+    background-color: #ccc
 </style>

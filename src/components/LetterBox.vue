@@ -24,7 +24,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #letter-box {
-  background-color: red;
 }
 h1 {
   margin: 0;
