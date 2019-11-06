@@ -12,16 +12,15 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+<script>
 import LetterBox from "./components/LetterBox.vue";
 
-@Component({
+export default {
+  name: "app",
   components: {
     LetterBox
   }
-})
-export default class App extends Vue {}
+};
 </script>
 
 <style lang="scss">
