@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+      rel="stylesheet"
+    />
+    <LetterBox letter="s" />
+    <LetterBox letter="u" />
+    <LetterBox letter="v" />
+    <LetterBox letter="a" />
+    <LetterBox letter="t" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import LetterBox from "./components/LetterBox.vue";
 
 @Component({
   components: {
-    HelloWorld
+    LetterBox
   }
 })
 export default class App extends Vue {}
@@ -19,7 +26,7 @@ export default class App extends Vue {}
 
 <style lang="scss">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
