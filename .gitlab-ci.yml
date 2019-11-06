@@ -22,4 +22,4 @@ build:
     - yarn global add @vue/cli
     - yarn global add @vue/cli-service-global
     - npm install
-    - yarn build
+    - yarn build --mode staging
