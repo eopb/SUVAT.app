@@ -102,7 +102,7 @@ body
   grid-template-rows: repeat(5, 1fr)
   height: 100vh
   background-color: #eee
-  *:nth-child(4n),
-  *:nth-child(4n - 1)
+  > *:nth-child(4n),
+  > *:nth-child(4n - 1)
     background-color: #ccc
 </style>

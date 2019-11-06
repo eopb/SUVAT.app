@@ -83,16 +83,10 @@ export default {
     min-width: 100%
     h1, h2
       margin: 0
-    h1
-      width: 300px
-    h2
-      writing-mode: vertical-lr
-      text-orientation: sideways
-      transform: rotate(180deg)
-      width: 100px
+    
     > *
       height: 100%
-      width: 300px
+      min-width: 300px
       
       box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75)
       display: flex
@@ -100,6 +94,14 @@ export default {
       justify-content: center
       math
         font-size: 3em
+        white-space: nowrap
+        padding: 10px
+    h2
+      writing-mode: vertical-lr
+      text-orientation: sideways
+      transform: rotate(180deg)
+      width: 100px
+      min-width: unset
 
 .fade-enter-active, .fade-leave-active 
   transition: opacity .5s
