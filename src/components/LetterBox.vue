@@ -8,13 +8,13 @@
 <script>
 export default {
   name: "LetterValue",
+  props: ["letter"],
   data: () => ({
     creditLimit: ""
   }),
   methods: {
     valuechange: function() {
-      console.log(this.letterValue);
-      return null;
+      this.$emit("letter-value-changed", this.letterValue, this.letter);
     }
   }
 };
