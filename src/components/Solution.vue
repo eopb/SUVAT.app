@@ -36,7 +36,6 @@ export default {
         case "t":
           return this.suvat.t;
       }
-      console.log(this.suvat);
     },
     formular() {
       switch (this.letter) {
