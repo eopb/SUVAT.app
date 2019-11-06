@@ -1,6 +1,7 @@
 <template>
   <div id="letter-box">
     <h1>{{ letter }}</h1>
+    <input type="number" step="any" />
   </div>
 </template>
 
