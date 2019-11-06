@@ -1,6 +1,12 @@
 <template>
   <div id="letter-box">
-    <h1>{{ letter }}</h1>
+    <h1>
+      {{ letter }}
+      <sub>
+        (
+        <slot></slot>)
+      </sub>
+    </h1>
     <input v-model="letterValue" v-on:input="valuechange" type="number" step="any" />
   </div>
 </template>
@@ -34,8 +40,13 @@ export default {
 h1
   margin: 0
   font-size: 3em
+  sub
+    font-size: .35em
+    margin-left: -8px
+    sup
+      font-size: .7em
+      margin-left: -4px
 
 input
   width: 80px
-
 </style>

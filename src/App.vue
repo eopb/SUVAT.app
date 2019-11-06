@@ -5,21 +5,32 @@
       rel="stylesheet"
     />
     <div id="grid-wrap">
-      <LetterBox @letter-value-changed="bruh" letter="s" />
+      <LetterBox @letter-value-changed="bruh" letter="s">m</LetterBox>
       <Solution :suvat="suvat" letter="s" />
-      <LetterBox @letter-value-changed="bruh" letter="u" />
+      <LetterBox @letter-value-changed="bruh" letter="u">
+        ms
+        <sup>-1</sup>
+      </LetterBox>
       <Solution :suvat="suvat" letter="u" />
-      <LetterBox @letter-value-changed="bruh" letter="v" />
+      <LetterBox @letter-value-changed="bruh" letter="v">
+        ms
+        <sup>-1</sup>
+      </LetterBox>
       <Solution :suvat="suvat" letter="v" />
-      <LetterBox @letter-value-changed="bruh" letter="a" />
+      <LetterBox @letter-value-changed="bruh" letter="a">
+        ms
+        <sup>-2</sup>
+      </LetterBox>
       <Solution :suvat="suvat" letter="a" />
-      <LetterBox @letter-value-changed="bruh" letter="t" />
+      <LetterBox @letter-value-changed="bruh" letter="t">s</LetterBox>
       <Solution :suvat="suvat" letter="t" />
     </div>
     <!-- <h1>{{ suvat.s + 5}}</h1> -->
   </div>
 </template>
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
 import LetterBox from "./components/LetterBox.vue";
 import Solution from "./components/Solution.vue";
