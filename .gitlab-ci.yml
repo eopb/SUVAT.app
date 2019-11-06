@@ -21,4 +21,5 @@ build:
     - apt install yarn -y
     - yarn global add @vue/cli
     - yarn global add @vue/cli-service-global
+    - npm install
     - yarn build
