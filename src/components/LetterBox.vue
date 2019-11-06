@@ -22,10 +22,20 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-#letter-box {
-}
-h1 {
-  margin: 0;
-}
+<style scoped lang="sass">
+
+#letter-box
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  border-right: 5px solid #1C6EA4
+
+h1
+  margin: 0
+  font-size: 3em
+
+input
+  width: 80px
+
 </style>
