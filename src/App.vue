@@ -9,31 +9,53 @@
     <LetterBox @letter-value-changed="bruh" letter="v" />
     <LetterBox @letter-value-changed="bruh" letter="a" />
     <LetterBox @letter-value-changed="bruh" letter="t" />
+    <h1>{{ suvat.s }}</h1>
   </div>
 </template>
 
 <script>
 import LetterBox from "./components/LetterBox.vue";
 
-class State {
-  static s = null;
-  static u = null;
-  static v = null;
-  static a = null;
-  static t = null;
-  static printOut() {
-    console.log(this);
-  }
-}
-
 export default {
   name: "app",
   components: {
     LetterBox
   },
+  data: () => ({
+    creditLimit: "",
+    suvat: {
+      s: null,
+      u: null,
+      v: null,
+      a: null,
+      t: null
+    }
+  }),
+
   methods: {
     bruh(value, letter) {
-      console.log(state);
+      value = parseFloat(value);
+
+      if (isNaN(value)) value = null;
+
+      switch (letter) {
+        case "s":
+          this.suvat.s = value;
+          break;
+        case "u":
+          this.suvat.u = value;
+          break;
+        case "v":
+          this.suvat.v = value;
+          break;
+        case "a":
+          this.suvat.a = value;
+          break;
+        case "t":
+          this.suvat.t = value;
+          break;
+      }
+      console.log(this.suvat);
     }
   }
 };

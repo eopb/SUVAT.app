@@ -10,7 +10,8 @@ export default {
   name: "LetterValue",
   props: ["letter"],
   data: () => ({
-    creditLimit: ""
+    creditLimit: "",
+    letterValue: null
   }),
   methods: {
     valuechange: function() {
