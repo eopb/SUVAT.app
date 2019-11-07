@@ -1,10 +1,22 @@
 <template>
   <div id="solution">
     <template v-if="formular() !== null">
-      <Ssutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Ssutat2>
+      <Ssutat2
+        v-if="formular() === 2"
+        :suvat="suvat"
+        :letter="letter"
+      ></Ssutat2>
       <Suvt v-else-if="formular() === 3" :suvat="suvat" :letter="letter"></Suvt>
-      <Sv2u22as v-else-if="formular() === 4" :suvat="suvat" :letter="letter"></Sv2u22as>
-      <Ssvtat2 v-if="formular() === 5" :suvat="suvat" :letter="letter"></Ssvtat2>
+      <Sv2u22as
+        v-else-if="formular() === 4"
+        :suvat="suvat"
+        :letter="letter"
+      ></Sv2u22as>
+      <Ssvtat2
+        v-if="formular() === 5"
+        :suvat="suvat"
+        :letter="letter"
+      ></Ssvtat2>
     </template>
   </div>
 </template>

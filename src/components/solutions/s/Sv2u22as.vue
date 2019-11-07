@@ -2,7 +2,7 @@
   <div>
     <transition appear name="fade">
       <h1>
-        s = {{ (Math.pow(suvat.v, 2) - Math.pow(suvat.u, 2)) / (2*suvat.a) }}
+        s = {{ (Math.pow(suvat.v, 2) - Math.pow(suvat.u, 2)) / (2 * suvat.a) }}
         <sub>m</sub>
       </h1>
     </transition>
@@ -39,7 +39,8 @@
             <mi>u</mi>
             <mn>2</mn>
           </msup>
-        </math> from both sides.
+        </math>
+        from both sides.
       </h3>
     </transition>
     <transition appear name="fade">
@@ -68,7 +69,8 @@
         <math>
           <mn>2</mn>
           <mi>a</mi>
-        </math> from both sides.
+        </math>
+        from both sides.
       </h3>
     </transition>
     <transition appear name="fade">
@@ -105,18 +107,18 @@
           <mfrac>
             <mn>
               <msup>
-                <mi>{{suvat.v}}</mi>
+                <mi>{{ suvat.v }}</mi>
                 <mn>2</mn>
               </msup>
               <mo>-</mo>
               <msup>
-                <mi>{{suvat.u}}</mi>
+                <mi>{{ suvat.u }}</mi>
                 <mn>2</mn>
               </msup>
             </mn>
             <mn>
               <mn>2</mn>
-              <mi>{{suvat.a}}</mi>
+              <mi>{{ suvat.a }}</mi>
             </mn>
           </mfrac>
         </math>
