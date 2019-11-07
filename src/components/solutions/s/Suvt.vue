@@ -2,7 +2,7 @@
   <div>
     <transition appear name="fade">
       <h1>
-        s = {{ 0.5 *(suvat.u + suvat.v ) * suvat.t }}
+        s = {{ 0.5 * (suvat.u + suvat.v) * suvat.t }}
         <sub>m</sub>
       </h1>
     </transition>
@@ -44,12 +44,12 @@
           </mfrac>
           <mo>&times;</mo>
           <mo>(</mo>
-          <mn>{{suvat.u}}</mn>
+          <mn>{{ suvat.u }}</mn>
           <mo>+</mo>
-          <mn>{{suvat.v}}</mn>
+          <mn>{{ suvat.v }}</mn>
           <mo>)</mo>
           <mo>&times;</mo>
-          <mn>{{suvat.t}}</mn>
+          <mn>{{ suvat.t }}</mn>
         </math>
       </div>
     </transition>

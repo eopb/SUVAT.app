@@ -1,7 +1,11 @@
 <template>
   <div id="solution">
     <template v-if="formular() !== null">
-      <Ssutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Ssutat2>
+      <Ssutat2
+        v-if="formular() === 2"
+        :suvat="suvat"
+        :letter="letter"
+      ></Ssutat2>
       <Suvt v-else-if="formular() === 3" :suvat="suvat" :letter="letter"></Suvt>
     </template>
   </div>
