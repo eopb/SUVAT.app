@@ -2,7 +2,7 @@
   <div>
     <transition appear name="fade">
       <h1>
-        s = {{ suvat.u * suvat.t + 0.5 * suvat.a * Math.pow(suvat.t, 2) }}
+        s = {{ suvat.v * suvat.t - 0.5 * suvat.a * Math.pow(suvat.t, 2) }}
         <sub>m</sub>
       </h1>
     </transition>
@@ -17,9 +17,9 @@
         <math>
           <mi>s</mi>
           <mo>=</mo>
-          <mi>u</mi>
+          <mi>v</mi>
           <mi>t</mi>
-          <mo>+</mo>
+          <mo>-</mo>
           <mfrac>
             <mn>1</mn>
             <mn>2</mn>
@@ -40,10 +40,10 @@
         <math>
           <mi>s</mi>
           <mo>=</mo>
-          <mn>{{ suvat.u }}</mn>
+          <mn>{{ suvat.v }}</mn>
           <mo>&times;</mo>
           <mn>{{ suvat.t }}</mn>
-          <mo>+</mo>
+          <mo>-</mo>
           <mfrac>
             <mn>1</mn>
             <mn>2</mn>
@@ -63,7 +63,7 @@
 
 <script>
 export default {
-  name: "Ssutat2",
+  name: "Ssvtat2",
   props: ["suvat", "letter"],
   data: () => ({
     creditLimit: ""

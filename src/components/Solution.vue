@@ -1,12 +1,10 @@
 <template>
   <div id="solution">
     <template v-if="formular() !== null">
-      <Ssutat2
-        v-if="formular() === 2"
-        :suvat="suvat"
-        :letter="letter"
-      ></Ssutat2>
+      <Ssutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Ssutat2>
       <Suvt v-else-if="formular() === 3" :suvat="suvat" :letter="letter"></Suvt>
+      <Sv2u22as v-else-if="formular() === 4" :suvat="suvat" :letter="letter"></Sv2u22as>
+      <Ssvtat2 v-if="formular() === 5" :suvat="suvat" :letter="letter"></Ssvtat2>
     </template>
   </div>
 </template>
@@ -14,12 +12,16 @@
 <script>
 import Ssutat2 from "./solutions/s/Ssutat2.vue";
 import Suvt from "./solutions/s/Suvt.vue";
+import Sv2u22as from "./solutions/s/Sv2u22as.vue";
+import Ssvtat2 from "./solutions/s/Ssvtat2.vue";
 
 export default {
   name: "Solution",
   components: {
     Ssutat2,
-    Suvt
+    Suvt,
+    Sv2u22as,
+    Ssvtat2
   },
   props: ["suvat", "letter"],
   data: () => ({
@@ -59,6 +61,19 @@ export default {
             this.suvat.t !== null
           )
             return 3;
+          if (
+            this.suvat.v !== null &&
+            this.suvat.u !== null &&
+            this.suvat.a !== null
+          )
+            return 4;
+          if (
+            this.suvat.v !== null &&
+            this.suvat.t !== null &&
+            this.suvat.a !== null
+          )
+            return 5;
+
           break;
 
         case "u":
@@ -93,8 +108,13 @@ export default {
     flex-direction: row
     height: 100%
     min-width: 100%
-    h1, h2
+    h1, h2, h3
       margin: 0
+      white-space: nowrap
+    h3
+      math
+        display: inline-block
+        font-size: 1.4em
 
     > *
       height: 100%
