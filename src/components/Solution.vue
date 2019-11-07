@@ -1,18 +1,21 @@
 <template>
   <div id="solution">
     <template v-if="formular() !== null">
-      <Ssutat2 :suvat="suvat" :letter="letter"></Ssutat2>
+      <Ssutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Ssutat2>
+      <Suvt v-else-if="formular() === 3" :suvat="suvat" :letter="letter"></Suvt>
     </template>
   </div>
 </template>
 
 <script>
 import Ssutat2 from "./solutions/s/Ssutat2.vue";
+import Suvt from "./solutions/s/Suvt.vue";
 
 export default {
   name: "Solution",
   components: {
-    Ssutat2
+    Ssutat2,
+    Suvt
   },
   props: ["suvat", "letter"],
   data: () => ({
@@ -46,6 +49,12 @@ export default {
             this.suvat.a !== null
           )
             return 2;
+          if (
+            this.suvat.u !== null &&
+            this.suvat.v !== null &&
+            this.suvat.t !== null
+          )
+            return 3;
           break;
 
         case "u":
