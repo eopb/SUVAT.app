@@ -1,22 +1,15 @@
 <template>
   <div id="solution">
     <template v-if="formular() !== null">
-      <Ssutat2
-        v-if="formular() === 2"
-        :suvat="suvat"
-        :letter="letter"
-      ></Ssutat2>
-      <Suvt v-else-if="formular() === 3" :suvat="suvat" :letter="letter"></Suvt>
-      <Sv2u22as
-        v-else-if="formular() === 4"
-        :suvat="suvat"
-        :letter="letter"
-      ></Sv2u22as>
-      <Ssvtat2
-        v-if="formular() === 5"
-        :suvat="suvat"
-        :letter="letter"
-      ></Ssvtat2>
+      <template v-if="letter === s">
+        <Ssutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Ssutat2>
+        <Suvt v-else-if="formular() === 3" :suvat="suvat" :letter="letter"></Suvt>
+        <Sv2u22as v-else-if="formular() === 4" :suvat="suvat" :letter="letter"></Sv2u22as>
+        <Ssvtat2 v-if="formular() === 5" :suvat="suvat" :letter="letter"></Ssvtat2>
+      </template>
+      <template v-if="letter === u">
+        <Uvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Uvuat>
+      </template>
     </template>
   </div>
 </template>
@@ -26,18 +19,21 @@ import Ssutat2 from "./solutions/s/Ssutat2.vue";
 import Suvt from "./solutions/s/Suvt.vue";
 import Sv2u22as from "./solutions/s/Sv2u22as.vue";
 import Ssvtat2 from "./solutions/s/Ssvtat2.vue";
-
+import Uvuat from "./solutions/u/Uvuat.vue";
 export default {
   name: "Solution",
   components: {
     Ssutat2,
     Suvt,
     Sv2u22as,
-    Ssvtat2
+    Ssvtat2,
+    Uvuat
   },
   props: ["suvat", "letter"],
   data: () => ({
-    creditLimit: ""
+    creditLimit: "",
+    s: "s",
+    u: "u"
   }),
   methods: {
     letterValue() {
@@ -89,6 +85,12 @@ export default {
           break;
 
         case "u":
+          if (
+            this.suvat.v !== null &&
+            this.suvat.a !== null &&
+            this.suvat.t !== null
+          )
+            return 1;
           break;
 
         case "v":

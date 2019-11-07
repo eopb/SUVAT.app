@@ -7,7 +7,7 @@
       </h1>
     </transition>
     <transition appear name="fade">
-      <h2>Solution -</h2>
+      <h2>Solution</h2>
     </transition>
     <transition appear name="fade">
       <h3>Using the equation.</h3>
@@ -118,6 +118,7 @@
             </mn>
             <mn>
               <mn>2</mn>
+              <mo>&times;</mo>
               <mi>{{ suvat.a }}</mi>
             </mn>
           </mfrac>
