@@ -97,6 +97,7 @@ body
   display: grid
   grid-template-columns: 300px 1fr
   grid-template-rows: repeat(5, 1fr)
+  min-height: 580px
   height: 100vh
   background-color: #eee
   > *:nth-child(4n),
