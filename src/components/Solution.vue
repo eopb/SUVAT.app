@@ -2,13 +2,34 @@
   <div id="solution">
     <template v-if="formular() !== null">
       <template v-if="letter === s">
-        <Ssutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Ssutat2>
-        <Suvt v-else-if="formular() === 3" :suvat="suvat" :letter="letter"></Suvt>
-        <Sv2u22as v-else-if="formular() === 4" :suvat="suvat" :letter="letter"></Sv2u22as>
-        <Ssvtat2 v-if="formular() === 5" :suvat="suvat" :letter="letter"></Ssvtat2>
+        <Ssutat2
+          v-if="formular() === 2"
+          :suvat="suvat"
+          :letter="letter"
+        ></Ssutat2>
+        <Suvt
+          v-else-if="formular() === 3"
+          :suvat="suvat"
+          :letter="letter"
+        ></Suvt>
+        <Sv2u22as
+          v-else-if="formular() === 4"
+          :suvat="suvat"
+          :letter="letter"
+        ></Sv2u22as>
+        <Ssvtat2
+          v-if="formular() === 5"
+          :suvat="suvat"
+          :letter="letter"
+        ></Ssvtat2>
       </template>
       <template v-if="letter === u">
         <Uvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Uvuat>
+        <Usutat2
+          v-if="formular() === 2"
+          :suvat="suvat"
+          :letter="letter"
+        ></Usutat2>
       </template>
     </template>
   </div>
@@ -20,6 +41,7 @@ import Suvt from "./solutions/s/Suvt.vue";
 import Sv2u22as from "./solutions/s/Sv2u22as.vue";
 import Ssvtat2 from "./solutions/s/Ssvtat2.vue";
 import Uvuat from "./solutions/u/Uvuat.vue";
+import Usutat2 from "./solutions/u/Usutat2.vue";
 export default {
   name: "Solution",
   components: {
@@ -27,7 +49,8 @@ export default {
     Suvt,
     Sv2u22as,
     Ssvtat2,
-    Uvuat
+    Uvuat,
+    Usutat2
   },
   props: ["suvat", "letter"],
   data: () => ({
@@ -91,6 +114,12 @@ export default {
             this.suvat.t !== null
           )
             return 1;
+          if (
+            this.suvat.s !== null &&
+            this.suvat.t !== null &&
+            this.suvat.a !== null
+          )
+            return 2;
           break;
 
         case "v":

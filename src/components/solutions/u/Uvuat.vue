@@ -2,8 +2,11 @@
   <div>
     <transition appear name="fade">
       <h1>
-        s = {{suvat.v -(suvat.a * suvat.t) }}
-        <sub>m</sub>
+        s = {{ suvat.v - suvat.a * suvat.t }}
+        <sub>
+          ms
+          <sup>-1</sup>
+        </sub>
       </h1>
     </transition>
     <transition appear name="fade">
@@ -52,11 +55,11 @@
     <transition appear name="fade">
       <div>
         <math>
-          <mi>{{suvat.v}}</mi>
+          <mi>{{ suvat.v }}</mi>
           <mo>-</mo>
-          <mi>{{suvat.a}}</mi>
+          <mi>{{ suvat.a }}</mi>
           <mo>&times;</mo>
-          <mi>{{suvat.t}}</mi>
+          <mi>{{ suvat.t }}</mi>
         </math>
       </div>
     </transition>
