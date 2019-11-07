@@ -31,6 +31,11 @@
           :letter="letter"
         ></Usutat2>
         <Uuvt v-if="formular() === 3" :suvat="suvat" :letter="letter"></Uuvt>
+        <Uv2u22as
+          v-if="formular() === 4"
+          :suvat="suvat"
+          :letter="letter"
+        ></Uv2u22as>
       </template>
     </template>
   </div>
@@ -44,6 +49,7 @@ import Ssvtat2 from "./solutions/s/Ssvtat2.vue";
 import Uvuat from "./solutions/u/Uvuat.vue";
 import Usutat2 from "./solutions/u/Usutat2.vue";
 import Uuvt from "./solutions/u/Uuvt.vue";
+import Uv2u22as from "./solutions/u/Uv2u22as.vue";
 export default {
   name: "Solution",
   components: {
@@ -53,7 +59,8 @@ export default {
     Ssvtat2,
     Uvuat,
     Usutat2,
-    Uuvt
+    Uuvt,
+    Uv2u22as
   },
   props: ["suvat", "letter"],
   data: () => ({
@@ -129,6 +136,12 @@ export default {
             this.suvat.t !== null
           )
             return 3;
+          if (
+            this.suvat.v !== null &&
+            this.suvat.a !== null &&
+            this.suvat.s !== null
+          )
+            return 4;
           break;
 
         case "v":
