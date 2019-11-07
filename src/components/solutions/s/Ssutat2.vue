@@ -2,7 +2,7 @@
   <div>
     <transition appear name="fade">
       <h1>
-        s = {{(suvat.u * suvat.t ) + (0.5*suvat.a * (Math.pow(suvat.t, 2)))}}
+        s = {{ suvat.u * suvat.t + 0.5 * suvat.a * Math.pow(suvat.t, 2) }}
         <sub>
           ms
           <sup>-1</sup>
@@ -43,19 +43,19 @@
         <math>
           <mi>s</mi>
           <mo>=</mo>
-          <mn>{{suvat.u}}</mn>
+          <mn>{{ suvat.u }}</mn>
           <mo>&times;</mo>
-          <mn>{{suvat.t}}</mn>
+          <mn>{{ suvat.t }}</mn>
           <mo>+</mo>
           <mfrac>
             <mn>1</mn>
             <mn>2</mn>
           </mfrac>
           <mo>&times;</mo>
-          <mn>{{suvat.a}}</mn>
+          <mn>{{ suvat.a }}</mn>
           <mo>&times;</mo>
           <msup>
-            <mn>{{suvat.t}}</mn>
+            <mn>{{ suvat.t }}</mn>
             <mn>2</mn>
           </msup>
         </math>
@@ -73,8 +73,3 @@ export default {
   })
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="sass">
-
-</style>

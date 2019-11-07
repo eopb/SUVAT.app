@@ -29,7 +29,6 @@
   </div>
 </template>
 
-
 <script>
 import LetterBox from "./components/LetterBox.vue";
 import Solution from "./components/Solution.vue";

@@ -82,11 +82,11 @@ export default {
     min-width: 100%
     h1, h2
       margin: 0
-    
+
     > *
       height: 100%
       min-width: 300px
-      
+
       box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75)
       display: flex
       align-items: center
@@ -102,7 +102,7 @@ export default {
       width: 100px
       min-width: unset
 
-.fade-enter-active, .fade-leave-active 
+.fade-enter-active, .fade-leave-active
   transition: opacity .5s
 
 .fade-enter, .fade-leave-to
