@@ -2,7 +2,7 @@
   <div>
     <transition appear name="fade">
       <h1>
-        u = {{ (suvat.s - 0.5 * suvat.a * Math.pow(suvat.t, 2)) / suvat.t }}
+        u = {{ (2 * suvat.s) / suvat.t - suvat.v }}
         <sub>
           ms
           <sup>-1</sup>
@@ -20,54 +20,15 @@
         <math>
           <mi>s</mi>
           <mo>=</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+          <mo>(</mo>
           <mi>u</mi>
-          <mi>t</mi>
           <mo>+</mo>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <mi>a</mi>
-          <msup>
-            <mi>t</mi>
-            <mn>2</mn>
-          </msup>
-        </math>
-      </div>
-    </transition>
-    <transition appear name="fade">
-      <h3>
-        First lets rearrange this equation by subtracting
-        <math>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <mi>a</mi>
-          <msup>
-            <mi>t</mi>
-            <mn>2</mn>
-          </msup>
-        </math>
-        from both sides.
-      </h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
-          <mi>s</mi>
-          <mo>-</mo>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <mi>a</mi>
-          <msup>
-            <mi>t</mi>
-            <mn>2</mn>
-          </msup>
-          <mo>=</mo>
-          <mi>u</mi>
+          <mi>v</mi>
+          <mo>)</mo>
           <mi>t</mi>
         </math>
       </div>
@@ -76,6 +37,10 @@
       <h3>
         First lets rearrange this equation by dividing both sides by
         <math>
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
           <mi>t</mi>
         </math>
       </h3>
@@ -85,20 +50,39 @@
         <math>
           <mfrac>
             <div>
+              <mn>2</mn>
               <mi>s</mi>
-              <mo>-</mo>
-              <mfrac>
-                <mn>1</mn>
-                <mn>2</mn>
-              </mfrac>
-              <mi>a</mi>
-              <msup>
-                <mi>t</mi>
-                <mn>2</mn>
-              </msup>
             </div>
             <mi>t</mi>
           </mfrac>
+          <mo>=</mo>
+          <mi>u</mi>
+          <mo>+</mo>
+          <mi>v</mi>
+        </math>
+      </div>
+    </transition>
+    <transition appear name="fade">
+      <h3>
+        Next lets rearrange this equation by subtracting
+        <math>
+          <mi>v</mi>
+        </math>
+        from both sides.
+      </h3>
+    </transition>
+    <transition appear name="fade">
+      <div>
+        <math>
+          <mfrac>
+            <div>
+              <mn>2</mn>
+              <mi>s</mi>
+            </div>
+            <mi>t</mi>
+          </mfrac>
+          <mo>-</mo>
+          <mi>v</mi>
           <mo>=</mo>
           <mi>u</mi>
         </math>
@@ -112,22 +96,14 @@
         <math>
           <mfrac>
             <div>
+              <mn>2</mn>
+              <mo>&times;</mo>
               <mi>{{ suvat.s }}</mi>
-              <mo>-</mo>
-              <mfrac>
-                <mn>1</mn>
-                <mn>2</mn>
-              </mfrac>
-              <mo>&times;</mo>
-              <mi>{{ suvat.a }}</mi>
-              <mo>&times;</mo>
-              <msup>
-                <mi>{{ suvat.t }}</mi>
-                <mn>2</mn>
-              </msup>
             </div>
             <mi>{{ suvat.t }}</mi>
           </mfrac>
+          <mo>-</mo>
+          <mi>{{ suvat.v }}</mi>
         </math>
       </div>
     </transition>
@@ -136,7 +112,7 @@
 
 <script>
 export default {
-  name: "Usutat2",
+  name: "Uuvt",
   props: ["suvat", "letter"],
   data: () => ({
     creditLimit: ""
