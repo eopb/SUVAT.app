@@ -37,6 +37,9 @@
           :letter="letter"
         ></Uv2u22as>
       </template>
+      <template v-if="letter === v">
+        <Vvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Vvuat>
+      </template>
     </template>
   </div>
 </template>
@@ -50,6 +53,7 @@ import Uvuat from "./solutions/u/Uvuat.vue";
 import Usutat2 from "./solutions/u/Usutat2.vue";
 import Uuvt from "./solutions/u/Uuvt.vue";
 import Uv2u22as from "./solutions/u/Uv2u22as.vue";
+import Vvuat from "./solutions/v/Vvuat.vue";
 export default {
   name: "Solution",
   components: {
@@ -60,13 +64,15 @@ export default {
     Uvuat,
     Usutat2,
     Uuvt,
-    Uv2u22as
+    Uv2u22as,
+    Vvuat
   },
   props: ["suvat", "letter"],
   data: () => ({
     creditLimit: "",
     s: "s",
-    u: "u"
+    u: "u",
+    v: "v"
   }),
   methods: {
     letterValue() {
@@ -145,6 +151,12 @@ export default {
           break;
 
         case "v":
+          if (
+            this.suvat.u !== null &&
+            this.suvat.a !== null &&
+            this.suvat.t !== null
+          )
+            return 1;
           break;
 
         case "a":
