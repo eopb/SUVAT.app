@@ -54,4 +54,7 @@ h1
 
 input
   width: 80px
+  border-radius: 30px
+  border: 2px solid #999
+  padding: 6px 8px
 </style>
