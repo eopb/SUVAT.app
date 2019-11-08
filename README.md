@@ -1,5 +1,8 @@
 # suvat-calculator
 
+[![pipeline status](https://gitlab.com/efunb/suvat-calculator/badges/master/pipeline.svg)](https://gitlab.com/efunb/suvat-calculator/commits/master)
+
+
 ## Project setup
 ```
 yarn install
