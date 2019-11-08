@@ -2,11 +2,8 @@
   <div>
     <transition appear name="fade">
       <h1>
-        u = {{ (suvat.s - suvat.u * suvat.t) / (0.5 * Math.pow(suvat.t, 2)) }}
-        <sub>
-          ms
-          <sup>-2</sup>
-        </sub>
+        s = {{ (Math.pow(suvat.v, 2) - Math.pow(suvat.u, 2)) / (2 * suvat.s) }}
+        <sub>m</sub>
       </h1>
     </transition>
     <transition appear name="fade">
@@ -18,20 +15,19 @@
     <transition appear name="fade">
       <div>
         <math>
-          <mi>s</mi>
-          <mo>=</mo>
-          <mi>u</mi>
-          <mi>t</mi>
-          <mo>+</mo>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <mi>a</mi>
           <msup>
-            <mi>t</mi>
+            <mi>v</mi>
             <mn>2</mn>
           </msup>
+          <mo>=</mo>
+          <msup>
+            <mi>u</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <mn>2</mn>
+          <mi>a</mi>
+          <mi>s</mi>
         </math>
       </div>
     </transition>
@@ -39,8 +35,10 @@
       <h3>
         First lets rearrange this equation by subtracting
         <math>
-          <mi>u</mi>
-          <mi>t</mi>
+          <msup>
+            <mi>u</mi>
+            <mn>2</mn>
+          </msup>
         </math>
         from both sides.
       </h3>
@@ -48,58 +46,52 @@
     <transition appear name="fade">
       <div>
         <math>
-          <mi>s</mi>
-          <mo>-</mo>
-          <mi>u</mi>
-          <mi>t</mi>
-          <mo>=</mo>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <mi>a</mi>
           <msup>
-            <mi>t</mi>
+            <mi>v</mi>
             <mn>2</mn>
           </msup>
+          <mo>-</mo>
+          <msup>
+            <mi>u</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>=</mo>
+
+          <mn>2</mn>
+          <mi>a</mi>
+          <mi>s</mi>
         </math>
       </div>
     </transition>
     <transition appear name="fade">
       <h3>
-        First lets rearrange this equation by dividing both sides by
+        Then divide both side by
         <math>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <msup>
-            <mi>t</mi>
-            <mn>2</mn>
-          </msup>
+          <mn>2</mn>
+          <mi>s</mi>
         </math>
+        from both sides.
       </h3>
     </transition>
     <transition appear name="fade">
       <div>
         <math>
           <mfrac>
-            <div>
-              <mi>s</mi>
-              <mo>-</mo>
-              <mi>u</mi>
-              <mi>t</mi>
-            </div>
-            <mpadded>
-              <mfrac>
-                <mn>1</mn>
-                <mn>2</mn>
-              </mfrac>
+            <mn>
               <msup>
-                <mi>t</mi>
+                <mi>v</mi>
                 <mn>2</mn>
               </msup>
-            </mpadded>
+              <mo>-</mo>
+              <msup>
+                <mi>u</mi>
+                <mn>2</mn>
+              </msup>
+            </mn>
+            <mn>
+              <mn>2</mn>
+              <mi>s</mi>
+            </mn>
           </mfrac>
           <mo>=</mo>
           <mi>a</mi>
@@ -113,25 +105,22 @@
       <div>
         <math>
           <mfrac>
-            <div>
-              <mi>{{ suvat.s }}</mi>
-              <mo>-</mo>
-              <mi>{{ suvat.u }}</mi>
-              <mo>&times;</mo>
-              <mi>{{ suvat.t }}</mi>
-            </div>
-
-            <mpadded>
-              <mfrac>
-                <mn>1</mn>
-                <mn>2</mn>
-              </mfrac>
-              <mo>&times;</mo>
+            <mn>
               <msup>
-                <mi>{{ suvat.t }}</mi>
+                <mi>{{ suvat.v }}</mi>
                 <mn>2</mn>
               </msup>
-            </mpadded>
+              <mo>-</mo>
+              <msup>
+                <mi>{{ suvat.u }}</mi>
+                <mn>2</mn>
+              </msup>
+            </mn>
+            <mn>
+              <mn>2</mn>
+              <mo>&times;</mo>
+              <mi>{{ suvat.s }}</mi>
+            </mn>
           </mfrac>
         </math>
       </div>
@@ -141,7 +130,7 @@
 
 <script>
 export default {
-  name: "Asutat2",
+  name: "Sv2u22as",
   props: ["suvat", "letter"],
   data: () => ({
     creditLimit: ""
