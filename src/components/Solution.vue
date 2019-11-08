@@ -53,6 +53,11 @@
       </template>
       <template v-if="letter === a">
         <Avuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Avuat>
+        <Asutat2
+          v-if="formular() === 2"
+          :suvat="suvat"
+          :letter="letter"
+        ></Asutat2>
       </template>
     </template>
   </div>
@@ -72,6 +77,7 @@ import Vuvt from "./solutions/v/Vuvt.vue";
 import Vuv2u22as from "./solutions/v/Vuv2u22as.vue";
 import Vsvtat2 from "./solutions/v/Vsvtat2.vue";
 import Avuat from "./solutions/a/Avuat.vue";
+import Asutat2 from "./solutions/a/Asutat2.vue";
 export default {
   name: "Solution",
   components: {
@@ -87,7 +93,8 @@ export default {
     Vuvt,
     Vuv2u22as,
     Vsvtat2,
-    Avuat
+    Avuat,
+    Asutat2
   },
   props: ["suvat", "letter"],
   data: () => ({
@@ -207,6 +214,12 @@ export default {
             this.suvat.t !== null
           )
             return 1;
+          if (
+            this.suvat.s !== null &&
+            this.suvat.u !== null &&
+            this.suvat.t !== null
+          )
+            return 2;
           break;
 
         case "t":
