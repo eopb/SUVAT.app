@@ -4,12 +4,12 @@
   <div>
     <transition appear name="fade">
       <h1>
-        u = &plusmn;{{
-          Math.abs(
-            Math.sqrt(
-              Math.pow(this.suvat.v, 2) - 2 * this.suvat.a * this.suvat.s
-            )
-          )
+        v = &plusmn;{{
+        Math.abs(
+        Math.sqrt(
+        Math.pow(this.suvat.u, 2) + 2 * this.suvat.a * this.suvat.s
+        )
+        )
         }}
         <sub>
           ms
@@ -42,54 +42,25 @@
         </math>
       </div>
     </transition>
+
     <transition appear name="fade">
-      <h3>
-        First lets rearrange this equation by subtracting
-        <math>
-          <mn>2</mn>
-          <mi>a</mi>
-          <mi>s</mi>
-        </math>
-        from both sides.
-      </h3>
+      <h3>First lets square root both sides.</h3>
     </transition>
     <transition appear name="fade">
       <div>
         <math>
-          <msup>
-            <mi>v</mi>
-            <mn>2</mn>
-          </msup>
-          <mo>-</mo>
-          <mn>2</mn>
-          <mi>a</mi>
-          <mi>s</mi>
+          <mi>v</mi>
           <mo>=</mo>
-          <msup>
-            <mi>u</mi>
-            <mn>2</mn>
-          </msup>
-        </math>
-      </div>
-    </transition>
-    <transition appear name="fade">
-      <h3>Next square root both sides.</h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
           <msqrt>
             <msup>
-              <mi>v</mi>
+              <mi>u</mi>
               <mn>2</mn>
             </msup>
-            <mo>-</mo>
+            <mo>+</mo>
             <mn>2</mn>
             <mi>a</mi>
             <mi>s</mi>
           </msqrt>
-          <mo>=</mo>
-          <mi>u</mi>
         </math>
       </div>
     </transition>
@@ -101,10 +72,10 @@
         <math>
           <msqrt>
             <msup>
-              <mi>{{ suvat.v }}</mi>
+              <mi>{{ suvat.u }}</mi>
               <mn>2</mn>
             </msup>
-            <mo>-</mo>
+            <mo>+</mo>
             <mn>2</mn>
             <mo>&times;</mo>
             <mi>{{ suvat.a }}</mi>
