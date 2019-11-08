@@ -1,19 +1,11 @@
-// TODO add better support for zero real roots and multiple soloutions.
-
 <template>
   <div>
     <transition appear name="fade">
       <h1>
-        v = &plusmn;{{
-          Math.abs(
-            Math.sqrt(
-              Math.pow(this.suvat.u, 2) + 2 * this.suvat.a * this.suvat.s
-            )
-          )
-        }}
+        a = {{ (suvat.v - suvat.u) / suvat.t }}
         <sub>
           ms
-          <sup>-1</sup>
+          <sup>-2</sup>
         </sub>
       </h1>
     </transition>
@@ -26,41 +18,57 @@
     <transition appear name="fade">
       <div>
         <math>
-          <msup>
-            <mi>v</mi>
-            <mn>2</mn>
-          </msup>
+          <mi>v</mi>
           <mo>=</mo>
-          <msup>
-            <mi>u</mi>
-            <mn>2</mn>
-          </msup>
+          <mi>u</mi>
           <mo>+</mo>
-          <mn>2</mn>
           <mi>a</mi>
-          <mi>s</mi>
+          <mi>t</mi>
         </math>
       </div>
     </transition>
-
     <transition appear name="fade">
-      <h3>First lets square root both sides.</h3>
+      <h3>
+        First lets rearrange this equation by subtracting
+        <math>
+          <mi>u</mi>
+        </math>
+        from both sides.
+      </h3>
     </transition>
     <transition appear name="fade">
       <div>
         <math>
           <mi>v</mi>
+          <mo>-</mo>
+          <mi>u</mi>
           <mo>=</mo>
-          <msqrt>
-            <msup>
+          <mi>a</mi>
+          <mi>t</mi>
+        </math>
+      </div>
+    </transition>
+    <transition appear name="fade">
+      <h3>
+        First lets rearrange this equation by dividing both sides by
+        <math>
+          <mi>a</mi>
+        </math>
+      </h3>
+    </transition>
+    <transition appear name="fade">
+      <div>
+        <math>
+          <mfrac>
+            <div>
+              <mi>v</mi>
+              <mo>-</mo>
               <mi>u</mi>
-              <mn>2</mn>
-            </msup>
-            <mo>+</mo>
-            <mn>2</mn>
-            <mi>a</mi>
-            <mi>s</mi>
-          </msqrt>
+            </div>
+            <mi>t</mi>
+          </mfrac>
+          <mo>=</mo>
+          <mi>a</mi>
         </math>
       </div>
     </transition>
@@ -70,18 +78,14 @@
     <transition appear name="fade">
       <div>
         <math>
-          <msqrt>
-            <msup>
+          <mfrac>
+            <div>
+              <mi>{{ suvat.v }}</mi>
+              <mo>-</mo>
               <mi>{{ suvat.u }}</mi>
-              <mn>2</mn>
-            </msup>
-            <mo>+</mo>
-            <mn>2</mn>
-            <mo>&times;</mo>
-            <mi>{{ suvat.a }}</mi>
-            <mo>&times;</mo>
-            <mi>{{ suvat.s }}</mi>
-          </msqrt>
+            </div>
+            <mi>{{ suvat.t }}</mi>
+          </mfrac>
         </math>
       </div>
     </transition>
@@ -90,7 +94,7 @@
 
 <script>
 export default {
-  name: "Uv2u22as",
+  name: "Vvuat",
   props: ["suvat", "letter"],
   data: () => ({
     creditLimit: ""
