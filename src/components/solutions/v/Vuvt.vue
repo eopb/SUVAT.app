@@ -32,7 +32,7 @@
           <mi>t</mi>
         </math>
       </div>
-    </transition>n
+    </transition>
     <transition appear name="fade">
       <h3>
         Next lets rearrange this equation by subtracting
