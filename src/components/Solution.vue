@@ -63,6 +63,11 @@
           :suvat="suvat"
           :letter="letter"
         ></Av2u22as>
+        <Asvtat2
+          v-if="formular() === 5"
+          :suvat="suvat"
+          :letter="letter"
+        ></Asvtat2>
       </template>
     </template>
   </div>
@@ -84,6 +89,7 @@ import Vsvtat2 from "./solutions/v/Vsvtat2.vue";
 import Avuat from "./solutions/a/Avuat.vue";
 import Asutat2 from "./solutions/a/Asutat2.vue";
 import Av2u22as from "./solutions/a/Av2u22as.vue";
+import Asvtat2 from "./solutions/a/Asvtat2.vue";
 export default {
   name: "Solution",
   components: {
@@ -101,7 +107,8 @@ export default {
     Vsvtat2,
     Avuat,
     Asutat2,
-    Av2u22as
+    Av2u22as,
+    Asvtat2
   },
   props: ["suvat", "letter"],
   data: () => ({
@@ -233,6 +240,12 @@ export default {
             this.suvat.s !== null
           )
             return 4;
+          if (
+            this.suvat.s !== null &&
+            this.suvat.v !== null &&
+            this.suvat.t !== null
+          )
+            return 5;
           break;
 
         case "t":
