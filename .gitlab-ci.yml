@@ -2,11 +2,11 @@ image: "ubuntu"
 
 cache:
   paths:
-    - .stack-work/
+    - node_modules/
 
 stages:
   - check
-  - .post
+  - deploy
 
 check:
   stage: check
