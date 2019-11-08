@@ -1,6 +1,6 @@
 <template>
   <div id="solution">
-    <template v-if="formular() !== null">
+    <template v-if="formular() !== null && letterValue() === null">
       <template v-if="letter === s">
         <Ssutat2
           v-if="formular() === 2"

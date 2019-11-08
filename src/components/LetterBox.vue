@@ -57,4 +57,6 @@ input
   border-radius: 30px
   border: 2px solid #999
   padding: 6px 8px
+  &:invalid
+    border-color: #c22
 </style>
