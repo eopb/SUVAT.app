@@ -2,7 +2,7 @@
   <div>
     <transition appear name="fade">
       <h1>
-        u = {{ (suvat.s + 0.5 * suvat.a * Math.pow(suvat.t, 2)) / suvat.t }}
+        v = {{ (suvat.s + 0.5 * suvat.a * Math.pow(suvat.t, 2)) / suvat.t }}
         <sub>
           ms
           <sup>-1</sup>
