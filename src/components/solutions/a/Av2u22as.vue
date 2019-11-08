@@ -2,8 +2,11 @@
   <div>
     <transition appear name="fade">
       <h1>
-        s = {{ (Math.pow(suvat.v, 2) - Math.pow(suvat.u, 2)) / (2 * suvat.s) }}
-        <sub>m</sub>
+        a = {{ (Math.pow(suvat.v, 2) - Math.pow(suvat.u, 2)) / (2 * suvat.s) }}
+        <sub>
+          ms
+          <sup>-2</sup>
+        </sub>
       </h1>
     </transition>
     <transition appear name="fade">
