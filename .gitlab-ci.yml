@@ -5,24 +5,25 @@ cache:
     - .stack-work/
 
 stages:
-  - build
+  - check
+  - .post
 
-# build:
-#   stage: build
-#   script:
-#     - apt update
-#     - apt upgrade -y
-#     - apt install curl gnupg -y
-#     - curl -sL https://deb.nodesource.com/setup_13.x | bash -
-#     - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-#     - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-#     - apt update
-#     - apt install nodejs -y
-#     - apt install yarn -y
-#     - yarn global add @vue/cli
-#     - yarn global add @vue/cli-service-global
-#     - npm install
-#     - yarn build --mode staging
+check:
+  stage: check
+  script:
+    - apt update
+    - apt upgrade -y
+    - apt install curl gnupg -y
+    - curl -sL https://deb.nodesource.com/setup_13.x | bash -
+    - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+    - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+    - apt update
+    - apt install nodejs -y
+    - apt install yarn -y
+    - yarn global add @vue/cli
+    - yarn global add @vue/cli-service-global
+    - npm install
+    - yarn build --mode staging
 
 pages: # the job must be named pages
   image: node:latest
