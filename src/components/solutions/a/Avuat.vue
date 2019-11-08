@@ -80,11 +80,11 @@
         <math>
           <mfrac>
             <div>
-              <mi>{{ suvat.v }}</mi>
+              <mn>{{ suvat.v }}</mn>
               <mo>-</mo>
-              <mi>{{ suvat.u }}</mi>
+              <mn>{{ suvat.u }}</mn>
             </div>
-            <mi>{{ suvat.t }}</mi>
+            <mn>{{ suvat.t }}</mn>
           </mfrac>
         </math>
       </div>

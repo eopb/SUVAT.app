@@ -55,11 +55,11 @@
     <transition appear name="fade">
       <div>
         <math>
-          <mi>{{ suvat.v }}</mi>
+          <mn>{{ suvat.v }}</mn>
           <mo>-</mo>
-          <mi>{{ suvat.a }}</mi>
+          <mn>{{ suvat.a }}</mn>
           <mo>&times;</mo>
-          <mi>{{ suvat.t }}</mi>
+          <mn>{{ suvat.t }}</mn>
         </math>
       </div>
     </transition>

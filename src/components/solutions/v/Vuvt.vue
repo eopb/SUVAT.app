@@ -32,36 +32,7 @@
           <mi>t</mi>
         </math>
       </div>
-    </transition>
-    <transition appear name="fade">
-      <h3>
-        First lets rearrange this equation by dividing both sides by
-        <math>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <mi>t</mi>
-        </math>
-      </h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
-          <mfrac>
-            <div>
-              <mn>2</mn>
-              <mi>s</mi>
-            </div>
-            <mi>t</mi>
-          </mfrac>
-          <mo>=</mo>
-          <mi>u</mi>
-          <mo>+</mo>
-          <mi>v</mi>
-        </math>
-      </div>
-    </transition>
+    </transition>n
     <transition appear name="fade">
       <h3>
         Next lets rearrange this equation by subtracting
@@ -98,12 +69,12 @@
             <div>
               <mn>2</mn>
               <mo>&times;</mo>
-              <mi>{{ suvat.s }}</mi>
+              <mn>{{ suvat.s }}</mn>
             </div>
-            <mi>{{ suvat.t }}</mi>
+            <mn>{{ suvat.t }}</mn>
           </mfrac>
           <mo>-</mo>
-          <mi>{{ suvat.u }}</mi>
+          <mn>{{ suvat.u }}</mn>
         </math>
       </div>
     </transition>

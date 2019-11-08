@@ -98,12 +98,12 @@
             <div>
               <mn>2</mn>
               <mo>&times;</mo>
-              <mi>{{ suvat.s }}</mi>
+              <mn>{{ suvat.s }}</mn>
             </div>
-            <mi>{{ suvat.t }}</mi>
+            <mn>{{ suvat.t }}</mn>
           </mfrac>
           <mo>-</mo>
-          <mi>{{ suvat.v }}</mi>
+          <mn>{{ suvat.v }}</mn>
         </math>
       </div>
     </transition>

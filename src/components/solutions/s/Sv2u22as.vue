@@ -107,19 +107,19 @@
           <mfrac>
             <mn>
               <msup>
-                <mi>{{ suvat.v }}</mi>
+                <mn>{{ suvat.v }}</mn>
                 <mn>2</mn>
               </msup>
               <mo>-</mo>
               <msup>
-                <mi>{{ suvat.u }}</mi>
+                <mn>{{ suvat.u }}</mn>
                 <mn>2</mn>
               </msup>
             </mn>
             <mn>
               <mn>2</mn>
               <mo>&times;</mo>
-              <mi>{{ suvat.a }}</mi>
+              <mn>{{ suvat.a }}</mn>
             </mn>
           </mfrac>
         </math>

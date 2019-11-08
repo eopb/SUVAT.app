@@ -114,11 +114,11 @@
         <math>
           <mfrac>
             <div>
-              <mi>{{ suvat.s }}</mi>
+              <mn>{{ suvat.s }}</mn>
               <mo>-</mo>
-              <mi>{{ suvat.u }}</mi>
+              <mn>{{ suvat.u }}</mn>
               <mo>&times;</mo>
-              <mi>{{ suvat.t }}</mi>
+              <mn>{{ suvat.t }}</mn>
             </div>
 
             <mpadded>
@@ -128,7 +128,7 @@
               </mfrac>
               <mo>&times;</mo>
               <msup>
-                <mi>{{ suvat.t }}</mi>
+                <mn>{{ suvat.t }}</mn>
                 <mn>2</mn>
               </msup>
             </mpadded>

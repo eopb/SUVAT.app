@@ -5,11 +5,11 @@
     <transition appear name="fade">
       <h1>
         v = &plusmn;{{
-          Math.abs(
-            Math.sqrt(
-              Math.pow(this.suvat.u, 2) + 2 * this.suvat.a * this.suvat.s
-            )
-          )
+        Math.abs(
+        Math.sqrt(
+        Math.pow(this.suvat.u, 2) + 2 * this.suvat.a * this.suvat.s
+        )
+        )
         }}
         <sub>
           ms
@@ -49,17 +49,17 @@
     <transition appear name="fade">
       <div>
         <math>
-          <mi>v</mi>
+          <mn>v</mn>
           <mo>=</mo>
           <msqrt>
             <msup>
-              <mi>u</mi>
+              <mn>u</mn>
               <mn>2</mn>
             </msup>
             <mo>+</mo>
             <mn>2</mn>
-            <mi>a</mi>
-            <mi>s</mi>
+            <mn>a</mn>
+            <mn>s</mn>
           </msqrt>
         </math>
       </div>
