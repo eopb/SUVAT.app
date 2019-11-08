@@ -1,5 +1,6 @@
 # suvat-calculator
 
+[![https://efunb.gitlab.io/suvat-calculator](https://efunb.gitlab.io/suvat-calculator)](https://efunb.gitlab.io/suvat-calculator)
 [![pipeline status](https://gitlab.com/efunb/suvat-calculator/badges/master/pipeline.svg)](https://gitlab.com/efunb/suvat-calculator/commits/master)
 
 
