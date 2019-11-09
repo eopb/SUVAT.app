@@ -61,17 +61,17 @@ div
     div
       math
         mfrac
-      div
-        mi s
-        mo +
-        mfrac
-          mn 1
-          mn 2
-        mi a
-        msup
+          div
+            mi s
+            mo +
+            mfrac
+              mn 1
+              mn 2
+            mi a
+            msup
+              mi t
+              mn 2
           mi t
-          mn 2
-      mi t
       mo =
       mi v
   transition(appear, name='fade')
@@ -80,19 +80,19 @@ div
     div
       math
         mfrac
-      div
-        mn {{ suvat.s }}
-        mo +
-        mfrac
-          mn 1
-          mn 2
-        mo &times;
-        mn {{ suvat.a }}
-        mo &times;
-        msup
+          div
+            mn {{ suvat.s }}
+            mo +
+            mfrac
+              mn 1
+              mn 2
+            mo &times;
+            mn {{ suvat.a }}
+            mo &times;
+            msup
+              mn {{ suvat.t }}
+              mn 2
           mn {{ suvat.t }}
-          mn 2
-      mn {{ suvat.t }}
 
 </template>
 

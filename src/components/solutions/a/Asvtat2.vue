@@ -83,18 +83,18 @@ div
     div
       math
         mfrac
-      div
-        mi v
-        mi t
-        mo -
-        mi s
-      mpadded
-        mfrac
-          mn 1
-          mn 2
-        msup
-          mi t
-          mn 2
+          div
+            mi v
+            mi t
+            mo -
+            mi s
+          mpadded
+            mfrac
+              mn 1
+              mn 2
+            msup
+              mi t
+              mn 2
       mo =
       mi a
   transition(appear, name='fade')
@@ -103,20 +103,20 @@ div
     div
       math
         mfrac
-      div
-        mn {{ suvat.v }}
-        mo &times;
-        mn {{ suvat.t }}
-        mo -
-        mn {{ suvat.s }}
-      mpadded
-        mfrac
-          mn 1
-          mn 2
-        mo &times;
-        msup
-          mn {{ suvat.t }}
-          mn 2
+          div
+            mn {{ suvat.v }}
+            mo &times;
+            mn {{ suvat.t }}
+            mo -
+            mn {{ suvat.s }}
+          mpadded
+            mfrac
+              mn 1
+              mn 2
+            mo &times;
+            msup
+              mn {{ suvat.t }}
+              mn 2
 </template>
 
 <script>

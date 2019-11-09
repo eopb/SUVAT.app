@@ -34,10 +34,10 @@ div
     div
       math
         mfrac
-      div
-        mn 2
-        mi s
-      mi t
+          div
+            mn 2
+            mi s
+          mi t
       mo -
       mi u
       mo =
@@ -48,11 +48,11 @@ div
     div
       math
         mfrac
-      div
-        mn 2
-        mo &times;
-        mn {{ suvat.s }}
-      mn {{ suvat.t }}
+          div
+            mn 2
+            mo &times;
+            mn {{ suvat.s }}
+          mn {{ suvat.t }}
       mo -
       mn {{ suvat.u }}
 

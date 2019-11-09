@@ -38,16 +38,16 @@ div
     h3
       | First lets rearrange this equation by dividing both sides by
       math
-        mi a
+        mi t
   transition(appear, name='fade')
     div
       math
         mfrac
-      div
-        mi v
-        mo -
-        mi u
-      mi t
+          div
+            mi v
+            mo -
+            mi u
+          mi t
       mo =
       mi a
   transition(appear, name='fade')
@@ -56,11 +56,11 @@ div
     div
       math
         mfrac
-      div
-        mn {{ suvat.v }}
-        mo -
-        mn {{ suvat.u }}
-      mn {{ suvat.t }}
+          div
+            mn {{ suvat.v }}
+            mo -
+            mn {{ suvat.u }}
+          mn {{ suvat.t }}
 </template>
 
 <script>
