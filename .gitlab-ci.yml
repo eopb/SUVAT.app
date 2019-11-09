@@ -5,7 +5,20 @@ cache:
     - node_modules/
 
 stages:
+  - check
   - deploy
+
+check: # the job must be named pages
+  image: node:latest
+  stage: check
+  script:
+    - npm ci
+    - npm run build
+    - mv public public-vue
+    - mv dist public
+  artifacts:
+    paths:
+      - public
 
 pages: # the job must be named pages
   image: node:latest
