@@ -6,29 +6,58 @@
     />
     <div id="grid-wrap">
       <LetterBox @letter-value-changed="bruh" letter="s">m</LetterBox>
-      <Solution :suvat="suvat" letter="s" />
+      <Solution
+        v-show="solved.s || solved.u || solved.v || solved.a"
+        @solved="upA"
+        :suvat="suvat"
+        letter="s"
+      />
       <LetterBox @letter-value-changed="bruh" letter="u">
         ms
         <sup>-1</sup>
       </LetterBox>
-      <Solution :suvat="suvat" letter="u" />
+      <Solution
+        v-show="solved.s || solved.u || solved.v || solved.a"
+        @solved="upA"
+        :suvat="suvat"
+        letter="u"
+      />
       <LetterBox @letter-value-changed="bruh" letter="v">
         ms
         <sup>-1</sup>
       </LetterBox>
-      <Solution :suvat="suvat" letter="v" />
+      <Solution
+        v-show="solved.s || solved.u || solved.v || solved.a"
+        @solved="upA"
+        :suvat="suvat"
+        letter="v"
+      />
       <LetterBox @letter-value-changed="bruh" letter="a">
         ms
         <sup>-2</sup>
       </LetterBox>
-      <Solution :suvat="suvat" letter="a" />
+      <Solution
+        v-show="solved.s || solved.u || solved.v || solved.a"
+        @solved="upA"
+        :suvat="suvat"
+        letter="a"
+      />
       <LetterBox @letter-value-changed="bruh" letter="t">s</LetterBox>
-      <Solution :suvat="suvat" letter="t" />
+      <Solution
+        v-show="solved.s || solved.u || solved.v || solved.a"
+        @solved="upA"
+        :suvat="suvat"
+        letter="t"
+      />
+      <div
+        class="inputerr"
+        v-if="!(solved.s || solved.u || solved.v || solved.a)"
+      >
+        <h1>Input at least 3 value to get solutions</h1>
+      </div>
     </div>
-    <!-- <h1>{{ suvat.s + 5}}</h1> -->
   </div>
 </template>
-
 <script>
 import LetterBox from "./components/LetterBox.vue";
 import Solution from "./components/Solution.vue";
@@ -47,7 +76,8 @@ export default {
       v: null,
       a: null,
       t: null
-    }
+    },
+    solved: { s: false, u: false, v: false, a: false }
   }),
 
   methods: {
@@ -73,6 +103,15 @@ export default {
           this.suvat.t = value;
           break;
       }
+    },
+    upA(v) {
+      this.solved = {
+        s: v.s !== null ? v.s : this.solved.s,
+        u: v.u !== null ? v.u : this.solved.u,
+        v: v.v !== null ? v.v : this.solved.v,
+        a: v.a !== null ? v.a : this.solved.a
+      };
+      console.log(this.solved);
     }
   }
 };
@@ -103,4 +142,10 @@ body
   > *:nth-child(4n),
   > *:nth-child(4n - 1)
     background-color: #ccc
+  > div.inputerr
+    grid-column: 2
+    grid-row: 1 / 7
+    display: flex
+    align-items: center
+    justify-content: center
 </style>

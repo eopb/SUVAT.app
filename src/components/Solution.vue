@@ -116,8 +116,21 @@ export default {
     s: "s",
     u: "u",
     v: "v",
-    a: "a"
+    a: "a",
+    solved: { s: null, u: null, v: null, a: null }
   }),
+  watch: {
+    ans: function() {}
+  },
+  updated: function() {
+    this.solved = {
+      s: this.letter === this.s ? this.formular() !== null : this.solved.s,
+      u: this.letter === this.u ? this.formular() !== null : this.solved.u,
+      v: this.letter === this.v ? this.formular() !== null : this.solved.v,
+      a: this.letter === this.a ? this.formular() !== null : this.solved.a
+    };
+    this.$emit("solved", this.solved);
+  },
   methods: {
     letterValue() {
       switch (this.letter) {
