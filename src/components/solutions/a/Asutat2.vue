@@ -40,7 +40,7 @@ div
       mi t
       mn 2
   +th3
-    | First lets rearrange this equation by dividing both sides by
+    | Next lets rearrange this equation by dividing both sides by
     math
       mfrac
         mn 1
