@@ -1,59 +1,45 @@
-<template>
-  <div>
-    <transition appear name="fade">
-      <h1>
-        s = {{ 0.5 * (suvat.u + suvat.v) * suvat.t }}
-        <sub>m</sub>
-      </h1>
-    </transition>
-    <transition appear name="fade">
-      <h2>Solution</h2>
-    </transition>
-    <transition appear name="fade">
-      <h3>Using the equation.</h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
-          <mi>s</mi>
-          <mo>=</mo>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <mo>(</mo>
-          <mi>u</mi>
-          <mo>+</mo>
-          <mi>v</mi>
-          <mo>)</mo>
-          <mi>t</mi>
-        </math>
-      </div>
-    </transition>
-    <transition appear name="fade">
-      <h3>Enter known values.</h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
-          <mn>s</mn>
-          <mo>=</mo>
-          <mfrac>
-            <mn>1</mn>
-            <mn>2</mn>
-          </mfrac>
-          <mo>&times;</mo>
-          <mo>(</mo>
-          <mn>{{ suvat.u }}</mn>
-          <mo>+</mo>
-          <mn>{{ suvat.v }}</mn>
-          <mo>)</mo>
-          <mo>&times;</mo>
-          <mn>{{ suvat.t }}</mn>
-        </math>
-      </div>
-    </transition>
-  </div>
+<template lang="pug">
+div
+  transition(appear='', name='fade')
+    h1
+      | s = {{ 0.5 * (suvat.u + suvat.v) * suvat.t }}
+      sub m
+  transition(appear='', name='fade')
+    h2 Solution
+  transition(appear='', name='fade')
+    h3 Using the equation.
+  transition(appear='', name='fade')
+    div
+      math
+        mi s
+        mo =
+        mfrac
+          mn 1
+          mn 2
+        mo (
+        mi u
+        mo +
+        mi v
+        mo )
+        mi t
+  transition(appear='', name='fade')
+    h3 Enter known values.
+  transition(appear='', name='fade')
+    div
+      math
+        mn s
+        mo =
+        mfrac
+          mn 1
+          mn 2
+        mo ×
+        mo (
+        mn {{ suvat.u }}
+        mo +
+        mn {{ suvat.v }}
+        mo )
+        mo ×
+        mn {{ suvat.t }}
 </template>
 
 <script>
