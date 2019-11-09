@@ -1,4 +1,5 @@
 <template lang="pug">
+include ../mixins.pug
 div
   transition(appear, name='fade')
     h1
