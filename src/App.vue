@@ -111,7 +111,6 @@ export default {
         v: v.v !== null ? v.v : this.solved.v,
         a: v.a !== null ? v.a : this.solved.a
       };
-      console.log(this.solved);
     }
   }
 };
