@@ -1,120 +1,89 @@
 // TODO add better support for zero real roots and multiple soloutions.
 
-<template>
-  <div>
-    <transition appear name="fade">
-      <h1>
-        u = &plusmn;{{
-          Math.abs(
-            Math.sqrt(
-              Math.pow(this.suvat.v, 2) - 2 * this.suvat.a * this.suvat.s
-            )
-          )
-        }}
-        <sub>
-          ms
-          <sup>-1</sup>
-        </sub>
-      </h1>
-    </transition>
-    <transition appear name="fade">
-      <h2>Solution</h2>
-    </transition>
-    <transition appear name="fade">
-      <h3>Using the equation.</h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
-          <msup>
-            <mi>v</mi>
-            <mn>2</mn>
-          </msup>
-          <mo>=</mo>
-          <msup>
-            <mi>u</mi>
-            <mn>2</mn>
-          </msup>
-          <mo>+</mo>
-          <mn>2</mn>
-          <mi>a</mi>
-          <mi>s</mi>
-        </math>
-      </div>
-    </transition>
-    <transition appear name="fade">
-      <h3>
-        First lets rearrange this equation by subtracting
-        <math>
-          <mn>2</mn>
-          <mi>a</mi>
-          <mi>s</mi>
-        </math>
-        from both sides.
-      </h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
-          <msup>
-            <mi>v</mi>
-            <mn>2</mn>
-          </msup>
-          <mo>-</mo>
-          <mn>2</mn>
-          <mi>a</mi>
-          <mi>s</mi>
-          <mo>=</mo>
-          <msup>
-            <mi>u</mi>
-            <mn>2</mn>
-          </msup>
-        </math>
-      </div>
-    </transition>
-    <transition appear name="fade">
-      <h3>Next square root both sides.</h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
-          <msqrt>
-            <msup>
-              <mi>v</mi>
-              <mn>2</mn>
-            </msup>
-            <mo>-</mo>
-            <mn>2</mn>
-            <mi>a</mi>
-            <mi>s</mi>
-          </msqrt>
-          <mo>=</mo>
-          <mi>u</mi>
-        </math>
-      </div>
-    </transition>
-    <transition appear name="fade">
-      <h3>Lastly enter known values.</h3>
-    </transition>
-    <transition appear name="fade">
-      <div>
-        <math>
-          <msqrt>
-            <msup>
-              <mn>{{ suvat.v }}</mn>
-              <mn>2</mn>
-            </msup>
-            <mo>-</mo>
-            <mn>2</mn>
-            <mo>&times;</mo>
-            <mn>{{ suvat.a }}</mn>
-            <mo>&times;</mo>
-            <mn>{{ suvat.s }}</mn>
-          </msqrt>
-        </math>
-      </div>
-    </transition>
-  </div>
+<template lang="pug">
+div
+  transition(appear='', name='fade')
+    h1
+      | u = ±{{
+      | Math.abs(
+      | Math.sqrt(
+      | Math.pow(this.suvat.v, 2) - 2 * this.suvat.a * this.suvat.s
+      | )
+      | )
+      | }}
+      sub
+        | ms
+        sup -1
+  transition(appear='', name='fade')
+    h2 Solution
+  transition(appear='', name='fade')
+    h3 Using the equation.
+  transition(appear='', name='fade')
+    div
+      math
+        msup
+          mi v
+          mn 2
+        mo =
+        msup
+          mi u
+          mn 2
+        mo +
+        mn 2
+        mi a
+        mi s
+  transition(appear='', name='fade')
+    h3
+      | First lets rearrange this equation by subtracting
+      math
+        mn 2
+        mi a
+        mi s
+      |         from both sides.
+  transition(appear='', name='fade')
+    div
+      math
+        msup
+          mi v
+          mn 2
+        mo -
+        mn 2
+        mi a
+        mi s
+        mo =
+        msup
+          mi u
+          mn 2
+  transition(appear='', name='fade')
+    h3 Next square root both sides.
+  transition(appear='', name='fade')
+    div
+      math
+        msqrt
+          msup
+            mi v
+            mn 2
+          mo -
+          mn 2
+          mi a
+          mi s
+        mo =
+        mi u
+  transition(appear='', name='fade')
+    h3 Lastly enter known values.
+  transition(appear='', name='fade')
+    div
+      math
+        msqrt
+          msup
+            mn {{ suvat.v }}
+            mn 2
+          mo -
+          mn 2
+          mo ×
+          mn {{ suvat.a }}
+          mo ×
+          mn {{ suvat.s }}
 </template>
 
 <script>
