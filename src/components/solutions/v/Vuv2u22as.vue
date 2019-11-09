@@ -58,9 +58,9 @@ div
             mn 2
           mo +
           mn 2
-          mo ×
+          mo &times;
           mi {{ suvat.a }}
-          mo ×
+          mo &times;
           mi {{ suvat.s }}
 </template>
 

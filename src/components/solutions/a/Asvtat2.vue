@@ -105,7 +105,7 @@ div
         mfrac
       div
         mn {{ suvat.v }}
-        mo ×
+        mo &times;
         mn {{ suvat.t }}
         mo -
         mn {{ suvat.s }}
@@ -113,7 +113,7 @@ div
         mfrac
           mn 1
           mn 2
-        mo ×
+        mo &times;
         msup
           mn {{ suvat.t }}
           mn 2

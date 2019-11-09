@@ -50,7 +50,7 @@ div
         mfrac
       div
         mn 2
-        mo ×
+        mo &times;
         mn {{ suvat.s }}
       mn {{ suvat.t }}
       mo -

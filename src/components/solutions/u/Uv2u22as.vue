@@ -80,9 +80,9 @@ div
             mn 2
           mo -
           mn 2
-          mo ×
+          mo &times;
           mn {{ suvat.a }}
-          mo ×
+          mo &times;
           mn {{ suvat.s }}
 </template>
 

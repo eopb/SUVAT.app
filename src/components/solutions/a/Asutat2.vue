@@ -85,13 +85,13 @@ div
         mn {{ suvat.s }}
         mo -
         mn {{ suvat.u }}
-        mo ×
+        mo &times;
         mn {{ suvat.t }}
       mpadded
         mfrac
           mn 1
           mn 2
-        mo ×
+        mo &times;
         msup
           mn {{ suvat.t }}
           mn 2

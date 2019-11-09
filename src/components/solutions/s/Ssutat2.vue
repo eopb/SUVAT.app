@@ -31,15 +31,15 @@ div
         mi s
         mo =
         mn {{ suvat.u }}
-        mo ×
+        mo &times;
         mn {{ suvat.t }}
         mo +
         mfrac
           mn 1
           mn 2
-        mo ×
+        mo &times;
         mn {{ suvat.a }}
-        mo ×
+        mo &times;
         msup
           mn {{ suvat.t }}
           mn 2

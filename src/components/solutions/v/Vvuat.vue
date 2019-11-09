@@ -27,7 +27,7 @@ div
         mn {{ suvat.u }}
         mo +
         mn {{ suvat.a }}
-        mo ×
+        mo &times;
         mn {{ suvat.t }}
 
 </template>

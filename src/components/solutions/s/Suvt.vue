@@ -32,13 +32,13 @@ div
         mfrac
           mn 1
           mn 2
-        mo ×
+        mo &times;
         mo (
         mn {{ suvat.u }}
         mo +
         mn {{ suvat.v }}
         mo )
-        mo ×
+        mo &times;
         mn {{ suvat.t }}
 </template>
 
