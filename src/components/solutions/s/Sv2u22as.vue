@@ -4,10 +4,7 @@ div
   +th1
     | s = {{ (Math.pow(suvat.v, 2) - Math.pow(suvat.u, 2)) / (2 * suvat.a) }}
     sub m
-  +th2
-    | Solution
-  +th3
-    | Using the equation.
+  +sue
   +tmath
     msup
       mi v

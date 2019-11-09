@@ -4,10 +4,7 @@ div
   +th1
     | s = {{ 0.5 * (suvat.u + suvat.v) * suvat.t }}
     sub m
-  +th2
-    | Solution
-  +th3
-    | Using the equation.
+  +sue
   +tmath
     mi s
     mo =

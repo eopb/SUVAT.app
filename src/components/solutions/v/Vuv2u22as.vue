@@ -12,10 +12,7 @@ div
     sub
       | ms
       sup -1
-  +th2
-    | Solution
-  +th3
-    | Using the equation.
+  +sue
   +tmath
     msup
       mi v

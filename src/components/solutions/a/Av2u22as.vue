@@ -6,10 +6,7 @@ div
     sub
       | ms
       sup -2
-  +th2
-    | Solution
-  +th3
-    | Using the equation.
+  +sue
   transition(appear, name='fade')
     div
       math
