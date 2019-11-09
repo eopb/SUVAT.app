@@ -53,7 +53,6 @@ div
       mn {{ suvat.t }}
 </template>
 
-
 <script>
 export default {
   name: "Vvuat",
