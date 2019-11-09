@@ -2,7 +2,7 @@
 
 <template lang="pug">
 div
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h1
       | v = &plusmn;{{
       | Math.abs(
@@ -12,11 +12,11 @@ div
       sub
         | ms
         sup -1
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h2 Solution
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h3 Using the equation.
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     div
       math
         msup
@@ -30,9 +30,9 @@ div
         mn 2
         mi a
         mi s
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h3 First lets square root both sides.
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     div
       math
         mn v
@@ -45,9 +45,9 @@ div
           mn 2
           mn a
           mn s
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h3 Lastly enter known values.
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     div
       math
         msqrt

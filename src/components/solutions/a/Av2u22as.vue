@@ -1,16 +1,16 @@
 <template lang="pug">
 div
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h1
       | a = {{ (Math.pow(suvat.v, 2) - Math.pow(suvat.u, 2)) / (2 * suvat.s) }}
       sub
         | ms
         sup -2
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h2 Solution
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h3 Using the equation.
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     div
       math
         msup
@@ -24,7 +24,7 @@ div
         mn 2
         mi a
         mi s
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h3
       | First lets rearrange this equation by subtracting
       math
@@ -32,7 +32,7 @@ div
           mi u
           mn 2
       |         from both sides.
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     div
       math
         msup
@@ -46,14 +46,14 @@ div
         mn 2
         mi a
         mi s
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h3
       | Then divide both side by
       math
         mn 2
         mi s
       |         from both sides.
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     div
       math
         mfrac
@@ -70,9 +70,9 @@ div
             mi s
         mo =
         mi a
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     h3 Lastly enter known values.
-  transition(appear='', name='fade')
+  transition(appear, name='fade')
     div
       math
         mfrac
