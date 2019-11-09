@@ -1,11 +1,11 @@
 <template lang="pug">
+include ../mixins.pug
 div
-  transition(appear, name='fade')
-    h1
-      | a = {{ (suvat.s - suvat.u * suvat.t) / (0.5 * Math.pow(suvat.t, 2)) }}
-      sub
-        | ms
-        sup -2
+  +th1
+    | a = {{ (suvat.s - suvat.u * suvat.t) / (0.5 * Math.pow(suvat.t, 2)) }}
+    sub
+      | ms
+      sup -2
   transition(appear, name='fade')
     h2 Solution
   transition(appear, name='fade')
@@ -61,40 +61,40 @@ div
     div
       math
         mfrac
-      div
-        mi s
-        mo -
-        mi u
-        mi t
-      mpadded
-        mfrac
-          mn 1
-          mn 2
-        msup
-          mi t
-          mn 2
-      mo =
-      mi a
+          div
+            mi s
+            mo -
+            mi u
+            mi t
+          mpadded
+            mfrac
+              mn 1
+              mn 2
+            msup
+              mi t
+              mn 2
+        mo =
+        mi a
   transition(appear, name='fade')
     h3 Lastly enter known values.
   transition(appear, name='fade')
     div
       math
         mfrac
-      div
-        mn {{ suvat.s }}
-        mo -
-        mn {{ suvat.u }}
-        mo &times;
-        mn {{ suvat.t }}
-      mpadded
-        mfrac
-          mn 1
-          mn 2
-        mo &times;
-        msup
-          mn {{ suvat.t }}
-          mn 2
+          div
+            mn {{ suvat.s }}
+            mo -
+            mn {{ suvat.u }}
+            mo &times;
+            mn {{ suvat.t }}
+          mpadded
+            mfrac
+              mn 1
+              mn 2
+            mo &times;
+            msup
+              mn {{ suvat.t }}
+              mn 2
 </template>
 
 <script>
