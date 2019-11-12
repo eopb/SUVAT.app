@@ -20,11 +20,9 @@ div
     msup
       mi t
       mn 2
+  h3 $$\frac{a}{\ {{ suvat.u }}\ }$$
   +th3
-    | First lets rearrange this equation by subtracting
-    math
-      mi u
-      mi t
+    | First lets rearrange this equation by subtracting $$\frac{a}{\ {{ suvat.u }}\ }$$
     | from both sides.
   +tmath
     mi s
@@ -90,6 +88,13 @@ export default {
   props: ["suvat", "letter"],
   data: () => ({
     creditLimit: ""
-  })
+  }),
+  updated() {
+    console.log("rendering mathjax");
+    window.MathJax.Hub.Typeset();
+    // window.MathJax.Hub.Queue(["Typeset", window.MathJax.Hub], () =>
+    //   console.log("done")
+    // );
+  }
 };
 </script>

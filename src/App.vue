@@ -49,10 +49,7 @@
         :suvat="suvat"
         letter="t"
       />
-      <div
-        class="inputerr"
-        v-if="!(solved.s || solved.u || solved.v || solved.a)"
-      >
+      <div class="inputerr" v-if="!(solved.s || solved.u || solved.v || solved.a)">
         <h1>Input at least 3 value to get solutions</h1>
       </div>
     </div>
@@ -111,8 +108,41 @@ export default {
         v: v.v !== null ? v.v : this.solved.v,
         a: v.a !== null ? v.a : this.solved.a
       };
+    },
+    reRender() {
+      if (window.MathJax) {
+        console.log("rendering mathjax");
+        window.MathJax.Hub.Queue(["Typeset", window.MathJax.Hub], () =>
+          console.log("done")
+        );
+      }
     }
+  },
+  mounted() {
+    this.reRender();
+    // this.$watch(
+    //   "suvat",
+    //   function() {
+    //     console.log("data changed");
+    //     this.$nextTick().then(() => {
+    //       this.reRender();
+    //     });
+    //   },
+    //   {
+    //     deep: true
+    //   }
+    // );
   }
+  // watch: {
+  //   suvat: {
+  //     function() {
+  //       console.log("data changed");
+  //       this.$nextTick().then(() => {
+  //         this.reRender();
+  //       });
+  //     }
+  //   }
+  // }
 };
 </script>
 
