@@ -119,9 +119,6 @@ export default {
     a: "a",
     solved: { s: null, u: null, v: null, a: null }
   }),
-  watch: {
-    ans: function() {}
-  },
   updated: function() {
     this.solved = {
       s: this.letter === this.s ? this.formular() !== null : this.solved.s,

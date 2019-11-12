@@ -20,9 +20,10 @@ div
     msup
       mi t
       mn 2
-  h3 $$\frac{a}{\ {{ suvat.u }}\ }$$
+  h3 $$\frac{a}{ {{ suvat.u }} }$$
   +th3
-    | First lets rearrange this equation by subtracting $$\frac{a}{\ {{ suvat.u }}\ }$$
+    | First lets rearrange this equation by subtracting
+    vue-mathjax(:formula="eqa")
     | from both sides.
   +tmath
     mi s
@@ -83,18 +84,20 @@ div
 </template>
 
 <script>
+import { VueMathjax } from "vue-mathjax";
 export default {
   name: "Asutat2",
   props: ["suvat", "letter"],
+  components: {
+    "vue-mathjax": VueMathjax
+  },
   data: () => ({
     creditLimit: ""
   }),
-  updated() {
-    console.log("rendering mathjax");
-    window.MathJax.Hub.Typeset();
-    // window.MathJax.Hub.Queue(["Typeset", window.MathJax.Hub], () =>
-    //   console.log("done")
-    // );
+  computed: {
+    eqa: function() {
+      return "$\\frac{a}{" + this.suvat.u + "}$";
+    }
   }
 };
 </script>
