@@ -44,17 +44,11 @@ export default {
   }),
   computed: {
     e6: function() {
-      return (
-        "$\\frac{" +
-        maybeBracket(this.suvat.s) +
-        "-" +
-        maybeBracket(this.suvat.u) +
-        "\\times" +
-        maybeBracket(this.suvat.t) +
-        "}{\\frac{1}{2}" +
-        maybeBracket(this.suvat.t) +
-        "^2}$"
-      );
+      return `$\\frac{${maybeBracket(this.suvat.s)}-${maybeBracket(
+        this.suvat.u
+      )}\\times${maybeBracket(this.suvat.t)}}{\\frac{1}{2}${maybeBracket(
+        this.suvat.t
+      )}^2}$`;
     }
   }
 };
