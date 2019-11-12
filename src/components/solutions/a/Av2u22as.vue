@@ -7,84 +7,48 @@ div
       | ms
       sup -2
   +sue
-  transition(appear, name='fade')
-    div
-      math
-        msup
-          mi v
-          mn 2
-        mo =
-        msup
-          mi u
-          mn 2
-        mo +
-        mn 2
-        mi a
-        mi s
+  +tmath 
+    Mathr(:formula="e1")
   +th3
     | First lets rearrange this equation by subtracting
-    math
-      msup
-        mi u
-        mn 2
+    Mathr(:formula="e2" size="small")
     | from both sides.
   +tmath
-    msup
-      mi v
-      mn 2
-    mo -
-    msup
-      mi u
-      mn 2
-    mo =
-    mn 2
-    mi a
-    mi s
+    Mathr(:formula="e3")
   +th3
-    | Then divide both side by
-    math
-      mn 2
-      mi s
+    | Then divide both sides by
+    Mathr(:formula="e4" size="small")
     | from both sides.
   +tmath
-    mfrac
-      mn
-        msup
-          mi v
-          mn 2
-        mo -
-        msup
-          mi u
-          mn 2
-      mn
-        mn 2
-        mi s
-    mo =
-    mi a
+    Mathr(:formula="e5")
   +th3
     | Lastly enter known values.
-  tmath
-    mfrac
-      mn
-        msup
-          mn {{ suvat.v }}
-          mn 2
-        mo -
-        msup
-          mn {{ suvat.u }}
-          mn 2
-      mn
-        mn 2
-        mo &times;
-        mn {{ suvat.s }}
+  +tmath
+    Mathr(:formula="e6")
 </template>
 
 <script>
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math.js";
 export default {
   name: "Sv2u22as",
   props: ["suvat", "letter"],
+  components: {
+    Mathr
+  },
   data: () => ({
-    creditLimit: ""
-  })
+    e1: "$v^2=u^2+2as$",
+    e2: "$u^2$",
+    e3: "$v^2-u^2=2as$",
+    e4: "$2s$",
+    e5: "$\\frac{v^2-u^2}{2s}=a$"
+  }),
+  computed: {
+    e6: function() {
+      return `$\\frac{${maybeBracket(this.suvat.v)}^2-${maybeBracket(
+        this.suvat.u
+      )}^2}{2${maybeBracket(this.suvat.s)}}=a$`;
+    }
+  }
 };
 </script>
