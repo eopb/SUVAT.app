@@ -7,95 +7,54 @@ div
       | ms
       sup -2
   +sue
-  +tmath
-    mi s
-    mo =
-    mi u
-    mi t
-    mo +
-    mfrac
-      mn 1
-      mn 2
-    mi a
-    msup
-      mi t
-      mn 2
+  +tmath 
+    Mathr(:formula="e1")
   +th3
     | First lets rearrange this equation by subtracting
-    vue-mathjax(:formula="ut")
+    Mathr(:formula="e2" size="small")
     | from both sides.
   +tmath
-    mi s
-    mo -
-    mi u
-    mi t
-    mo =
-    mfrac
-      mn 1
-      mn 2
-    mi a
-    msup
-      mi t
-      mn 2
+    Mathr(:formula="e3")
   +th3
     | Next lets rearrange this equation by dividing both sides by
-    math
-      mfrac
-        mn 1
-        mn 2
-      msup
-        mi t
-        mn 2
+    Mathr(:formula="e4" size="small")
   +tmath
-    mfrac
-      div
-        mi s
-        mo -
-        mi u
-        mi t
-      mpadded
-        mfrac
-          mn 1
-          mn 2
-        msup
-          mi t
-          mn 2
-    mo =
-    mi a
+    Mathr(:formula="e5")
   +th3
     | Lastly enter known values.
   +tmath
-    mfrac
-      div
-        mn {{ suvat.s }}
-        mo -
-        mn {{ suvat.u }}
-        mo &times;
-        mn {{ suvat.t }}
-      mpadded
-        mfrac
-          mn 1
-          mn 2
-        mo &times;
-        msup
-          mn {{ suvat.t }}
-          mn 2
+    Mathr(:formula="e6")
 </template>
 
 <script>
-import { VueMathjax } from "vue-mathjax";
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math.js";
 export default {
   name: "Asutat2",
   props: ["suvat", "letter"],
   components: {
-    "vue-mathjax": VueMathjax
+    Mathr
   },
   data: () => ({
-    ut: "$ut$"
+    e1: "$s=ut+\\frac{1}{2}at^2$",
+    e2: "$ut$",
+    e3: "$s-ut=\\frac{1}{2}at^2$",
+    e4: "$\\frac{1}{2}t^2$",
+    e5: "$\\frac{s-ut}{\\frac{1}{2}t^2}=a$"
   }),
   computed: {
-    eqa: function() {
-      return "$\\frac{a}{" + this.suvat.u + "}$";
+    e6: function() {
+      return (
+        "$\\frac{" +
+        maybeBracket(this.suvat.s) +
+        "-" +
+        maybeBracket(this.suvat.u) +
+        "\\times" +
+        maybeBracket(this.suvat.t) +
+        "}{\\frac{1}{2}" +
+        maybeBracket(this.suvat.t) +
+        "^2}$"
+      );
     }
   }
 };
