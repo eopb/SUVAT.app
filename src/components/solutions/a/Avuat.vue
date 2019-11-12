@@ -8,18 +8,18 @@ div
       sup -2
   +sue
   +tmath 
-    Mathr(:formula="e1")
+    Mathr(formula="$v=u+at$")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(:formula="e2" size="small")
+    Mathr(formula="$u$" size="small")
     | from both sides.
   +tmath 
-    Mathr(:formula="e3")
+    Mathr(formula="$v-u=at$")
   +th3
     | First lets rearrange this equation by dividing both sides by
-    Mathr(:formula="e4" size="small")
+    Mathr(formula="$t$" size="small")
   +tmath 
-    Mathr(:formula="e5")
+    Mathr(formula="$\\frac{v-u}{t}=a$")
   +th3
     | Lastly enter known values.
   +tmath 
@@ -35,13 +35,6 @@ export default {
   components: {
     Mathr
   },
-  data: () => ({
-    e1: "$v=u+at$",
-    e2: "$u$",
-    e3: "$v-u=at$",
-    e4: "$t$",
-    e5: "$\\frac{v-u}{t}=a$"
-  }),
   computed: {
     e6: function() {
       return `$\\frac{${maybeBracket(this.suvat.v)}-${maybeBracket(
