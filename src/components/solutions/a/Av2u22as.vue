@@ -47,7 +47,7 @@ export default {
     e6: function() {
       return `$\\frac{${maybeBracket(this.suvat.v)}^2-${maybeBracket(
         this.suvat.u
-      )}^2}{2${maybeBracket(this.suvat.s)}}=a$`;
+      )}^2}{2\\times${maybeBracket(this.suvat.s)}}$`;
     }
   }
 };

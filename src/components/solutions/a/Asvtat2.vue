@@ -7,108 +7,56 @@ div
       | ms
       sup -2
   +sue
-  +tmath
-    mi s
-    mo =
-    mi v
-    mi t
-    mo -
-    mfrac
-      mn 1
-      mn 2
-    mi a
-    msup
-      mi t
-      mn 2
+  +tmath 
+    Mathr(:formula="e1")
   +th3
     | First lets rearrange this equation by subtracting
-    math
-      mi v
-      mi t
+    Mathr(:formula="e2" size="small")
     | from both sides.
-  +tmath
-    mi s
-    mo -
-    mi v
-    mi t
-    mo =
-    mo -
-    mfrac
-      mn 1
-      mn 2
-    mi a
-    msup
-      mi t
-      mn 2
+  +tmath 
+    Mathr(:formula="e3")
   +th3
     | First lets rearrange this equation by multiplying both sides by
-    math
-      mo -
-      mn 1
-  +tmath
-    mi v
-    mi t
-    mo -
-    mi s
-    mo =
-    mfrac
-      mn 1
-      mn 2
-    mi a
-    msup
-      mi t
-      mn 2
-  +th2
-    | First lets rearrange this equation by dividing both sides by
-    math
-      mfrac
-        mn 1
-        mn 2
-      msup
-        mi t
-        mn 2
-  +tmath
-    mfrac
-      div
-        mi v
-        mi t
-        mo -
-        mi s
-      mpadded
-        mfrac
-          mn 1
-          mn 2
-        msup
-          mi t
-          mn 2
-    mo =
-    mi a
+    Mathr(:formula="e4" size="small")
+  +tmath 
+    Mathr(:formula="e5")
+  +th3
+    | Next lets rearrange this equation by dividing both sides by
+    Mathr(:formula="e6" size="small")
+  +tmath 
+    Mathr(:formula="e7")
   +th3
     | Lastly enter known values.
-  +tmath
-    mfrac
-      div
-        mn {{ suvat.v }}
-        mo &times;
-        mn {{ suvat.t }}
-        mo -
-        mn {{ suvat.s }}
-      mpadded
-        mfrac
-          mn 1
-          mn 2
-        mo &times;
-        msup
-          mn {{ suvat.t }}
-          mn 2
+  +tmath 
+    Mathr(:formula="e8")
 </template>
 
 <script>
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math.js";
 export default {
   name: "Asvtat2",
   props: ["suvat", "letter"],
+  components: {
+    Mathr
+  },
   data: () => ({
-    creditLimit: ""
-  })
+    e1: "$s=vt-\\frac{1}{2}at^2$",
+    e2: "$ut$",
+    e3: "$s-vt=-\\frac{1}{2}at^2$",
+    e4: "-1",
+    e5: "$vt-s=\\frac{1}{2}at^2$",
+    e6: "$\\frac{1}{2}t^2$",
+    e7: "$\\frac{vt-s}{\\frac{1}{2}t^2}=a$"
+  }),
+  computed: {
+    e8: function() {
+      return `$\\frac{${maybeBracket(this.suvat.v)}\\times${maybeBracket(
+        this.suvat.t
+      )}-${maybeBracket(this.suvat.s)}}{\\frac{1}{2}\\times${maybeBracket(
+        this.suvat.t
+      )}^2}$`;
+    }
+  }
 };
 </script>
