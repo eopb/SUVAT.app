@@ -20,10 +20,9 @@ div
     msup
       mi t
       mn 2
-  h3 $$\frac{a}{ {{ suvat.u }} }$$
   +th3
     | First lets rearrange this equation by subtracting
-    vue-mathjax(:formula="eqa")
+    vue-mathjax(:formula="ut")
     | from both sides.
   +tmath
     mi s
@@ -92,7 +91,7 @@ export default {
     "vue-mathjax": VueMathjax
   },
   data: () => ({
-    creditLimit: ""
+    ut: "$ut$"
   }),
   computed: {
     eqa: function() {
