@@ -1,3 +1,5 @@
+// TODO not fin
+
 <template lang="pug">
 include ../mixins.pug
 div
@@ -5,42 +7,29 @@ div
     | s = {{ 0.5 * (suvat.u + suvat.v) * suvat.t }}
     sub m
   +sue
-  +tmath
-    mi s
-    mo =
-    mfrac
-      mn 1
-      mn 2
-    mo (
-    mi u
-    mo +
-    mi v
-    mo )
-    mi t
+  +tmath 
+    Mathr(formula="$s=\\frac{1}{2}(u+v)t$")
   +th3
     | Enter known values.
   +tmath
-    mn s
-    mo =
-    mfrac
-      mn 1
-      mn 2
-    mo &times;
-    mo (
-    mn {{ suvat.u }}
-    mo +
-    mn {{ suvat.v }}
-    mo )
-    mo &times;
-    mn {{ suvat.t }}
+    Mathr(:formula="e1")
 </template>
 
 <script>
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math";
 export default {
   name: "Suvt",
   props: ["suvat", "letter"],
-  data: () => ({
-    creditLimit: ""
-  })
+  components: {
+    Mathr
+  },
+  computed: {
+    e1: function() {
+      return `$\\frac{1}{2}\\times(${maybeBracket(this.suvat.u)}+${maybeBracket(
+        this.suvat.v
+      )})\\times${maybeBracket(this.suvat.t)}$`;
+    }
+  }
 };
 </script>

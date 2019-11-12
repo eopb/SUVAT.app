@@ -5,46 +5,32 @@ div
     | s = {{ suvat.v * suvat.t - 0.5 * suvat.a * Math.pow(suvat.t, 2) }}
     sub m
   +sue
-  +tmath
-    mi s
-    mo =
-    mi v
-    mi t
-    mo -
-    mfrac
-      mn 1
-      mn 2
-    mi a
-    msup
-      mi t
-      mn 2
+  +tmath 
+    Mathr(formula="$s=vt-\\frac{1}{2}at^2$")
   +th3
     | Enter known values.
   +tmath
-    mi s
-    mo =
-    mn {{ suvat.v }}
-    mo &times;
-    mn {{ suvat.t }}
-    mo -
-    mfrac
-      mn 1
-      mn 2
-    mo &times;
-    mn {{ suvat.a }}
-    mo &times;
-    msup
-      mn {{ suvat.t }}
-      mn 2
+    Mathr(:formula="e1")
 
 </template>
 
 <script>
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math";
 export default {
   name: "Ssvtat2",
   props: ["suvat", "letter"],
-  data: () => ({
-    creditLimit: ""
-  })
+  components: {
+    Mathr
+  },
+  computed: {
+    e1: function() {
+      return `$s=${maybeBracket(this.suvat.v)}\\times${maybeBracket(
+        this.suvat.t
+      )}-\\frac{1}{2}\\times${maybeBracket(this.suvat.a)}\\times${maybeBracket(
+        this.suvat.t
+      )}^2$`;
+    }
+  }
 };
 </script>
