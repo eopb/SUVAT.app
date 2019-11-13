@@ -7,7 +7,12 @@
         <slot></slot>)
       </sub>
     </h1>
-    <input v-model="letterValue" v-on:input="valuechange" type="number" step="any" />
+    <input
+      v-model="letterValue"
+      v-on:input="valuechange"
+      type="number"
+      step="any"
+    />
   </div>
 </template>
 
@@ -16,7 +21,6 @@ export default {
   name: "LetterValue",
   props: ["letter"],
   data: () => ({
-    creditLimit: "",
     letterValue: null
   }),
   methods: {

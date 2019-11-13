@@ -78,7 +78,6 @@ export default {
     Solution
   },
   data: () => ({
-    creditLimit: "",
     suvat: {
       s: null,
       u: null,
