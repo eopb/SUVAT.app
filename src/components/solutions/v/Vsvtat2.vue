@@ -2,10 +2,12 @@
 include ../mixins.pug
 div
   +th1
-    | v = {{ (suvat.s + 0.5 * suvat.a * Math.pow(suvat.t, 2)) / suvat.t }}
-    sub
-      | ms
-      sup -1
+    template(v-if="isFinite(soloution)")
+      | v = {{ soloution }}
+      sub
+        | ms
+        sup -1
+    template(v-else) Can't solve for v
   +sue
   +tmath 
     Mathr(formula="$s=vt-\\frac{1}{2}at^2$")
@@ -24,6 +26,12 @@ div
     | Lastly enter known values.
   +tmath
     Mathr(:formula="e1")
+  template(v-if="!isFinite(soloution)")
+    +th3
+      | Can't solve as denominator
+      Mathr(formula="$=0$" size="small")
+      | Can't divide by zero.
+
 
 </template>
 
@@ -43,6 +51,12 @@ export default {
       )}+\\frac{1}{2}\\times${maybeBracket(this.suvat.a)}\\times${maybeBracket(
         this.suvat.t
       )}^2}{${this.suvat.t}}$`;
+    },
+    soloution: function() {
+      return (
+        (this.suvat.s + 0.5 * this.suvat.a * Math.pow(this.suvat.t, 2)) /
+        this.suvat.t
+      );
     }
   }
 };
