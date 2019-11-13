@@ -8,7 +8,7 @@ div
       | u = &plusmn;{{
       | Math.abs(
       | Math.sqrt(
-      | Math.pow(this.suvat.v, 2) - 2 * this.suvat.a * this.suvat.s
+      | inRoot
       | )
       | )
       | }}
