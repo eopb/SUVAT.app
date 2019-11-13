@@ -1,9 +1,18 @@
 <template>
   <div id="app">
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
-      rel="stylesheet"
-    />
+    <header>
+      <div id="title">
+        <p>
+          <b>suvat calculator</b>
+        </p>
+      </div>
+      <aside>
+        <p>
+          Designed by
+          <a href="https://github.com/ethanboxx">Ethan Brierley</a>
+        </p>
+      </aside>
+    </header>
     <div id="grid-wrap">
       <LetterBox @letter-value-changed="bruh" letter="s">m</LetterBox>
       <Solution
@@ -130,13 +139,43 @@ body
   -moz-osx-font-smoothing: grayscale
   text-align: center
   color: #2c3e50
+  display: grid
+  grid-template-rows: 30px auto
+  min-height: 580px
+  height: 100vh
+  header
+    color: #fff
+    background-color: #222
+    #title
+      float: left
+    aside
+      float: right
+    > *
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      p
+        margin-left: 5px
+        margin-right: 5px
+        a
+          transition: .5s
+            timing-function: ease-out
+          display: inline-block
+          transition-timing-function: cubic-bezier(1,1.85,.34,-.03)
+          transform: scale(1, 1)
+          text-decoration: none
+          color: inherit
+          font-weight: bold
+          &:hover,
+          &:active
+            transform: scale(1, 1.8)
 
 #grid-wrap
   display: grid
   grid-template-columns: 300px 1fr
   grid-template-rows: repeat(5, 1fr)
-  min-height: 580px
-  height: 100vh
+
   background-color: #eee
   > *:nth-child(4n),
   > *:nth-child(4n - 1)
