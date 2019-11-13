@@ -58,7 +58,10 @@
         :suvat="suvat"
         letter="t"
       />
-      <div class="inputerr" v-if="!(solved.s || solved.u || solved.v || solved.a)">
+      <div
+        class="inputerr"
+        v-if="!(solved.s || solved.u || solved.v || solved.a)"
+      >
         <h1>Input at least 3 value to get solutions</h1>
       </div>
     </div>
@@ -184,7 +187,7 @@ body
       display: flex
       align-items: center
       justify-content: center
-  
+
   background-color: #eee
   > *:nth-child(4n),
   > *:nth-child(4n - 1)
