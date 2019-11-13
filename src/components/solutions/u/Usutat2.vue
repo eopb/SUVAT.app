@@ -7,88 +7,43 @@ div
       | ms
       sup -1
   +sue
-  +tmath
-    mi s
-    mo =
-    mi u
-    mi t
-    mo +
-    mfrac
-      mn 1
-      mn 2
-    mi a
-    msup
-      mi t
-      mn 2
+  +tmath 
+    Mathr(formula="$s=ut+\\frac{1}{2}at^2$")
   +th3
     | First lets rearrange this equation by subtracting
-    math
-      mfrac
-        mn 1
-        mn 2
-      mi a
-      msup
-        mi t
-        mn 2
+    Mathr(formula="$\\frac{1}{2}at^2$" size="small")
     | from both sides.
-  +tmath
-    mi s
-    mo -
-    mfrac
-      mn 1
-      mn 2
-    mi a
-    msup
-      mi t
-      mn 2
-    mo =
-    mi u
-    mi t
+  +tmath 
+    Mathr(formula="$s-\\frac{1}{2}at^2=ut$")
   +th3
     | First lets rearrange this equation by dividing both sides by
-    math
-      mi t
-  +tmath
-    mfrac
-      div
-        mi s
-        mo -
-        mfrac
-          mn 1
-          mn 2
-        mi a
-        msup
-          mi t
-          mn 2
-      mi t
-  mo =
-  mi u
+    Mathr(formula="$t$" size="small")
+  +tmath 
+    Mathr(formula="$\\frac{s-\\frac{1}{2}at^2}{t}=u$")
   +th3
     | Lastly enter known values.
-  +tmath
-    mfrac
-      div
-        mn {{ suvat.s }}
-        mo -
-        mfrac
-          mn 1
-          mn 2
-        mo &times;
-        mn {{ suvat.a }}
-        mo &times;
-        msup
-          mn {{ suvat.t }}
-          mn 2
-      mn {{ suvat.t }}
+  +tmath 
+    Mathr(:formula="e1")
 
 </template>
 
 <script>
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math.js";
 export default {
   name: "Usutat2",
   props: ["suvat", "letter"],
-  data: () => ({
-    creditLimit: ""
-  })
+  components: {
+    Mathr
+  },
+  computed: {
+    e1: function() {
+      return `$\\frac{${maybeBracket(
+        this.suvat.s
+      )}-\\frac{1}{2}\\times${maybeBracket(this.suvat.a)}\\times${maybeBracket(
+        this.suvat.t
+      )}^2}{${maybeBracket(this.suvat.t)}}$`;
+    }
+  }
 };
 </script>
