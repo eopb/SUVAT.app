@@ -14,14 +14,20 @@
       </aside>
     </header>
     <div id="grid-wrap">
-      <LetterBox @letter-value-changed="bruh" letter="s">m</LetterBox>
+      <LetterBox @letter-value-changed="bruh" letter="s" name="Displacement"
+        >m</LetterBox
+      >
       <Solution
         v-show="solved.s || solved.u || solved.v || solved.a"
         @solved="upA"
         :suvat="suvat"
         letter="s"
       />
-      <LetterBox @letter-value-changed="bruh" letter="u">
+      <LetterBox
+        @letter-value-changed="bruh"
+        letter="u"
+        name="Initial velocity"
+      >
         ms
         <sup>-1</sup>
       </LetterBox>
@@ -31,7 +37,7 @@
         :suvat="suvat"
         letter="u"
       />
-      <LetterBox @letter-value-changed="bruh" letter="v">
+      <LetterBox @letter-value-changed="bruh" letter="v" name="Final velocity">
         ms
         <sup>-1</sup>
       </LetterBox>
@@ -41,7 +47,7 @@
         :suvat="suvat"
         letter="v"
       />
-      <LetterBox @letter-value-changed="bruh" letter="a">
+      <LetterBox @letter-value-changed="bruh" letter="a" name="Accelleration">
         ms
         <sup>-2</sup>
       </LetterBox>
@@ -51,7 +57,9 @@
         :suvat="suvat"
         letter="a"
       />
-      <LetterBox @letter-value-changed="bruh" letter="t">s</LetterBox>
+      <LetterBox @letter-value-changed="bruh" letter="t" name="Time"
+        >s</LetterBox
+      >
       <Solution
         v-show="solved.s || solved.u || solved.v || solved.a"
         @solved="upA"
@@ -62,7 +70,7 @@
         class="inputerr"
         v-if="!(solved.s || solved.u || solved.v || solved.a)"
       >
-        <h1>Input at least 3 value to get solutions</h1>
+        <h1>Input at least three values to get solutions</h1>
       </div>
     </div>
   </div>

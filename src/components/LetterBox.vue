@@ -1,25 +1,30 @@
 <template>
   <div id="letter-box">
-    <h1>
-      {{ letter }}
-      <sub>
-        (
-        <slot></slot>)
-      </sub>
-    </h1>
-    <input
-      v-model="letterValue"
-      v-on:input="valuechange"
-      type="number"
-      step="any"
-    />
+    <div id="title">
+      <h3>{{ name }}</h3>
+    </div>
+    <div id="input-area">
+      <h1>
+        {{ letter }}
+        <sub>
+          (
+          <slot></slot>)
+        </sub>
+      </h1>
+      <input
+        v-model="letterValue"
+        v-on:input="valuechange"
+        type="number"
+        step="any"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "LetterValue",
-  props: ["letter"],
+  props: ["letter", "name"],
   data: () => ({
     letterValue: null
   }),
@@ -34,12 +39,21 @@ export default {
 <style scoped lang="sass">
 
 #letter-box
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: column
   @media (min-width: 700px)
     border-right: 5px solid #1C6EA4
+  #input-area
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    height: calc(100% - 29px)
+  #title
+    background-color: #888
+    color: #222
+    padding: 3px
+    h3
+      margin: 0
+
 
 h1
   margin: 0
