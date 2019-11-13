@@ -173,9 +173,8 @@ body
 
 #grid-wrap
   display: grid
-  grid-template-columns: 300px 1fr
+  grid-template-columns: 300px auto
   grid-template-rows: repeat(5, 1fr)
-
   background-color: #eee
   > *:nth-child(4n),
   > *:nth-child(4n - 1)

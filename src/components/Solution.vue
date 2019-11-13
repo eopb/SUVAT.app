@@ -272,8 +272,8 @@ export default {
 
 
 #solution
-  overflow-x:  auto
-  width: 100%
+  overflow-x: auto
+  width: auto
   > div
     display: inline-flex
     align-items: center
