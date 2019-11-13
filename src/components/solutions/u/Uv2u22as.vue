@@ -15,71 +15,39 @@ div
       | ms
       sup -1
   +sue
-  +tmath
-    msup
-      mi v
-      mn 2
-    mo =
-    msup
-      mi u
-      mn 2
-    mo +
-    mn 2
-    mi a
-    mi s
+  +tmath 
+    Mathr(formula="$v^2=u^2+2as$")
   +th3
     | First lets rearrange this equation by subtracting
-    math
-      mn 2
-      mi a
-      mi s
+    Mathr(formula="$2as$" size="small")
     | from both sides.
-  +tmath
-    msup
-      mi v
-      mn 2
-    mo -
-    mn 2
-    mi a
-    mi s
-    mo =
-    msup
-      mi u
-      mn 2
+  +tmath 
+    Mathr(formula="$v^2-2as=u^2$")
   +th3
     | Next square root both sides.
-  +tmath
-    msqrt
-      msup
-        mi v
-        mn 2
-      mo -
-      mn 2
-      mi a
-      mi s
-    mo =
-    mi u
+  +tmath 
+    Mathr(formula="$\\sqrt{v^2-2as}=u$")
   +th3
     | Lastly enter known values.
-  +tmath
-    msqrt
-      msup
-        mn {{ suvat.v }}
-        mn 2
-      mo -
-      mn 2
-      mo &times;
-      mn {{ suvat.a }}
-      mo &times;
-      mn {{ suvat.s }}
+  +tmath 
+    Mathr(:formula="e1")
 </template>
 
 <script>
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math";
 export default {
   name: "Uv2u22as",
   props: ["suvat", "letter"],
-  data: () => ({
-    creditLimit: ""
-  })
+  components: {
+    Mathr
+  },
+  computed: {
+    e1: function() {
+      return `$\\sqrt{${maybeBracket(this.suvat.v)}^2-2\\times${maybeBracket(
+        this.suvat.a
+      )}\\times${maybeBracket(this.suvat.s)}}$`;
+    }
+  }
 };
 </script>
