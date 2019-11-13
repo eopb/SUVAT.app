@@ -1,5 +1,3 @@
-// TODO not fin
-
 <template lang="pug">
 include ../mixins.pug
 div

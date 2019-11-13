@@ -1,5 +1,3 @@
-// TODO add better support for zero real roots and multiple soloutions.
-
 <template lang="pug">
 include ../mixins.pug
 div
