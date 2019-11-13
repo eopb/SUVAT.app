@@ -38,7 +38,8 @@ export default {
   align-items: center
   justify-content: center
   flex-direction: column
-  border-right: 5px solid #1C6EA4
+  @media (min-width: 700px)
+    border-right: 5px solid #1C6EA4
 
 h1
   margin: 0
