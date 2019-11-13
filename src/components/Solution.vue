@@ -275,9 +275,10 @@ export default {
   overflow-x:  auto
   width: 100%
   > div
-    display: inline flex
+    display: inline-flex
     align-items: center
     justify-content: flex-start
+    align-items: stretch
     flex-direction: row
     height: 100%
     min-width: 100%
@@ -290,9 +291,10 @@ export default {
         font-size: 1.4em
 
     > *
-      height: 100%
       min-width: 300px
-
+      max-width: auto
+      padding-left: 10px
+      padding-right: 10px
       box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75)
       display: flex
       align-items: center
@@ -301,7 +303,7 @@ export default {
         font-size: 3em
         white-space: nowrap
         padding: 10px
-    h2
+    > h2
       writing-mode: vertical-lr
       text-orientation: sideways
       transform: rotate(180deg)
