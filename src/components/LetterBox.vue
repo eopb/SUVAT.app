@@ -7,12 +7,7 @@
         <slot></slot>)
       </sub>
     </h1>
-    <input
-      v-model="letterValue"
-      v-on:input="valuechange"
-      type="number"
-      step="any"
-    />
+    <input v-model="letterValue" v-on:input="valuechange" type="number" step="any" />
   </div>
 </template>
 
@@ -32,7 +27,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
 
 #letter-box

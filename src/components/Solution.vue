@@ -2,72 +2,28 @@
   <div id="solution">
     <template v-if="formular() !== null && letterValue() === null">
       <template v-if="letter === s">
-        <Ssutat2
-          v-if="formular() === 2"
-          :suvat="suvat"
-          :letter="letter"
-        ></Ssutat2>
-        <Suvt
-          v-else-if="formular() === 3"
-          :suvat="suvat"
-          :letter="letter"
-        ></Suvt>
-        <Sv2u22as
-          v-else-if="formular() === 4"
-          :suvat="suvat"
-          :letter="letter"
-        ></Sv2u22as>
-        <Ssvtat2
-          v-if="formular() === 5"
-          :suvat="suvat"
-          :letter="letter"
-        ></Ssvtat2>
+        <Ssutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Ssutat2>
+        <Suvt v-else-if="formular() === 3" :suvat="suvat" :letter="letter"></Suvt>
+        <Sv2u22as v-else-if="formular() === 4" :suvat="suvat" :letter="letter"></Sv2u22as>
+        <Ssvtat2 v-if="formular() === 5" :suvat="suvat" :letter="letter"></Ssvtat2>
       </template>
       <template v-if="letter === u">
         <Uvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Uvuat>
-        <Usutat2
-          v-if="formular() === 2"
-          :suvat="suvat"
-          :letter="letter"
-        ></Usutat2>
+        <Usutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Usutat2>
         <Uuvt v-if="formular() === 3" :suvat="suvat" :letter="letter"></Uuvt>
-        <Uv2u22as
-          v-if="formular() === 4"
-          :suvat="suvat"
-          :letter="letter"
-        ></Uv2u22as>
+        <Uv2u22as v-if="formular() === 4" :suvat="suvat" :letter="letter"></Uv2u22as>
       </template>
       <template v-if="letter === v">
         <Vvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Vvuat>
         <Vuvt v-if="formular() === 3" :suvat="suvat" :letter="letter"></Vuvt>
-        <Vuv2u22as
-          v-if="formular() === 4"
-          :suvat="suvat"
-          :letter="letter"
-        ></Vuv2u22as>
-        <Vsvtat2
-          v-if="formular() === 5"
-          :suvat="suvat"
-          :letter="letter"
-        ></Vsvtat2>
+        <Vuv2u22as v-if="formular() === 4" :suvat="suvat" :letter="letter"></Vuv2u22as>
+        <Vsvtat2 v-if="formular() === 5" :suvat="suvat" :letter="letter"></Vsvtat2>
       </template>
       <template v-if="letter === a">
         <Avuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Avuat>
-        <Asutat2
-          v-if="formular() === 2"
-          :suvat="suvat"
-          :letter="letter"
-        ></Asutat2>
-        <Av2u22as
-          v-if="formular() === 4"
-          :suvat="suvat"
-          :letter="letter"
-        ></Av2u22as>
-        <Asvtat2
-          v-if="formular() === 5"
-          :suvat="suvat"
-          :letter="letter"
-        ></Asvtat2>
+        <Asutat2 v-if="formular() === 2" :suvat="suvat" :letter="letter"></Asutat2>
+        <Av2u22as v-if="formular() === 4" :suvat="suvat" :letter="letter"></Av2u22as>
+        <Asvtat2 v-if="formular() === 5" :suvat="suvat" :letter="letter"></Asvtat2>
       </template>
     </template>
   </div>
@@ -267,7 +223,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass">
 
 
