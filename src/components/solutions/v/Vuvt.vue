@@ -7,53 +7,41 @@ div
       | ms
       sup -1
   +sue
-  +tmath
-    mi s
-    mo =
-    mfrac
-      mn 1
-      mn 2
-    mo (
-    mi u
-    mo +
-    mi v
-    mo )
-    mi t
+  +tmath 
+    Mathr(formula="$s=\\frac{1}{2}(u+v)t$")
+  +th3
+    | First lets rearrange this equation by dividing both sides by
+    Mathr(formula="$\\frac{1}{2}t$" size="small")
+  +tmath 
+    Mathr(formula="$\\frac{2s}{t}=u+v$")
   +th3
     | Next lets rearrange this equation by subtracting
-    math
-      mi u
+    Mathr(formula="$u$" size="small")
     | from both sides.
-  +tmath
-    mfrac
-      div
-        mn 2
-        mi s
-      mi t
-    mo -
-    mi u
-    mo =
-    mi v
+  +tmath 
+    Mathr(formula="$\\frac{2s}{t}-u=v$")
   +th3
     | Lastly enter known values.
-  +tmath
-    mfrac
-      div
-        mn 2
-        mo &times;
-        mn {{ suvat.s }}
-      mn {{ suvat.t }}
-    mo -
-    mn {{ suvat.u }}
+  +tmath 
+    Mathr(:formula="e1")
 
 </template>
 
 <script>
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math.js";
 export default {
   name: "Vuvt",
   props: ["suvat", "letter"],
-  data: () => ({
-    creditLimit: ""
-  })
+  components: {
+    Mathr
+  },
+  computed: {
+    e1: function() {
+      return `$\\frac{2\\times${maybeBracket(this.suvat.s)}}{${maybeBracket(
+        this.suvat.t
+      )}}-${maybeBracket(this.suvat.u)}$`;
+    }
+  }
 };
 </script>

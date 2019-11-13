@@ -7,30 +7,30 @@ div
       | ms
       sup -1
   +sue
-  +tmath
-    mi v
-    mo =
-    mi u
-    mo +
-    mi a
-    mi t
+  +tmath 
+    Mathr(formula="$v=u+at$")
   +th3
     | Enter known values.
-  +tmath
-    mn {{ suvat.u }}
-    mo +
-    mn {{ suvat.a }}
-    mo &times;
-    mn {{ suvat.t }}
+  +tmath 
+    Mathr(:formula="e1")
 
 </template>
 
 <script>
+import Mathr from "../../Mathr.vue";
+import maybeBracket from "../../math.js";
 export default {
   name: "Vvuat",
   props: ["suvat", "letter"],
-  data: () => ({
-    creditLimit: ""
-  })
+  components: {
+    Mathr
+  },
+  computed: {
+    e1: function() {
+      return `$${this.suvat.u}+${maybeBracket(
+        this.suvat.a
+      )}\\times${maybeBracket(this.suvat.t)}$`;
+    }
+  }
 };
 </script>
