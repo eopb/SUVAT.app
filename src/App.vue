@@ -148,7 +148,7 @@ body
   color: #2c3e50
   display: grid
   grid-template-rows: 30px auto
-  min-height: 1000px
+  min-height: 750px
   height: 100vh
   header
     color: #fff
