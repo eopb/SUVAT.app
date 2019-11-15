@@ -3,7 +3,7 @@ include ../mixins.pug
 div
   +th1
     template(v-if="isFinite(soloution)")
-      | t = {{ 0.5 * (suvat.u + suvat.v) * suvat.t }}
+      | t = {{ soloution }}
       sub s
     template(v-else) Can't solve for t
   +sue
@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\frac{2${maybeBracket(this.suvat.s)}}{${maybeBracket(
+      return `$\\frac{2\\times${maybeBracket(this.suvat.s)}}{${maybeBracket(
         this.suvat.u
       )}+${maybeBracket(this.suvat.v)}}$`;
     },
