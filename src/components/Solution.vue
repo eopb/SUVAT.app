@@ -345,20 +345,24 @@ export default {
       display: flex
       align-items: center
       justify-content: center
+
       math
         font-size: 3em
         white-space: nowrap
         padding: 10px
+      @for $i from 1 through 20
+        &:nth-child(#{$i})
+            transition-delay: (($i - 1s) / 10) + .02
     > h2
       writing-mode: vertical-lr
       text-orientation: sideways
       transform: rotate(180deg)
       width: 100px
       min-width: unset
-
 .fade-enter-active, .fade-leave-active
-  transition: opacity .5s
-
+  transition: .5s
+  transform: scale(1)
 .fade-enter, .fade-leave-to
   opacity: 0
+  transform: scale(0.8)
 </style>
