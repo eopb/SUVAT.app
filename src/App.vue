@@ -8,7 +8,13 @@
       </div>
       <div id="about">
         <p>
-          <button @click="toggleAbout()">About suvat</button>
+          <button @click="toggleAbout()">
+            <template v-if="!about"
+              >About suvat</template
+            ><template v-else
+              >Back</template
+            >
+          </button>
         </p>
       </div>
       <aside>
