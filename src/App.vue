@@ -8,7 +8,7 @@
       </div>
       <div id="about">
         <p>
-          <a href="#about">about suvat</a>
+          <button @click="toggleAbout()">About suvat</button>
         </p>
       </div>
       <aside>
@@ -18,7 +18,7 @@
         </p>
       </aside>
     </header>
-    <div id="grid-wrap">
+    <div id="grid-wrap" v-if="!about">
       <LetterBox
         @letter-value-changed="updateLater"
         letter="s"
@@ -64,17 +64,20 @@
         <h1>Input only three values to get solutions</h1>
       </div>
     </div>
+    <About id="about" v-else></About>
   </div>
 </template>
 <script>
 import LetterBox from "./components/LetterBox.vue";
 import Solution from "./components/Solution.vue";
+import About from "./components/About.vue";
 
 export default {
   name: "app",
   components: {
     LetterBox,
-    Solution
+    Solution,
+    About
   },
   data: () => ({
     suvat: {
@@ -83,10 +86,14 @@ export default {
       v: null,
       a: null,
       t: null
-    }
+    },
+    about: false
   }),
 
   methods: {
+    toggleAbout: function() {
+      this.about = !this.about;
+    },
     updateLater(value, letter) {
       value = parseFloat(value);
 
