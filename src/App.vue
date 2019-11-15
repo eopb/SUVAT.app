@@ -106,7 +106,6 @@ export default {
       );
     },
     showSoloutions: function() {
-      console.log(this.numOfInputs);
       return this.numOfInputs === 3;
     },
     inputPrompt: function() {
