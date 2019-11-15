@@ -1,6 +1,6 @@
 <template>
   <div id="solution">
-    <template v-if="formular() !== null && letterValue() === null">
+    <template v-if="formular() !== null">
       <template v-if="letter === s">
         <Ssutat2
           v-if="formular() === 2"
@@ -138,38 +138,9 @@ export default {
     u: "u",
     v: "v",
     a: "a",
-    t: "t",
-    solved: { s: null, u: null, v: null, a: null, t: null }
+    t: "t"
   }),
-  updated: function() {
-    this.solved = {
-      s: this.letter === this.s ? this.formular() !== null : this.solved.s,
-      u: this.letter === this.u ? this.formular() !== null : this.solved.u,
-      v: this.letter === this.v ? this.formular() !== null : this.solved.v,
-      a: this.letter === this.a ? this.formular() !== null : this.solved.a,
-      t: this.letter === this.t ? this.formular() !== null : this.solved.t
-    };
-    this.$emit("solved", this.solved);
-  },
   methods: {
-    letterValue() {
-      switch (this.letter) {
-        case "s":
-          return this.suvat.s;
-
-        case "u":
-          return this.suvat.u;
-
-        case "v":
-          return this.suvat.v;
-
-        case "a":
-          return this.suvat.a;
-
-        case "t":
-          return this.suvat.t;
-      }
-    },
     formular() {
       switch (this.letter) {
         case "s":

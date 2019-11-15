@@ -17,12 +17,7 @@
       <LetterBox @letter-value-changed="bruh" letter="s" name="Displacement"
         >m</LetterBox
       >
-      <Solution
-        v-show="showSoloutions"
-        @solved="upA"
-        :suvat="suvat"
-        letter="s"
-      />
+      <Solution v-show="showSoloutions" :suvat="suvat" letter="s" />
       <LetterBox
         @letter-value-changed="bruh"
         letter="u"
@@ -31,41 +26,21 @@
         ms
         <sup>-1</sup>
       </LetterBox>
-      <Solution
-        v-show="showSoloutions"
-        @solved="upA"
-        :suvat="suvat"
-        letter="u"
-      />
+      <Solution v-show="showSoloutions" :suvat="suvat" letter="u" />
       <LetterBox @letter-value-changed="bruh" letter="v" name="Final velocity">
         ms
         <sup>-1</sup>
       </LetterBox>
-      <Solution
-        v-show="showSoloutions"
-        @solved="upA"
-        :suvat="suvat"
-        letter="v"
-      />
+      <Solution v-show="showSoloutions" :suvat="suvat" letter="v" />
       <LetterBox @letter-value-changed="bruh" letter="a" name="Accelleration">
         ms
         <sup>-2</sup>
       </LetterBox>
-      <Solution
-        v-show="showSoloutions"
-        @solved="upA"
-        :suvat="suvat"
-        letter="a"
-      />
+      <Solution v-show="showSoloutions" :suvat="suvat" letter="a" />
       <LetterBox @letter-value-changed="bruh" letter="t" name="Time"
         >s</LetterBox
       >
-      <Solution
-        v-show="showSoloutions"
-        @solved="upA"
-        :suvat="suvat"
-        letter="t"
-      />
+      <Solution v-show="showSoloutions" :suvat="suvat" letter="t" />
       <div class="inputerr" v-if="inputPrompt">
         <h1>Input three values to get solutions</h1>
       </div>
@@ -92,8 +67,7 @@ export default {
       v: null,
       a: null,
       t: null
-    },
-    solved: { s: false, u: false, v: false, a: false, t: false }
+    }
   }),
 
   methods: {
@@ -119,15 +93,6 @@ export default {
           this.suvat.t = value;
           break;
       }
-    },
-    upA(v) {
-      this.solved = {
-        s: v.s !== null ? v.s : this.solved.s,
-        u: v.u !== null ? v.u : this.solved.u,
-        v: v.v !== null ? v.v : this.solved.v,
-        a: v.a !== null ? v.a : this.solved.a,
-        t: v.t !== null ? v.t : this.solved.t
-      };
     }
   },
   computed: {
