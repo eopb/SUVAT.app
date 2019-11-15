@@ -98,6 +98,13 @@ export default {
 
   methods: {
     toggleAbout: function() {
+      if (this.about) this.suvat = {
+      s: null,
+      u: null,
+      v: null,
+      a: null,
+      t: null
+    };
       this.about = !this.about;
     },
     updateLater(value, letter) {
