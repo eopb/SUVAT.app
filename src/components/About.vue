@@ -42,6 +42,13 @@
           >constant acceleration</a
         >.
       </p>
+      <p class="smalltext">
+        If you run into any issues with this calculator please email
+        <a
+          href="mailto:incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com"
+          >incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com</a
+        >.
+      </p>
     </div>
   </div>
 </template>
@@ -68,6 +75,8 @@ export default {
       width: 800px
     p, li
       font-size: 1.1em
+      &.smalltext
+        font-size: 0.8em
     ul
       padding-left: 16px
 </style>
