@@ -14,12 +14,15 @@
       </aside>
     </header>
     <div id="grid-wrap">
-      <LetterBox @letter-value-changed="bruh" letter="s" name="Displacement"
+      <LetterBox
+        @letter-value-changed="updateLater"
+        letter="s"
+        name="Displacement"
         >m</LetterBox
       >
       <Solution v-show="showSoloutions" :suvat="suvat" letter="s" />
       <LetterBox
-        @letter-value-changed="bruh"
+        @letter-value-changed="updateLater"
         letter="u"
         name="Initial velocity"
       >
@@ -27,17 +30,25 @@
         <sup>-1</sup>
       </LetterBox>
       <Solution v-show="showSoloutions" :suvat="suvat" letter="u" />
-      <LetterBox @letter-value-changed="bruh" letter="v" name="Final velocity">
+      <LetterBox
+        @letter-value-changed="updateLater"
+        letter="v"
+        name="Final velocity"
+      >
         ms
         <sup>-1</sup>
       </LetterBox>
       <Solution v-show="showSoloutions" :suvat="suvat" letter="v" />
-      <LetterBox @letter-value-changed="bruh" letter="a" name="Accelleration">
+      <LetterBox
+        @letter-value-changed="updateLater"
+        letter="a"
+        name="Accelleration"
+      >
         ms
         <sup>-2</sup>
       </LetterBox>
       <Solution v-show="showSoloutions" :suvat="suvat" letter="a" />
-      <LetterBox @letter-value-changed="bruh" letter="t" name="Time"
+      <LetterBox @letter-value-changed="updateLater" letter="t" name="Time"
         >s</LetterBox
       >
       <Solution v-show="showSoloutions" :suvat="suvat" letter="t" />
@@ -71,7 +82,7 @@ export default {
   }),
 
   methods: {
-    bruh(value, letter) {
+    updateLater(value, letter) {
       value = parseFloat(value);
 
       if (isNaN(value)) value = null;
