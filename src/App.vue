@@ -11,7 +11,8 @@
           <button @click="toggleAbout()">
             <template v-if="!about"
               >About suvat</template
-            ><template v-else
+            >
+            <template v-else
               >Back</template
             >
           </button>
@@ -170,7 +171,9 @@ body
   text-align: center
   color: #2c3e50
   display: grid
-  grid-template-rows: 30px auto
+  grid-template-rows: 60px auto
+  @media (min-width: 470px)
+    grid-template-rows: 30px auto
   min-height: 750px
   height: 100vh
   header
