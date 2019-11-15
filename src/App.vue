@@ -6,8 +6,13 @@
           <b>suvat calculator</b>
         </p>
       </div>
-      <aside>
+      <div id="about">
         <p>
+          <a href="#about">about suvat</a>
+        </p>
+      </div>
+      <aside>
+        <p class="credit">
           Designed by
           <a href="https://github.com/ethanboxx">Ethan Brierley</a>
         </p>
@@ -150,10 +155,8 @@ body
   header
     color: #fff
     background-color: #222
-    #title
-      float: left
-    aside
-      float: right
+    display: flex
+    justify-content: space-between
     > *
       display: flex
       align-items: center
@@ -162,7 +165,7 @@ body
       p
         margin-left: 5px
         margin-right: 5px
-        a
+        &.credit a
           transition: .5s
             timing-function: ease-out
           display: inline-block
