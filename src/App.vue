@@ -18,7 +18,7 @@
         >m</LetterBox
       >
       <Solution
-        v-show="solved.s || solved.u || solved.v || solved.a"
+        v-show="showSoloutions"
         @solved="upA"
         :suvat="suvat"
         letter="s"
@@ -32,7 +32,7 @@
         <sup>-1</sup>
       </LetterBox>
       <Solution
-        v-show="solved.s || solved.u || solved.v || solved.a"
+        v-show="showSoloutions"
         @solved="upA"
         :suvat="suvat"
         letter="u"
@@ -42,7 +42,7 @@
         <sup>-1</sup>
       </LetterBox>
       <Solution
-        v-show="solved.s || solved.u || solved.v || solved.a"
+        v-show="showSoloutions"
         @solved="upA"
         :suvat="suvat"
         letter="v"
@@ -52,7 +52,7 @@
         <sup>-2</sup>
       </LetterBox>
       <Solution
-        v-show="solved.s || solved.u || solved.v || solved.a"
+        v-show="showSoloutions"
         @solved="upA"
         :suvat="suvat"
         letter="a"
@@ -61,16 +61,16 @@
         >s</LetterBox
       >
       <Solution
-        v-show="solved.s || solved.u || solved.v || solved.a"
+        v-show="showSoloutions"
         @solved="upA"
         :suvat="suvat"
         letter="t"
       />
-      <div
-        class="inputerr"
-        v-if="!(solved.s || solved.u || solved.v || solved.a)"
-      >
-        <h1>Input at least three values to get solutions</h1>
+      <div class="inputerr" v-if="inputPrompt">
+        <h1>Input three values to get solutions</h1>
+      </div>
+      <div class="inputerr" v-if="inputLessPrompt">
+        <h1>Input only three values to get solutions</h1>
       </div>
     </div>
   </div>
@@ -128,6 +128,27 @@ export default {
         a: v.a !== null ? v.a : this.solved.a,
         t: v.t !== null ? v.t : this.solved.t
       };
+    }
+  },
+  computed: {
+    numOfInputs: function() {
+      return (
+        (this.suvat.s === null ? 0 : 1) +
+        (this.suvat.u === null ? 0 : 1) +
+        (this.suvat.v === null ? 0 : 1) +
+        (this.suvat.a === null ? 0 : 1) +
+        (this.suvat.t === null ? 0 : 1)
+      );
+    },
+    showSoloutions: function() {
+      console.log(this.numOfInputs);
+      return this.numOfInputs === 3;
+    },
+    inputPrompt: function() {
+      return this.numOfInputs < 3;
+    },
+    inputLessPrompt: function() {
+      return this.numOfInputs > 3;
     }
   }
 };
