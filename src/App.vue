@@ -1,3 +1,6 @@
+// TODO better support for zero acceleration using v=s/t
+// TODO support for g and -g followed by a number for decimal places
+
 <template>
   <div id="app">
     <header>
