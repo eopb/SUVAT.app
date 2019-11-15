@@ -7,11 +7,11 @@
 
 If you run into any issues with this calculator please email [incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com](mailto:incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com)
 
-## What is it.
+## What is it?
 
 A single page web app that solves physics problems with constant acceleration.
 
-## Why make this when there are existing online suvat calculators.
+## Why make this when there are existing online suvat calculators?
 
 This suvat calculator has not only a better design than the others I have seen. It also provides step by step solutions explaining exactly how you could solve the same problem without the calculator.
 
