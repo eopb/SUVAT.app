@@ -69,6 +69,20 @@
           :letter="letter"
         ></Asvtat2>
       </template>
+      <template v-if="letter === t">
+        <Tvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Tvuat>
+        <Tsutat2
+          v-if="formular() === 2"
+          :suvat="suvat"
+          :letter="letter"
+        ></Tsutat2>
+        <Tuvt v-if="formular() === 3" :suvat="suvat" :letter="letter"></Tuvt>
+        <Tsvtat2
+          v-if="formular() === 5"
+          :suvat="suvat"
+          :letter="letter"
+        ></Tsvtat2>
+      </template>
     </template>
   </div>
 </template>
@@ -90,6 +104,10 @@ import Avuat from "./solutions/a/Avuat.vue";
 import Asutat2 from "./solutions/a/Asutat2.vue";
 import Av2u22as from "./solutions/a/Av2u22as.vue";
 import Asvtat2 from "./solutions/a/Asvtat2.vue";
+import Tvuat from "./solutions/t/Tvuat.vue";
+import Tsutat2 from "./solutions/t/Tsutat2.vue";
+import Tuvt from "./solutions/t/Tuvt.vue";
+import Tsvtat2 from "./solutions/t/Tsvtat2.vue";
 export default {
   name: "Solution",
   components: {
@@ -108,7 +126,11 @@ export default {
     Avuat,
     Asutat2,
     Av2u22as,
-    Asvtat2
+    Asvtat2,
+    Tvuat,
+    Tsutat2,
+    Tuvt,
+    Tsvtat2
   },
   props: ["suvat", "letter"],
   data: () => ({
@@ -116,14 +138,16 @@ export default {
     u: "u",
     v: "v",
     a: "a",
-    solved: { s: null, u: null, v: null, a: null }
+    t: "t",
+    solved: { s: null, u: null, v: null, a: null, t: null }
   }),
   updated: function() {
     this.solved = {
       s: this.letter === this.s ? this.formular() !== null : this.solved.s,
       u: this.letter === this.u ? this.formular() !== null : this.solved.u,
       v: this.letter === this.v ? this.formular() !== null : this.solved.v,
-      a: this.letter === this.a ? this.formular() !== null : this.solved.a
+      a: this.letter === this.a ? this.formular() !== null : this.solved.a,
+      t: this.letter === this.t ? this.formular() !== null : this.solved.t
     };
     this.$emit("solved", this.solved);
   },
@@ -258,6 +282,30 @@ export default {
           break;
 
         case "t":
+          if (
+            this.suvat.v !== null &&
+            this.suvat.u !== null &&
+            this.suvat.a !== null
+          )
+            return 1;
+          if (
+            this.suvat.s !== null &&
+            this.suvat.u !== null &&
+            this.suvat.a !== null
+          )
+            return 2;
+          if (
+            this.suvat.s !== null &&
+            this.suvat.u !== null &&
+            this.suvat.v !== null
+          )
+            return 3;
+          if (
+            this.suvat.s !== null &&
+            this.suvat.v !== null &&
+            this.suvat.a !== null
+          )
+            return 5;
           break;
       }
       return null;

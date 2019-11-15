@@ -93,7 +93,7 @@ export default {
       a: null,
       t: null
     },
-    solved: { s: false, u: false, v: false, a: false }
+    solved: { s: false, u: false, v: false, a: false, t: false }
   }),
 
   methods: {
@@ -125,7 +125,8 @@ export default {
         s: v.s !== null ? v.s : this.solved.s,
         u: v.u !== null ? v.u : this.solved.u,
         v: v.v !== null ? v.v : this.solved.v,
-        a: v.a !== null ? v.a : this.solved.a
+        a: v.a !== null ? v.a : this.solved.a,
+        t: v.t !== null ? v.t : this.solved.t
       };
     }
   }
