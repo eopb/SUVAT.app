@@ -12,7 +12,10 @@
       <Mathr
         formula="$v=u+at\\s=ut+\frac{1}{2}at^2\\s=\frac{1}{2}(u+v)t\\v^2=u^2+2as\\s=vt-\frac{1}{2}at^2$"
       />
-      <p>Using these equations any three variables combined with the correct equations can be used to calcuate the other two values.</p>
+      <p>
+        Using these equations any three variables combined with the correct
+        equations can be used to calcuate the other two values.
+      </p>
     </div>
   </div>
 </template>
