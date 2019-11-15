@@ -16,6 +16,7 @@
         v-on:input="valuechange"
         type="number"
         step="any"
+        :name="name"
       />
     </div>
   </div>
