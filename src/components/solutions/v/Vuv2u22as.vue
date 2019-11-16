@@ -14,11 +14,11 @@ div
     template(v-else) No real roots for v
   +sue
   +tmath 
-    Mathr(formula="$v^2=u^2+2as$")
+    Mathr(formula="v^2=u^2+2as")
   +th3
     | First lets square root both sides.
   +tmath 
-    Mathr(formula="$v=\\sqrt{u^2+2as}$")
+    Mathr(formula="v=\\sqrt{u^2+2as}")
   +th3
     | Lastly enter known values.
   +tmath 
@@ -41,14 +41,14 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\sqrt{${maybeBracket(this.suvat.u)}^2+2\\times${maybeBracket(
+      return `\\sqrt{${maybeBracket(this.suvat.u)}^2+2\\times${maybeBracket(
         this.suvat.a
-      )}\\times${maybeBracket(this.suvat.s)}}$`;
+      )}\\times${maybeBracket(this.suvat.s)}}`;
     },
     e2: function() {
-      return `$${maybeBracket(this.suvat.u)}^2+2\\times${maybeBracket(
+      return `${maybeBracket(this.suvat.u)}^2+2\\times${maybeBracket(
         this.suvat.a
-      )}\\times${maybeBracket(this.suvat.s)}<0$`;
+      )}\\times${maybeBracket(this.suvat.s)}<0`;
     },
     inRoot: function() {
       return Math.pow(this.suvat.u, 2) + 2 * this.suvat.a * this.suvat.s;

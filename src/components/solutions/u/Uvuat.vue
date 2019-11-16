@@ -8,13 +8,13 @@ div
       sup -1
   +sue
   +tmath 
-    Mathr(formula="$v=u+at$")
+    Mathr(formula="v=u+at")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="$at$" size="small")
+    Mathr(formula="at" size="small")
     | from both sides.
   +tmath 
-    Mathr(formula="$v-at=u$")
+    Mathr(formula="v-at=u")
   +th3
     | Lastly enter known values.
   +tmath 
@@ -33,9 +33,9 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$${maybeBracket(this.suvat.v)}-${maybeBracket(
+      return `${maybeBracket(this.suvat.v)}-${maybeBracket(
         this.suvat.a
-      )}\\times${maybeBracket(this.suvat.t)}$`;
+      )}\\times${maybeBracket(this.suvat.t)}`;
     }
   }
 };

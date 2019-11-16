@@ -16,17 +16,17 @@ div
     template(v-else) No real roots for u
   +sue
   +tmath 
-    Mathr(formula="$v^2=u^2+2as$")
+    Mathr(formula="v^2=u^2+2as")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="$2as$" size="small")
+    Mathr(formula="2as" size="small")
     | from both sides.
   +tmath 
-    Mathr(formula="$v^2-2as=u^2$")
+    Mathr(formula="v^2-2as=u^2")
   +th3
     | Next square root both sides.
   +tmath 
-    Mathr(formula="$\\sqrt{v^2-2as}=u$")
+    Mathr(formula="\\sqrt{v^2-2as}=u")
   +th3
     | Lastly enter known values.
   +tmath 
@@ -49,14 +49,14 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\sqrt{${maybeBracket(this.suvat.v)}^2-2\\times${maybeBracket(
+      return `\\sqrt{${maybeBracket(this.suvat.v)}^2-2\\times${maybeBracket(
         this.suvat.a
-      )}\\times${maybeBracket(this.suvat.s)}}$`;
+      )}\\times${maybeBracket(this.suvat.s)}}`;
     },
     e2: function() {
-      return `$${maybeBracket(this.suvat.v)}^2-2\\times${maybeBracket(
+      return `${maybeBracket(this.suvat.v)}^2-2\\times${maybeBracket(
         this.suvat.a
-      )}\\times${maybeBracket(this.suvat.s)}<0$`;
+      )}\\times${maybeBracket(this.suvat.s)}<0`;
     },
     inRoot: function() {
       return Math.pow(this.suvat.v, 2) - 2 * this.suvat.a * this.suvat.s;

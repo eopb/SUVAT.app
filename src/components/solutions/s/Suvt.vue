@@ -6,7 +6,7 @@ div
     sub m
   +sue
   +tmath 
-    Mathr(formula="$s=\\frac{1}{2}(u+v)t$")
+    Mathr(formula="s=\\frac{1}{2}(u+v)t")
   +th3
     | Enter known values.
   +tmath
@@ -24,9 +24,9 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\frac{1}{2}\\times(${maybeBracket(this.suvat.u)}+${maybeBracket(
+      return `\\frac{1}{2}\\times(${maybeBracket(this.suvat.u)}+${maybeBracket(
         this.suvat.v
-      )})\\times${maybeBracket(this.suvat.t)}$`;
+      )})\\times${maybeBracket(this.suvat.t)}`;
     }
   }
 };

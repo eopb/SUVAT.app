@@ -8,21 +8,21 @@ div
     template(v-else) Can't solve for t
   +sue
   +tmath 
-    Mathr(formula="$s=vt-\\frac{1}{2}at^2$")
+    Mathr(formula="s=vt-\\frac{1}{2}at^2")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="$s$" size="small")
+    Mathr(formula="s" size="small")
     | from both sides.
   +tmath 
-    Mathr(formula="$0=-\\frac{1}{2}at^2+vt-s$")
+    Mathr(formula="0=-\\frac{1}{2}at^2+vt-s")
   +th3
     | Using the quadratic equation
-    Mathr(formula="$\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$" size="small")
+    Mathr(formula="\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}" size="small")
     | we can deduce a formula for
-    Mathr(formula="$t$" size="small")
+    Mathr(formula="t" size="small")
     | .
   +tmath 
-    Mathr(formula="$t=\\frac{-v\\pm\\sqrt{v^2-2as}}{-a}$")
+    Mathr(formula="t=\\frac{-v\\pm\\sqrt{v^2-2as}}{-a}")
   +th3
     | Enter known values.
   +tmath
@@ -35,7 +35,7 @@ div
   emplate(v-else-if="!isFinite(soloution)")
     +th3
       | Can't solve as denominator
-      Mathr(formula="$=0$" size="small")
+      Mathr(formula="=0" size="small")
       | Can't divide by zero.
 
 </template>
@@ -51,16 +51,16 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\frac{-${maybeBracket(this.suvat.v)}\\pm\\sqrt{${maybeBracket(
+      return `\\frac{-${maybeBracket(this.suvat.v)}\\pm\\sqrt{${maybeBracket(
         this.suvat.v
       )}^2-2\\times ${maybeBracket(this.suvat.a)}\\times ${maybeBracket(
         this.suvat.s
-      )}}}{${maybeBracket(this.suvat.a)}}$`;
+      )}}}{${maybeBracket(this.suvat.a)}}`;
     },
     e2: function() {
-      return `$${maybeBracket(this.suvat.v)}^2-2\\times ${maybeBracket(
+      return `${maybeBracket(this.suvat.v)}^2-2\\times ${maybeBracket(
         this.suvat.a
-      )}\\times ${maybeBracket(this.suvat.s)}<0$`;
+      )}\\times ${maybeBracket(this.suvat.s)}<0`;
     },
     soloution: function() {
       return (-this.suvat.v - Math.sqrt(this.v22as)) / this.a2;

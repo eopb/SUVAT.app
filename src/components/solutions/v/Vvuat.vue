@@ -8,7 +8,7 @@ div
       sup -1
   +sue
   +tmath 
-    Mathr(formula="$v=u+at$")
+    Mathr(formula="v=u+at")
   +th3
     | Enter known values.
   +tmath 
@@ -27,9 +27,9 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$${this.suvat.u}+${maybeBracket(
+      return `${this.suvat.u}+${maybeBracket(
         this.suvat.a
-      )}\\times${maybeBracket(this.suvat.t)}$`;
+      )}\\times${maybeBracket(this.suvat.t)}`;
     }
   }
 };

@@ -10,23 +10,23 @@ div
     template(v-else) Can't solve for a
   +sue
   +tmath 
-    Mathr(formula="$s=vt-\\frac{1}{2}at^2$")
+    Mathr(formula="s=vt-\\frac{1}{2}at^2")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="$ut$" size="small")
+    Mathr(formula="ut" size="small")
     | from both sides.
   +tmath 
-    Mathr(formula="$s-vt=-\\frac{1}{2}at^2$")
+    Mathr(formula="s-vt=-\\frac{1}{2}at^2")
   +th3
     | First lets rearrange this equation by multiplying both sides by
-    Mathr(formula="$-1$" size="small")
+    Mathr(formula="-1" size="small")
   +tmath 
-    Mathr(formula="$vt-s=\\frac{1}{2}at^2$")
+    Mathr(formula="vt-s=\\frac{1}{2}at^2")
   +th3
     | Next lets rearrange this equation by dividing both sides by
-    Mathr(formula="$\\frac{1}{2}t^2$" size="small")
+    Mathr(formula="\\frac{1}{2}t^2" size="small")
   +tmath 
-    Mathr(formula="$\\frac{vt-s}{\\frac{1}{2}t^2}=a$")
+    Mathr(formula="\\frac{vt-s}{\\frac{1}{2}t^2}=a")
   +th3
     | Lastly enter known values.
   +tmath 
@@ -49,14 +49,14 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\frac{${maybeBracket(this.suvat.v)}\\times${maybeBracket(
+      return `\\frac{${maybeBracket(this.suvat.v)}\\times${maybeBracket(
         this.suvat.t
       )}-${maybeBracket(this.suvat.s)}}{\\frac{1}{2}\\times${maybeBracket(
         this.suvat.t
-      )}^2}$`;
+      )}^2}`;
     },
     e2: function() {
-      return `$\\frac{1}{2}\\times${maybeBracket(this.suvat.t)}^2=0$`;
+      return `\\frac{1}{2}\\times${maybeBracket(this.suvat.t)}^2=0`;
     },
     soloution: function() {
       return (

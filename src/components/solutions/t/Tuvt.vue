@@ -8,12 +8,12 @@ div
     template(v-else) Can't solve for t
   +sue
   +tmath 
-    Mathr(formula="$s=\\frac{1}{2}(u+v)t$")
+    Mathr(formula="s=\\frac{1}{2}(u+v)t")
   +th3
     | First lets rearrange this equation by dividing both sides by
-    Mathr(formula="$\\frac{1}{2}(u+v)$" size="small")
+    Mathr(formula="\\frac{1}{2}(u+v)" size="small")
   +tmath 
-    Mathr(formula="$\\frac{2s}{u+v}=t$")
+    Mathr(formula="\\frac{2s}{u+v}=t")
   +th3
     | Enter known values.
   +tmath
@@ -21,7 +21,7 @@ div
   template(v-if="!isFinite(soloution)")
     +th3
       | Can't solve as denominator
-      Mathr(formula="$=0$" size="small")
+      Mathr(formula="=0" size="small")
       | Can't divide by zero.
 </template>
 
@@ -36,9 +36,9 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\frac{2\\times${maybeBracket(this.suvat.s)}}{${maybeBracket(
+      return `\\frac{2\\times${maybeBracket(this.suvat.s)}}{${maybeBracket(
         this.suvat.u
-      )}+${maybeBracket(this.suvat.v)}}$`;
+      )}+${maybeBracket(this.suvat.v)}}`;
     },
     soloution: function() {
       return (2 * this.suvat.s) / (this.suvat.u + this.suvat.v);

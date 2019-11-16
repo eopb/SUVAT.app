@@ -10,19 +10,19 @@ div
     template(v-else) Can't solve for a
   +sue
   +tmath 
-    Mathr(formula="$v^2=u^2+2as$")
+    Mathr(formula="v^2=u^2+2as")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="$u^2$" size="small")
+    Mathr(formula="u^2" size="small")
     | from both sides.
   +tmath
-    Mathr(formula="$v^2-u^2=2as$")
+    Mathr(formula="v^2-u^2=2as")
   +th3
     | Then divide both sides by
-    Mathr(formula="$2s$" size="small")
+    Mathr(formula="2s" size="small")
     | from both sides.
   +tmath
-    Mathr(formula="$\\frac{v^2-u^2}{2s}=a$")
+    Mathr(formula="\\frac{v^2-u^2}{2s}=a")
   +th3
     | Lastly enter known values.
   +tmath
@@ -45,12 +45,12 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\frac{${maybeBracket(this.suvat.v)}^2-${maybeBracket(
+      return `\\frac{${maybeBracket(this.suvat.v)}^2-${maybeBracket(
         this.suvat.u
-      )}^2}{2\\times${maybeBracket(this.suvat.s)}}$`;
+      )}^2}{2\\times${maybeBracket(this.suvat.s)}}`;
     },
     e2: function() {
-      return `$2\\times${maybeBracket(this.suvat.s)}=0$`;
+      return `2\\times${maybeBracket(this.suvat.s)}=0`;
     },
     soloution: function() {
       return (

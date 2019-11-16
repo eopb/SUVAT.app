@@ -8,18 +8,18 @@ div
     template(v-else) Can't solve for t
   +sue
   +tmath 
-    Mathr(formula="$v=u+at$")
+    Mathr(formula="v=u+at")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="$u$" size="small")
+    Mathr(formula="u" size="small")
     | from both sides.
   +tmath 
-    Mathr(formula="$v-u=at$")
+    Mathr(formula="v-u=at")
   +th3
     | Next divide both sides by
-    Mathr(formula="$a$" size="small")
+    Mathr(formula="a" size="small")
   +tmath 
-    Mathr(formula="$\\frac{v-u}{a}=t$")
+    Mathr(formula="\\frac{v-u}{a}=t")
   +th3
     | Enter known values.
   +tmath 
@@ -27,7 +27,7 @@ div
   template(v-if="!isFinite(soloution)")
     +th3
       | Can't solve as the denominator
-      Mathr(formula="$=0$" size="small")
+      Mathr(formula="=0" size="small")
       | Can't divide by zero.
 
 </template>
@@ -43,9 +43,9 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$\\frac{${maybeBracket(this.suvat.v)}-${maybeBracket(
+      return `\\frac{${maybeBracket(this.suvat.v)}-${maybeBracket(
         this.suvat.u
-      )}}{${maybeBracket(this.suvat.a)}}$`;
+      )}}{${maybeBracket(this.suvat.a)}}`;
     },
     soloution: function() {
       return (this.suvat.v - this.suvat.u) / this.suvat.a;

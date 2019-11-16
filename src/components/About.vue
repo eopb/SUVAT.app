@@ -29,7 +29,7 @@
       </ul>
       <p>These variables are linked by the suvat equations.</p>
       <Mathr
-        formula="$v=u+at\\s=ut+\frac{1}{2}at^2\\s=\frac{1}{2}(u+v)t\\v^2=u^2+2as\\s=vt-\frac{1}{2}at^2$"
+        formula="v=u+at\\s=ut+\frac{1}{2}at^2\\s=\frac{1}{2}(u+v)t\\v^2=u^2+2as\\s=vt-\frac{1}{2}at^2"
       />
       <p>
         Using these equations any three variables combined with the correct

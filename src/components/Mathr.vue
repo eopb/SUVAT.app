@@ -1,6 +1,6 @@
 <template>
   <span class="root-math" v-bind:class="size" ref="mathJaxEl">{{
-    formula
+    c_formula
   }}</span>
 </template>
 
@@ -30,15 +30,20 @@ export default {
       this.renderMathJax();
     }
   },
+  computed: {
+    c_formula: function() {
+      return `$${this.formula}$`;
+    }
+  },
   mounted() {
     this.renderMathJax();
   },
   methods: {
     renderContent() {
       if (this.safe) {
-        this.$refs.mathJaxEl.textContent = this.formula;
+        this.$refs.mathJaxEl.textContent = this.c_formula;
       } else {
-        this.$refs.mathJaxEl.innerHTML = this.formula;
+        this.$refs.mathJaxEl.innerHTML = this.c_formula;
       }
     },
 

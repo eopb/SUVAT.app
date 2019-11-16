@@ -6,7 +6,7 @@ div
     sub m
   +sue
   +tmath 
-    Mathr(formula="$s=vt-\\frac{1}{2}at^2$")
+    Mathr(formula="s=vt-\\frac{1}{2}at^2")
   +th3
     | Enter known values.
   +tmath
@@ -25,11 +25,11 @@ export default {
   },
   computed: {
     e1: function() {
-      return `$s=${maybeBracket(this.suvat.v)}\\times${maybeBracket(
+      return `s=${maybeBracket(this.suvat.v)}\\times${maybeBracket(
         this.suvat.t
       )}-\\frac{1}{2}\\times${maybeBracket(this.suvat.a)}\\times${maybeBracket(
         this.suvat.t
-      )}^2$`;
+      )}^2`;
     }
   }
 };
