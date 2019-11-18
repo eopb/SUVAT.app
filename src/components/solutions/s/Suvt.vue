@@ -2,8 +2,7 @@
 include ../mixins.pug
 div
   +th1
-    | s = {{ 0.5 * (suvat.u + suvat.v) * suvat.t }}
-    sub m
+    Mathr(:formula="soloution_r" size="small")
   +sue
   +tmath 
     Mathr(formula="s=\\frac{1}{2}(u+v)t")
@@ -23,6 +22,9 @@ export default {
     Mathr
   },
   computed: {
+    soloution_r: function() {
+      return MF.solutionS(0.5 * (this.suvat.u + this.suvat.v) * this.suvat.t);
+    },
     e1: function() {
       return `\\frac{1}{2}\\times(${MF.maybeBracket(
         this.suvat.u

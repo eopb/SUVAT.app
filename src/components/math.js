@@ -6,6 +6,7 @@ class MF {
   };
 
   static solutionA = _solution => this.solution("a", _solution, "ms^{-2}");
+  static solutionS = _solution => this.solution("s", _solution, "m");
 }
 
 export default MF;
