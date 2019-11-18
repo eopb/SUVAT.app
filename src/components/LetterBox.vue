@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     full_letter: function() {
-      return `\\Huge{${this.letter}}\\tiny{${this.unit}}`;
+      return `\\Huge{${this.letter}}`;
     }
   }
 };
