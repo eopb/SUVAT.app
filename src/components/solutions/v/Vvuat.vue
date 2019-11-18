@@ -18,7 +18,7 @@ div
 
 <script>
 import Mathr from "../../Mathr.vue";
-import maybeBracket from "../../math.js";
+import MF from "../../math.js";
 export default {
   name: "Vvuat",
   props: ["suvat", "letter"],
@@ -27,9 +27,9 @@ export default {
   },
   computed: {
     e1: function() {
-      return `${this.suvat.u}+${maybeBracket(
+      return `${this.suvat.u}+${MF.maybeBracket(
         this.suvat.a
-      )}\\times${maybeBracket(this.suvat.t)}`;
+      )}\\times${MF.maybeBracket(this.suvat.t)}`;
     }
   }
 };

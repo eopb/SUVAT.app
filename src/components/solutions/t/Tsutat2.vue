@@ -42,7 +42,7 @@ div
 
 <script>
 import Mathr from "../../Mathr.vue";
-import maybeBracket from "../../math.js";
+import MF from "../../math.js";
 export default {
   name: "Tsutat2",
   props: ["suvat", "letter"],
@@ -51,16 +51,18 @@ export default {
   },
   computed: {
     e1: function() {
-      return `\\frac{-${maybeBracket(this.suvat.u)}\\pm\\sqrt{${maybeBracket(
+      return `\\frac{-${MF.maybeBracket(
         this.suvat.u
-      )}^2+2\\times ${maybeBracket(this.suvat.a)}\\times ${maybeBracket(
+      )}\\pm\\sqrt{${MF.maybeBracket(
+        this.suvat.u
+      )}^2+2\\times ${MF.maybeBracket(this.suvat.a)}\\times ${MF.maybeBracket(
         this.suvat.s
-      )}}}{${maybeBracket(this.suvat.a)}}`;
+      )}}}{${MF.maybeBracket(this.suvat.a)}}`;
     },
     e2: function() {
-      return `${maybeBracket(this.suvat.u)}^2+2\\times ${maybeBracket(
+      return `${MF.maybeBracket(this.suvat.u)}^2+2\\times ${MF.maybeBracket(
         this.suvat.a
-      )}\\times ${maybeBracket(this.suvat.s)}<0`;
+      )}\\times ${MF.maybeBracket(this.suvat.s)}<0`;
     },
     soloution: function() {
       return (-this.suvat.u + Math.sqrt(this.u22as)) / this.a2;
