@@ -57,7 +57,7 @@ and -g followed by a number for decimal places
       <LetterBox
         @letter-value-changed="updateLater"
         letter="a"
-        name="Acceleration"
+        name="Accelleration"
       >
         ms
         <sup>-2</sup>
