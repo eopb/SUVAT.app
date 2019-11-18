@@ -12,8 +12,12 @@ and -g followed by a number for decimal places// rebuild
       <div id="about">
         <p>
           <button @click="toggleAbout()">
-            <template v-if="!about">About suvat</template>
-            <template v-else>Back</template>
+            <template v-if="!about"
+              >About suvat</template
+            >
+            <template v-else
+              >Back</template
+            >
           </button>
         </p>
       </div>
@@ -25,7 +29,12 @@ and -g followed by a number for decimal places// rebuild
       </aside>
     </header>
     <div id="grid-wrap" v-if="!about">
-      <LetterBox @letter-value-changed="updateLater" letter="s" name="Displacement" unit="m" />
+      <LetterBox
+        @letter-value-changed="updateLater"
+        letter="s"
+        name="Displacement"
+        unit="m"
+      />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="s" />
       <LetterBox
         @letter-value-changed="updateLater"
@@ -41,9 +50,19 @@ and -g followed by a number for decimal places// rebuild
         unit="ms^{-1}"
       />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="v" />
-      <LetterBox @letter-value-changed="updateLater" letter="a" name="Acceleration" unit="ms^{-2}" />
+      <LetterBox
+        @letter-value-changed="updateLater"
+        letter="a"
+        name="Acceleration"
+        unit="ms^{-2}"
+      />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="a" />
-      <LetterBox @letter-value-changed="updateLater" letter="t" name="Time" unit="s" />
+      <LetterBox
+        @letter-value-changed="updateLater"
+        letter="t"
+        name="Time"
+        unit="s"
+      />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="t" />
       <div class="inputerr" v-if="inputPrompt">
         <h1>Input three values to get solutions</h1>
