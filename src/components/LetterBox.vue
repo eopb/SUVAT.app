@@ -5,7 +5,7 @@
     </div>
     <div id="input-area">
       <h1>
-        <Mathr :formula="full_letter" size="small" />
+        <Mathr :formula="full_letter" style="font-size: 0.6em" />
       </h1>
       <input
         v-model="letterValue"
@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     full_letter: function() {
-      return `\\Large{${this.letter}}\\mathrm{\\tiny{(${this.unit})}}`;
+      return `\\Huge{${this.letter}}\\mathrm{\\tiny{(${this.unit})}}`;
     }
   }
 };
