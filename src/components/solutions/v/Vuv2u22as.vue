@@ -3,14 +3,7 @@ include ../mixins.pug
 div
   +th1
     template(v-if="inRoot >= 0")
-      | v = &plusmn;{{
-      | Math.abs(
-      | Math.sqrt(
-      | inRoot))
-      | }}
-      sub
-        | ms
-        sup -1
+      Mathr(:formula="soloution_r" size="small")
     template(v-else) No real roots for v
   +sue
   +tmath 
@@ -40,6 +33,9 @@ export default {
     Mathr
   },
   computed: {
+    soloution_r: function() {
+      return MF.solutionV(Math.abs(Math.sqrt(this.inRoot)), "\\pm");
+    },
     e1: function() {
       return `\\sqrt{${MF.maybeBracket(
         this.suvat.u
