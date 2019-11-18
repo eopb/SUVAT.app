@@ -4,9 +4,9 @@
       <h3>{{ name }}</h3>
     </div>
     <div id="input-area">
-      <h1>
-        <Mathr :formula="full_letter" style="font-size: 0.6em" />
-      </h1>
+      <h1>{{ letter }}</h1>
+      <!-- <Mathr :formula="full_letter" style="font-size: 1.8em; margin: 0" />
+      <Mathr :formula="full_letter2" style="font-size: 1.8em; margin: 0; margin-top: -15px" />-->
       <input
         v-model="letterValue"
         v-on:input="valuechange"
@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import Mathr from "./Mathr.vue";
+// import Mathr from "./Mathr.vue";
 export default {
   name: "LetterValue",
   props: ["letter", "name", "unit"],
   components: {
-    Mathr
+    // Mathr
   },
   data: () => ({
     letterValue: null
@@ -37,6 +37,9 @@ export default {
   computed: {
     full_letter: function() {
       return `\\Huge{${this.letter}}`;
+    },
+    full_letter2: function() {
+      return `\\tiny{${this.unit}}`;
     }
   }
 };
