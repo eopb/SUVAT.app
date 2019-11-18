@@ -33,39 +33,36 @@ and -g followed by a number for decimal places
         @letter-value-changed="updateLater"
         letter="s"
         name="Displacement"
-        >m</LetterBox
-      >
+        unit="m"
+      />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="s" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="u"
         name="Initial velocity"
-      >
-        ms
-        <sup>-1</sup>
-      </LetterBox>
+        unit="ms^{-1}"
+      />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="u" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="v"
         name="Final velocity"
-      >
-        ms
-        <sup>-1</sup>
-      </LetterBox>
+        unit="ms^{-1}"
+      />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="v" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="a"
-        name="Accelleration"
-      >
-        ms
-        <sup>-2</sup>
-      </LetterBox>
+        name="Acceleration"
+        unit="ms^{-2}"
+      />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="a" />
-      <LetterBox @letter-value-changed="updateLater" letter="t" name="Time"
-        >s</LetterBox
-      >
+      <LetterBox
+        @letter-value-changed="updateLater"
+        letter="t"
+        name="Time"
+        unit="s"
+      />
       <Solution v-show="showSoloutions" :suvat="suvat" letter="t" />
       <div class="inputerr" v-if="inputPrompt">
         <h1>Input three values to get solutions</h1>

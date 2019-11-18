@@ -3,6 +3,7 @@ include ../mixins.pug
 div
   +th1
     template(v-if="isFinite(soloution)")
+      Mathr(formula="a" size="small")
       | a = {{ soloution }}
       sub
         | ms
@@ -43,6 +44,9 @@ export default {
     Mathr
   },
   computed: {
+    soloution_r: function() {
+      return `a = d`;
+    },
     e1: function() {
       return `\\frac{${maybeBracket(this.suvat.s)}-${maybeBracket(
         this.suvat.u
