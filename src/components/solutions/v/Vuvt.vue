@@ -3,10 +3,7 @@ include ../mixins.pug
 div
   +th1
     template(v-if="isFinite(soloution)")
-      | v = {{ soloution }}
-      sub
-        | ms
-        sup -1
+      Mathr(:formula="soloution_r" size="small")
     template(v-else) Can't solve for v
   +sue
   +tmath 
@@ -36,7 +33,7 @@ div
 
 <script>
 import Mathr from "../../Mathr.vue";
-import maybeBracket from "../../math.js";
+import MF from "../../math.js";
 export default {
   name: "Vuvt",
   props: ["suvat", "letter"],
@@ -44,10 +41,13 @@ export default {
     Mathr
   },
   computed: {
+    soloution_r: function() {
+      return MF.solutionV(this.soloution, "");
+    },
     e1: function() {
-      return `\\frac{2\\times${maybeBracket(this.suvat.s)}}{${maybeBracket(
-        this.suvat.t
-      )}}-${maybeBracket(this.suvat.u)}`;
+      return `\\frac{2\\times${MF.maybeBracket(
+        this.suvat.s
+      )}}{${MF.maybeBracket(this.suvat.t)}}-${MF.maybeBracket(this.suvat.u)}`;
     },
     soloution: function() {
       return (2 * this.suvat.s) / this.suvat.t - this.suvat.u;

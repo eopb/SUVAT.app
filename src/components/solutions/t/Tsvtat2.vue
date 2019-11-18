@@ -3,8 +3,7 @@ include ../mixins.pug
 div
   +th1
     template(v-if="isFinite(soloution)&&!isNaN(soloution)")
-      | t = {{ soloution }} or {{ soloution2}}
-      sub s
+      Mathr(:formula="soloution_r" size="small")
     template(v-else) Can't solve for t
   +sue
   +tmath 
@@ -42,7 +41,7 @@ div
 
 <script>
 import Mathr from "../../Mathr.vue";
-import maybeBracket from "../../math.js";
+import MF from "../../math.js";
 export default {
   name: "Tsvtat2",
   props: ["suvat", "letter"],
@@ -50,17 +49,22 @@ export default {
     Mathr
   },
   computed: {
+    soloution_r: function() {
+      return MF.solutionT2(this.soloution, this.soloution2);
+    },
     e1: function() {
-      return `\\frac{-${maybeBracket(this.suvat.v)}\\pm\\sqrt{${maybeBracket(
+      return `\\frac{-${MF.maybeBracket(
         this.suvat.v
-      )}^2-2\\times ${maybeBracket(this.suvat.a)}\\times ${maybeBracket(
+      )}\\pm\\sqrt{${MF.maybeBracket(
+        this.suvat.v
+      )}^2-2\\times ${MF.maybeBracket(this.suvat.a)}\\times ${MF.maybeBracket(
         this.suvat.s
-      )}}}{${maybeBracket(this.suvat.a)}}`;
+      )}}}{${MF.maybeBracket(this.suvat.a)}}`;
     },
     e2: function() {
-      return `${maybeBracket(this.suvat.v)}^2-2\\times ${maybeBracket(
+      return `${MF.maybeBracket(this.suvat.v)}^2-2\\times ${MF.maybeBracket(
         this.suvat.a
-      )}\\times ${maybeBracket(this.suvat.s)}<0`;
+      )}\\times ${MF.maybeBracket(this.suvat.s)}<0`;
     },
     soloution: function() {
       return (-this.suvat.v - Math.sqrt(this.v22as)) / this.a2;

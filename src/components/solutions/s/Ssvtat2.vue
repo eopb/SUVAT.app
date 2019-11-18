@@ -2,8 +2,7 @@
 include ../mixins.pug
 div
   +th1
-    | s = {{ suvat.v * suvat.t - 0.5 * suvat.a * Math.pow(suvat.t, 2) }}
-    sub m
+    Mathr(:formula="soloution_r" size="small")
   +sue
   +tmath 
     Mathr(formula="s=vt-\\frac{1}{2}at^2")
@@ -16,7 +15,7 @@ div
 
 <script>
 import Mathr from "../../Mathr.vue";
-import maybeBracket from "../../math";
+import MF from "../../math";
 export default {
   name: "Ssvtat2",
   props: ["suvat", "letter"],
@@ -24,12 +23,18 @@ export default {
     Mathr
   },
   computed: {
+    soloution_r: function() {
+      return MF.solutionS(
+        this.suvat.v * this.suvat.t -
+          0.5 * this.suvat.a * Math.pow(this.suvat.t, 2)
+      );
+    },
     e1: function() {
-      return `s=${maybeBracket(this.suvat.v)}\\times${maybeBracket(
+      return `s=${MF.maybeBracket(this.suvat.v)}\\times${MF.maybeBracket(
         this.suvat.t
-      )}-\\frac{1}{2}\\times${maybeBracket(this.suvat.a)}\\times${maybeBracket(
-        this.suvat.t
-      )}^2`;
+      )}-\\frac{1}{2}\\times${MF.maybeBracket(
+        this.suvat.a
+      )}\\times${MF.maybeBracket(this.suvat.t)}^2`;
     }
   }
 };
