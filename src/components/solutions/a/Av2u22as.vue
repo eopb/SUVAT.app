@@ -3,10 +3,7 @@ include ../mixins.pug
 div
   +th1
     template(v-if="isFinite(soloution)")
-      | a = {{ soloution }}
-      sub
-        | ms
-        sup -2
+      Mathr(:formula="soloution_r" size="small")
     template(v-else) Can't solve for a
   +sue
   +tmath 
@@ -44,6 +41,9 @@ export default {
     Mathr
   },
   computed: {
+    soloution_r: function() {
+      return MF.solutionA(this.soloution);
+    },
     e1: function() {
       return `\\frac{${MF.maybeBracket(this.suvat.v)}^2-${MF.maybeBracket(
         this.suvat.u
