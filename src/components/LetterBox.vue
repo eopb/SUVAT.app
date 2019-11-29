@@ -58,7 +58,6 @@ export default {
     flex-direction: column
     height: calc(100% - 29px)
     margin-top: -10px
-    margin-bottom: -10px
   #title
     background-color: #888
     color: #222
@@ -82,6 +81,7 @@ input
   border-radius: 30px
   border: 2px solid #999
   padding: 6px 8px
+  margin-top: -10px
   &:invalid
     border-color: #c22
 </style>
