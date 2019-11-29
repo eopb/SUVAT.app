@@ -7,7 +7,8 @@
       <h1>
         <Mathr
           :formula="full_letter"
-          style="font-size: 0.6em; height: 30px; margin: 0; padding: 0"
+          :display="true"
+          style="font-size: 0.6em; margin: 0; padding: 0"
         />
       </h1>
       <input

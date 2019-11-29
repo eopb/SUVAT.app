@@ -18,6 +18,10 @@ export default {
       type: String,
       default: "large"
     },
+    display: {
+      type: Boolean,
+      default: false
+    },
     options: {
       type: Object,
       default: function() {
@@ -32,7 +36,7 @@ export default {
   },
   computed: {
     c_formula: function() {
-      return `$$${this.formula}$$`;
+      return this.display ? `$$${this.formula}$$` : `$${this.formula}$`;
     }
   },
   mounted() {
