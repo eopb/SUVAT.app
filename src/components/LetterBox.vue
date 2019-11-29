@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     full_letter: function() {
-      return `\\Huge{${this.letter}}\\mathrm{\\tiny{${this.unit}}}`;
+      return `\\Huge{${this.letter}}\\mathrm{\\tiny{(${this.unit})}}`;
     }
   }
 };
@@ -56,6 +56,8 @@ export default {
     justify-content: center
     flex-direction: column
     height: calc(100% - 29px)
+    margin-top: -10px
+    margin-bottom: -10px
   #title
     background-color: #888
     color: #222
