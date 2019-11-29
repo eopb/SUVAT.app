@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     c_formula: function() {
-      return `$${this.formula}$`;
+      return `$$${this.formula}$$`;
     }
   },
   mounted() {
