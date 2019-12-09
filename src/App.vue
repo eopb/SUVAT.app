@@ -22,8 +22,17 @@ and -g followed by a number for decimal places// rebuild
         </p>
       </div>
       <aside>
-        <p>Decimal places</p>
-        <input v-model="dp" type="number" step="1" max="16" min="0" value="3" />
+        <template v-if="!about">
+          <p>Decimal places</p>
+          <input
+            v-model="dp"
+            type="number"
+            step="1"
+            max="16"
+            min="0"
+            value="3"
+          />
+        </template>
         <p class="credit">
           Designed by
           <a href="https://github.com/ethanboxx">Ethan Brierley</a>
