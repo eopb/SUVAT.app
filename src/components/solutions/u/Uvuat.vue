@@ -24,13 +24,17 @@ import Mathr from "../../Mathr.vue";
 import MF from "../../math";
 export default {
   name: "Uvuat",
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   components: {
     Mathr
   },
   computed: {
     soloution_r: function() {
-      return MF.solutionU(this.suvat.v - this.suvat.a * this.suvat.t, "");
+      return MF.solutionU(
+        this.suvat.v - this.suvat.a * this.suvat.t,
+        "",
+        this.dp
+      );
     },
     e1: function() {
       return `${MF.maybeBracket(this.suvat.v)}-${MF.maybeBracket(

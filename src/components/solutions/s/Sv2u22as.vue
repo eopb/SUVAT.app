@@ -36,13 +36,13 @@ import Mathr from "../../Mathr.vue";
 import MF from "../../math";
 export default {
   name: "Sv2u22as",
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   components: {
     Mathr
   },
   computed: {
     soloution_r: function() {
-      return MF.solutionS(this.soloution);
+      return MF.solutionS(this.soloution, this.dp);
     },
     e1: function() {
       return `\\frac{${MF.maybeBracket(this.suvat.v)}^2-${MF.maybeBracket(

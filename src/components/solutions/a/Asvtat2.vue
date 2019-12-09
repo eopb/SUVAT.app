@@ -40,13 +40,13 @@ import Mathr from "../../Mathr.vue";
 import MF from "../../math.js";
 export default {
   name: "Asvtat2",
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   components: {
     Mathr
   },
   computed: {
     soloution_r: function() {
-      return MF.solutionA(this.soloution);
+      return MF.solutionA(this.soloution, this.dp);
     },
     e1: function() {
       return `\\frac{${MF.maybeBracket(this.suvat.v)}\\times${MF.maybeBracket(

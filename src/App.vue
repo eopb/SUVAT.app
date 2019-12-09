@@ -22,6 +22,17 @@ and -g followed by a number for decimal places// rebuild
         </p>
       </div>
       <aside>
+        <template v-if="!about">
+          <p>Decimal places</p>
+          <input
+            v-model="dp"
+            type="number"
+            step="1"
+            max="16"
+            min="0"
+            value="3"
+          />
+        </template>
         <p class="credit">
           Designed by
           <a href="https://github.com/ethanboxx">Ethan Brierley</a>
@@ -35,35 +46,35 @@ and -g followed by a number for decimal places// rebuild
         name="Displacement"
         unit="m"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="s" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="s" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="u"
         name="Initial velocity"
         unit="ms^{-1}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="u" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="u" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="v"
         name="Final velocity"
         unit="ms^{-1}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="v" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="v" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="a"
         name="Acceleration"
         unit="ms^{-2}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="a" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="a" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="t"
         name="Time"
         unit="s"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="t" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="t" />
       <div class="inputerr" v-if="inputPrompt">
         <h1>Input three values to get solutions</h1>
       </div>
@@ -74,6 +85,7 @@ and -g followed by a number for decimal places// rebuild
     <About id="about" v-else></About>
   </div>
 </template>
+
 <script>
 import LetterBox from "./components/LetterBox.vue";
 import Solution from "./components/Solution.vue";
@@ -94,7 +106,8 @@ export default {
       a: null,
       t: null
     },
-    about: false
+    about: false,
+    dp: 3
   }),
 
   methods: {
@@ -171,36 +184,51 @@ body
   text-align: center
   color: #2c3e50
   display: grid
-  grid-template-rows: 60px auto
-  @media (min-width: 470px)
-    grid-template-rows: 30px auto
+  grid-template-rows: 100px auto
+  @media (min-width: 500px)
+    grid-template-rows: 60px auto
+    @media (min-width: 670px)
+      grid-template-rows: 30px auto
   min-height: 750px
   height: 100vh
   header
     color: #fff
     background-color: #222
-    display: flex
-    justify-content: space-between
+    display: grid
+    @media (min-width: 500px)
+      grid-auto-flow: column
+      @media (min-width: 1200px)
+        grid-template-columns: 450px auto 450px
+    height: 100%
     > *
       display: flex
       align-items: center
       justify-content: center
       height: 100%
-      p
-        margin-left: 5px
-        margin-right: 5px
-        &.credit a
-          transition: .5s
-            timing-function: ease-out
-          display: inline-block
-          transition-timing-function: cubic-bezier(1,1.85,.34,-.03)
-          transform: scale(1, 1)
-          text-decoration: none
-          color: inherit
-          font-weight: bold
-          &:hover,
-          &:active
-            transform: scale(1, 1.8)
+    :first-child
+      justify-content: flex-start
+    :last-child
+      justify-content: flex-center
+      @media (min-width: 500px)
+        justify-content: flex-end
+    p
+      margin: 0 5px
+      display: inline
+      &.credit a
+        transition: .5s
+          timing-function: ease-out
+        display: inline-block
+        transition-timing-function: cubic-bezier(1,1.85,.34,-.03)
+        transform: scale(1, 1)
+        text-decoration: none
+        color: inherit
+        font-weight: bold
+        &:hover,
+        &:active
+          transform: scale(1, 1.8)
+    input
+      width: 35px
+      margin-right: 8px
 
 #grid-wrap
   display: grid

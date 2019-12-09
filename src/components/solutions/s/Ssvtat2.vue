@@ -18,7 +18,7 @@ import Mathr from "../../Mathr.vue";
 import MF from "../../math";
 export default {
   name: "Ssvtat2",
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   components: {
     Mathr
   },
@@ -26,7 +26,8 @@ export default {
     soloution_r: function() {
       return MF.solutionS(
         this.suvat.v * this.suvat.t -
-          0.5 * this.suvat.a * Math.pow(this.suvat.t, 2)
+          0.5 * this.suvat.a * Math.pow(this.suvat.t, 2),
+        this.dp
       );
     },
     e1: function() {
