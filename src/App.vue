@@ -184,38 +184,51 @@ body
   text-align: center
   color: #2c3e50
   display: grid
-  grid-template-rows: 60px auto
-  @media (min-width: 470px)
-    grid-template-rows: 30px auto
+  grid-template-rows: 100px auto
+  @media (min-width: 500px)
+    grid-template-rows: 60px auto
+    @media (min-width: 670px)
+      grid-template-rows: 30px auto
   min-height: 750px
   height: 100vh
   header
     color: #fff
     background-color: #222
-    display: flex
-    justify-content: space-between
+    display: grid
+    @media (min-width: 500px)
+      grid-auto-flow: column
+      @media (min-width: 1200px)
+        grid-template-columns: 450px auto 450px
+    height: 100%
     > *
       display: flex
       align-items: center
       justify-content: center
       height: 100%
-      p
-        margin-left: 5px
-        margin-right: 5px
-        &.credit a
-          transition: .5s
-            timing-function: ease-out
-          display: inline-block
-          transition-timing-function: cubic-bezier(1,1.85,.34,-.03)
-          transform: scale(1, 1)
-          text-decoration: none
-          color: inherit
-          font-weight: bold
-          &:hover,
-          &:active
-            transform: scale(1, 1.8)
+    :first-child
+      justify-content: flex-start
+    :last-child
+      justify-content: flex-center
+      @media (min-width: 500px)
+        justify-content: flex-end
+    p
+      margin: 0 5px
+      display: inline
+      &.credit a
+        transition: .5s
+          timing-function: ease-out
+        display: inline-block
+        transition-timing-function: cubic-bezier(1,1.85,.34,-.03)
+        transform: scale(1, 1)
+        text-decoration: none
+        color: inherit
+        font-weight: bold
+        &:hover,
+        &:active
+          transform: scale(1, 1.8)
     input
       width: 35px
+      margin-right: 8px
 
 #grid-wrap
   display: grid
