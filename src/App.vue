@@ -205,6 +205,8 @@ body
           &:hover,
           &:active
             transform: scale(1, 1.8)
+    input
+      width: 35px
 
 #grid-wrap
   display: grid
