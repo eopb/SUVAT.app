@@ -22,6 +22,8 @@ and -g followed by a number for decimal places// rebuild
         </p>
       </div>
       <aside>
+        <p>Decimal places</p>
+        <input v-model="dp" type="number" step="1" max="16" min="0" value="3" />
         <p class="credit">
           Designed by
           <a href="https://github.com/ethanboxx">Ethan Brierley</a>
@@ -35,35 +37,35 @@ and -g followed by a number for decimal places// rebuild
         name="Displacement"
         unit="m"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="s" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="s" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="u"
         name="Initial velocity"
         unit="ms^{-1}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="u" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="u" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="v"
         name="Final velocity"
         unit="ms^{-1}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="v" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="v" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="a"
         name="Acceleration"
         unit="ms^{-2}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="a" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="a" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="t"
         name="Time"
         unit="s"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" letter="t" />
+      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="t" />
       <div class="inputerr" v-if="inputPrompt">
         <h1>Input three values to get solutions</h1>
       </div>
@@ -74,6 +76,7 @@ and -g followed by a number for decimal places// rebuild
     <About id="about" v-else></About>
   </div>
 </template>
+
 <script>
 import LetterBox from "./components/LetterBox.vue";
 import Solution from "./components/Solution.vue";
@@ -94,7 +97,8 @@ export default {
       a: null,
       t: null
     },
-    about: false
+    about: false,
+    dp: 3
   }),
 
   methods: {

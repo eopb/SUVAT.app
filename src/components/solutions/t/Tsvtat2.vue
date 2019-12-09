@@ -44,13 +44,13 @@ import Mathr from "../../Mathr.vue";
 import MF from "../../math.js";
 export default {
   name: "Tsvtat2",
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   components: {
     Mathr
   },
   computed: {
     soloution_r: function() {
-      return MF.solutionT2(this.soloution, this.soloution2);
+      return MF.solutionT2(this.soloution, this.soloution2, this.dp);
     },
     e1: function() {
       return `\\frac{-${MF.maybeBracket(

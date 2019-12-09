@@ -29,13 +29,13 @@ import Mathr from "../../Mathr.vue";
 import MF from "../../math";
 export default {
   name: "Tuvt",
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   components: {
     Mathr
   },
   computed: {
     soloution_r: function() {
-      return MF.solutionT(this.soloution);
+      return MF.solutionT(this.soloution, this.dp);
     },
     e1: function() {
       return `\\frac{2\\times${MF.maybeBracket(

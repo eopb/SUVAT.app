@@ -34,13 +34,13 @@ import Mathr from "../../Mathr.vue";
 import MF from "../../math";
 export default {
   name: "Uv2u22as",
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   components: {
     Mathr
   },
   computed: {
     soloution_r: function() {
-      return MF.solutionU(Math.abs(Math.sqrt(this.inRoot)), "\\pm");
+      return MF.solutionU(Math.abs(Math.sqrt(this.inRoot)), "\\pm", this.dp);
     },
     e1: function() {
       return `\\sqrt{${MF.maybeBracket(

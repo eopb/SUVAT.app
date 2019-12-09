@@ -6,81 +6,129 @@
           v-if="formular() === 2"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Ssutat2>
         <Suvt
           v-else-if="formular() === 3"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Suvt>
         <Sv2u22as
           v-else-if="formular() === 4"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Sv2u22as>
         <Ssvtat2
           v-if="formular() === 5"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Ssvtat2>
       </template>
       <template v-if="letter === u">
-        <Uvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Uvuat>
+        <Uvuat
+          v-if="formular() === 1"
+          :suvat="suvat"
+          :letter="letter"
+          :dp="dp"
+        ></Uvuat>
         <Usutat2
           v-if="formular() === 2"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Usutat2>
-        <Uuvt v-if="formular() === 3" :suvat="suvat" :letter="letter"></Uuvt>
+        <Uuvt
+          v-if="formular() === 3"
+          :suvat="suvat"
+          :letter="letter"
+          :dp="dp"
+        ></Uuvt>
         <Uv2u22as
           v-if="formular() === 4"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Uv2u22as>
       </template>
       <template v-if="letter === v">
-        <Vvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Vvuat>
-        <Vuvt v-if="formular() === 3" :suvat="suvat" :letter="letter"></Vuvt>
+        <Vvuat
+          v-if="formular() === 1"
+          :suvat="suvat"
+          :letter="letter"
+          :dp="dp"
+        ></Vvuat>
+        <Vuvt
+          v-if="formular() === 3"
+          :suvat="suvat"
+          :letter="letter"
+          :dp="dp"
+        ></Vuvt>
         <Vuv2u22as
           v-if="formular() === 4"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Vuv2u22as>
         <Vsvtat2
           v-if="formular() === 5"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Vsvtat2>
       </template>
       <template v-if="letter === a">
-        <Avuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Avuat>
+        <Avuat
+          v-if="formular() === 1"
+          :suvat="suvat"
+          :letter="letter"
+          :dp="dp"
+        ></Avuat>
         <Asutat2
           v-if="formular() === 2"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Asutat2>
         <Av2u22as
           v-if="formular() === 4"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Av2u22as>
         <Asvtat2
           v-if="formular() === 5"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Asvtat2>
       </template>
       <template v-if="letter === t">
-        <Tvuat v-if="formular() === 1" :suvat="suvat" :letter="letter"></Tvuat>
+        <Tvuat
+          v-if="formular() === 1"
+          :suvat="suvat"
+          :letter="letter"
+          :dp="dp"
+        ></Tvuat>
         <Tsutat2
           v-if="formular() === 2"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Tsutat2>
-        <Tuvt v-if="formular() === 3" :suvat="suvat" :letter="letter"></Tuvt>
+        <Tuvt
+          v-if="formular() === 3"
+          :suvat="suvat"
+          :letter="letter"
+          :dp="dp"
+        ></Tuvt>
         <Tsvtat2
           v-if="formular() === 5"
           :suvat="suvat"
           :letter="letter"
+          :dp="dp"
         ></Tsvtat2>
       </template>
     </template>
@@ -132,7 +180,7 @@ export default {
     Tuvt,
     Tsvtat2
   },
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   data: () => ({
     s: "s",
     u: "u",

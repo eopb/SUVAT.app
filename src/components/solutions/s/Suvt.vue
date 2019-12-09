@@ -17,13 +17,16 @@ import Mathr from "../../Mathr.vue";
 import MF from "../../math";
 export default {
   name: "Suvt",
-  props: ["suvat", "letter"],
+  props: ["suvat", "letter", "dp"],
   components: {
     Mathr
   },
   computed: {
     soloution_r: function() {
-      return MF.solutionS(0.5 * (this.suvat.u + this.suvat.v) * this.suvat.t);
+      return MF.solutionS(
+        0.5 * (this.suvat.u + this.suvat.v) * this.suvat.t,
+        this.dp
+      );
     },
     e1: function() {
       return `\\frac{1}{2}\\times(${MF.maybeBracket(
