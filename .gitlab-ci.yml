@@ -8,8 +8,9 @@ stages:
   - deploy
 
 before_script:
-  - rm -rf public-vue
-  - rm -rf dist
+  - apt update
+  - apt install tree -y
+  - tree
 
 check: # the job must be named pages
   image: node:latest
