@@ -1,9 +1,5 @@
 image: "ubuntu"
 
-cache:
-  paths:
-    - node_modules/
-
 stages:
   - check
   - deploy
