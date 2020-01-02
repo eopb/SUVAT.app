@@ -4,18 +4,12 @@ stages:
   - build
   - deploy
 
-before_script:
-  - apt update
-  - apt install tree -y
-  - tree
-
 build:
   image: node:latest
   stage: build
   script:
     - npm ci
     - npm run build
-    - tree
   artifacts:
     paths:
       - dist
