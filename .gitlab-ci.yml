@@ -8,6 +8,10 @@ stages:
   - check
   - deploy
 
+before-script:
+  - rm -rf public-vue
+  - rm -rf dist
+
 check: # the job must be named pages
   image: node:latest
   stage: check
