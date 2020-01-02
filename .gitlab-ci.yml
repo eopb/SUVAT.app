@@ -8,7 +8,7 @@ stages:
   - check
   - deploy
 
-before-script:
+before_script:
   - rm -rf public-vue
   - rm -rf dist
 
