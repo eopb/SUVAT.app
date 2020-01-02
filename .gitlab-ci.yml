@@ -18,7 +18,7 @@ check: # the job must be named pages
     - tree
   artifacts:
     paths:
-      - public
+      - dist
 
 pages: # the job must be named pages
   image: node:latest
