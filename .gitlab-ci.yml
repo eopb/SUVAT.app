@@ -4,12 +4,18 @@ stages:
   - check
   - deploy
 
+before_script:
+  - apt update
+  - apt install tree -y
+  - tree
+
 check: # the job must be named pages
   image: node:latest
   stage: check
   script:
     - npm ci
     - npm run build
+    - tree
   artifacts:
     paths:
       - public
