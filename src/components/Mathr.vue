@@ -56,14 +56,8 @@ export default {
       if (window.MathJax) {
         window.MathJax.Hub.Config({
           tex2jax: {
-            inlineMath: [
-              ["$", "$"],
-              ["(", ")"]
-            ],
-            displayMath: [
-              ["$$", "$$"],
-              ["[", "]"]
-            ],
+            inlineMath: [["$", "$"], ["(", ")"]],
+            displayMath: [["$$", "$$"], ["[", "]"]],
             processEscapes: true,
             processEnvironments: true
           },
