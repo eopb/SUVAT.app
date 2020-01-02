@@ -1,5 +1,8 @@
 image: "ubuntu"
 
+variables:
+  GIT_STRATEGY: clone
+
 stages:
   - check
   - deploy
