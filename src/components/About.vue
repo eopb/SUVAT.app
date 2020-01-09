@@ -29,7 +29,7 @@
       </ul>
       <p>These variables are linked by the suvat equations.</p>
       <Mathr
-        formula="v=u+at\\s=ut+\frac{1}{2}at^2\\s=\frac{1}{2}(u+v)t\\v^2=u^2+2as\\s=vt-\frac{1}{2}at^2"
+        formula="\tiny{1}: \normalsize{v=u+at}\\\tiny{2}: \normalsize{s=ut+\frac{1}{2}at^2}\\\tiny{3}: \normalsize{s=\frac{1}{2}(u+v)t}\\\tiny{4}: \normalsize{v^2=u^2+2as}\\\tiny{5}: \normalsize{s=vt-\frac{1}{2}at^2}"
       />
       <p>
         Using these equations any three variables combined with the correct
@@ -42,6 +42,16 @@
           >constant acceleration</a
         >.
       </p>
+
+      <h1>Deriving suvat</h1>
+      <h3>Assumptions</h3>
+      <Mathr
+        formula="\text{velocity}=\frac{\text{displacement}}{\text{time}}"
+      />
+      <Mathr
+        formula="\text{acceleration}=\frac{\text{change in velocity}}{\text{time}}"
+      />
+      <h3>Deriving<Mathr formula="v=u+at" size="small" /></h3>
       <p class="smalltext">
         If you run into any issues with this calculator please email
         <a
