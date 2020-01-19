@@ -6,4 +6,4 @@ Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(About)
-}).$mount("#about");
+}).$mount("#app");

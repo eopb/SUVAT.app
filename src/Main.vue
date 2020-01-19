@@ -11,13 +11,10 @@ and -g followed by a number for decimal places// rebuild
       </div>
       <div id="about">
         <p>
-          <button @click="toggleAbout()">
-            <template v-if="!about"
-              >About suvat</template
-            >
-            <template v-else
-              >Back</template
-            >
+          <button v-if="!about" onclick="window.location.href = '/about.html';">
+            About suvat</button
+          ><button v-else onclick="window.location.href = '/';">
+            Back
           </button>
         </p>
       </div>
