@@ -43,9 +43,26 @@
       <h1>Deriving suvat</h1>
 
       <h3>Assumptions</h3>
-      <Mathr formula="\text{average velocity}=\frac{\text{displacement}}{\text{time}}" />
-      <Mathr formula="\text{acceleration}=\frac{\text{change in velocity}}{\text{time}}" />
 
+      <p>
+        <Mathr
+          formula="\text{average velocity}=\frac{\text{displacement}}{\text{time}}"
+          size="small"
+        />
+      </p>
+      <p>
+        <Mathr
+          formula="\text{acceleration}=\frac{\text{change in velocity}}{\text{time}}"
+          size="small"
+        />
+      </p>
+      <p>
+        These are literally the definitions of
+        <a
+          href="https://en.wikipedia.org/wiki/Velocity#Average_velocity"
+        >average velocity</a> and
+        <a href="https://en.wikipedia.org/wiki/Acceleration#Average_acceleration">acceleration</a>.
+      </p>
       <h3>
         Deriving
         <Mathr formula="v=u+at" size="small" />
@@ -70,14 +87,51 @@
         <Mathr
           formula="\text{average velocity}=\frac{\text{displacement}}{\text{time}}"
           size="small"
-        />can be rewritten using our suvat variables to become:
+        />can be rewritten using our suvat variables to become
         <Mathr formula="\text{average velocity}=\frac{s}{t}" size="small" />.
-        The average velocity is also the average of the initial and final velocities so we can write
+        The average velocity is also the average of the initial and final velocities so we can also write
         <Mathr formula="\text{average velocity}=\frac{u+v}{2}" size="small" />.
         Combine these two to find
         <Mathr formula="\frac{u+v}{2}=\frac{s}{t}" size="small" />.
         This can then be rearranged to form
         <Mathr formula="s=\frac{1}{2}(u+v)t" size="small" />.
+      </p>
+
+      <h3>
+        Deriving
+        <Mathr formula="s=ut+\frac{1}{2}at^2" size="small" />and
+        <Mathr formula="s=vt-\frac{1}{2}at^2" size="small" />
+      </h3>
+      <p>
+        We have already derived that
+        <Mathr formula="v=u+at" size="small" />and
+        <Mathr formula="s=\frac{1}{2}(u+v)t" size="small" />. We can substitute
+        <Mathr formula="v=u+at" size="small" />into
+        <Mathr formula="s=\frac{1}{2}(u+v)t" size="small" />to form
+        <Mathr formula="s=\frac{1}{2}(u+(u+at))t" size="small" />. This can then be rearranged to form
+        <Mathr formula="s=ut+\frac{1}{2}at^2" size="small" />.
+      </p>
+      <p>
+        Deriving
+        <Mathr formula="s=vt-\frac{1}{2}at^2" size="small" />can be done in a simallar way but first
+        <Mathr formula="v=u+at" size="small" />must be rearranged to make
+        <Mathr formula="u" size="small" />the subject forming
+        <Mathr formula="u=v-at" size="small" />. Then the substitution can be done to form
+        <Mathr formula="s=\frac{1}{2}((v-at)+v)t" size="small" />. This can then be rearranged to form
+        <Mathr formula="s=vt-\frac{1}{2}at^2" size="small" />.
+      </p>
+
+      <h3>
+        Deriving
+        <Mathr formula="v^2=u^2+2as" size="small" />
+      </h3>
+      <p>
+        <Mathr formula="v=u+at" size="small" />must be rearranged to make
+        <Mathr formula="t" size="small" />the subject forming
+        <Mathr formula="t=\frac{v-u}{a}" size="small" />. This can then be substituted into
+        <Mathr formula="s=\frac{1}{2}(u+v)t" size="small" />to form
+        <Mathr formula="s=\frac{1}{2}(u+v)(\frac{v-u}{a})" size="small" />. Lastly it can be rearranged to form
+        <Mathr formula="v^2=u^2+2as" size="small" />.
       </p>
 
       <p class="smalltext">
