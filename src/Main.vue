@@ -11,11 +11,10 @@ and -g followed by a number for decimal places// rebuild
       </div>
       <div id="about">
         <p>
-          <button v-if="!about" onclick="window.location.href = '/about.html';">
-            About suvat</button
-          ><button v-else onclick="window.location.href = '/';">
+          <a v-if="!about" href="/about.html" class="button"> About suvat</a
+          ><a v-else href="/" class="button">
             Back
-          </button>
+          </a>
         </p>
       </div>
       <aside>
@@ -212,6 +211,20 @@ body
         &:hover,
         &:active
           transform: scale(1, 1.8)
+    a.button
+      transition: .5s
+      timing-function: ease-out
+      display: inline-block
+      background-color: #fff
+      color: #111
+      padding: 3px 9px
+      text-decoration: none
+      border-radius: 5px
+      transform: scale(1)
+      &:hover,
+      &:active
+        transform: scale(1.06)
+        box-shadow: inset 0px 0px 0px 3px rgba(125,125,125,1)
     input
       width: 35px
       margin-right: 8px
