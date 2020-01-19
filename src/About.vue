@@ -1,12 +1,12 @@
 <template>
-  <Main :about="false" />
+  <Main :about="true" />
 </template>
 
 <script>
 import Main from "./Main.vue";
 
 export default {
-  name: "app",
+  name: "about",
   components: {
     Main
   }
