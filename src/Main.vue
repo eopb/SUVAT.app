@@ -217,7 +217,7 @@ body
       display: inline-block
       background-color: #fff
       color: #111
-      padding: 3px 9px
+      padding: 3px 21px
       text-decoration: none
       border-radius: 5px
       transform: scale(1)
