@@ -147,8 +147,8 @@
       <p class="smalltext">
         If you run into any issues with this calculator please email
         <a
-          href="mailto:incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com"
-          >incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com</a
+          href="mailto:incoming+efunb-suvat-app-15193084-issue-@incoming.gitlab.com"
+          >incoming+efunb-suvat-app-15193084-issue-@incoming.gitlab.com</a
         >.
       </p>
     </div>

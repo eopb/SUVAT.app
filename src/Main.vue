@@ -6,7 +6,7 @@ and -g followed by a number for decimal places// rebuild
     <header>
       <div id="title">
         <p>
-          <b>suvat calculator</b>
+          <b>SUVAT.app</b>
         </p>
       </div>
       <div id="about">
