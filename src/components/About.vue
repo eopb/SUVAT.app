@@ -27,7 +27,14 @@
           <a href="https://en.wikipedia.org/wiki/Time">time</a>
         </li>
       </ul>
-      <p>These variables are linked by the suvat equations.</p>
+      <p>
+        These variables are linked by
+        <a
+          href="https://en.wikipedia.org/wiki/Equations_of_motion#Constant_translational_acceleration_in_a_straight_line"
+          >equations of motion</a
+        >
+        called suvat equations.
+      </p>
       <Mathr
         formula="\tiny{1}: \normalsize{v=u+at}\\\tiny{2}: \normalsize{s=ut+\frac{1}{2}at^2}\\\tiny{3}: \normalsize{s=\frac{1}{2}(u+v)t}\\\tiny{4}: \normalsize{v^2=u^2+2as}\\\tiny{5}: \normalsize{s=vt-\frac{1}{2}at^2}"
       />
@@ -43,7 +50,7 @@
         >.
       </p>
 
-      <h1 id="deriving">Deriving suvat</h1>
+      <h1 id="deriving">Deriving equations of motion</h1>
 
       <h3>Assumptions</h3>
 
