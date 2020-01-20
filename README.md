@@ -1,4 +1,4 @@
-# suvat-calculator
+# SUVAT app
 
 <img align="right" width="135" src="src/assets/logo.png">
 
@@ -8,13 +8,17 @@
 
 ## Help
 
-If you run into any issues with this calculator please email [incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com](mailto:incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com)
+If you run into any issues with this web app please email [incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com](mailto:incoming+efunb-suvat-calculator-15193084-issue-@incoming.gitlab.com)
 
 ## What is it?
 
-A single page web app that solves physics problems with constant acceleration.
+A web app that solves physics problems with constant acceleration.
 
 ![](screenshot.png)
+
+SUVAT app also explains the concepts around suvat such as how the suvat equations are derived.
+
+![](screenshotabout.png)
 
 ## Why make this when there are existing online suvat calculators?
 
