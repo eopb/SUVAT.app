@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <div>
-      <h1>About suvat</h1>
+      <h1 id="about">About suvat</h1>
       <p>Suvat is first and foremost an acronym.</p>
       <ul>
         <li>
@@ -43,7 +43,7 @@
         >.
       </p>
 
-      <h1>Deriving suvat</h1>
+      <h1 id="deriving">Deriving suvat</h1>
 
       <h3>Assumptions</h3>
 
