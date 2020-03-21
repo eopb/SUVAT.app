@@ -228,6 +228,9 @@ body
     input
       width: 35px
       margin-right: 8px
+      padding: 4px
+      border: 0
+        radius: 5px
 
 #grid-wrap
   display: grid
