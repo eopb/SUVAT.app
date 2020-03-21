@@ -234,17 +234,18 @@ body
 
 #grid-wrap
   display: grid
-  grid-template-columns: 1fr
-  grid-template-rows: repeat(auto-fill, 1fr)
+  grid:
+    template-columns: 1fr
+    template-rows: repeat(auto-fill, 1fr)
   > div.inputerr
     display: none
   @media (min-width: 700px)
     grid-template-columns: 300px auto
     grid-template-rows: repeat(5, 1fr)
     > div.inputerr
-      display: block
-      grid-column: 2
-      grid-row: 1 / 7
+      grid:
+        column: 2
+        row: 1 / 7
       display: flex
       align-items: center
       justify-content: center
