@@ -167,8 +167,8 @@ import Mathr from "./Mathr.vue";
 export default {
   name: "About",
   components: {
-    Mathr
-  }
+    Mathr,
+  },
 };
 </script>
 

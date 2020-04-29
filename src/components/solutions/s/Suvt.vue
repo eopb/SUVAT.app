@@ -19,22 +19,22 @@ export default {
   name: "Suvt",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionS(
         0.5 * (this.suvat.u + this.suvat.v) * this.suvat.t,
         this.dp
       );
     },
-    e1: function() {
+    e1: function () {
       return `\\frac{1}{2}\\times(${MF.maybeBracket(
         this.suvat.u
       )}+${MF.maybeBracket(this.suvat.v)})\\times${MF.maybeBracket(
         this.suvat.t
       )}`;
-    }
-  }
+    },
+  },
 };
 </script>

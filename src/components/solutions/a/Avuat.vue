@@ -37,20 +37,20 @@ export default {
   name: "Vvuat",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionA(this.soloution, this.dp);
     },
-    e1: function() {
+    e1: function () {
       return `\\frac{${MF.maybeBracket(this.suvat.v)}-${MF.maybeBracket(
         this.suvat.u
       )}}{${MF.maybeBracket(this.suvat.t)}}`;
     },
-    soloution: function() {
+    soloution: function () {
       return (this.suvat.v - this.suvat.u) / this.suvat.t;
-    }
-  }
+    },
+  },
 };
 </script>

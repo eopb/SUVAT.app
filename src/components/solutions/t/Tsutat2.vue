@@ -46,13 +46,13 @@ export default {
   name: "Tsutat2",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionT2(this.soloution, this.soloution2, this.dp);
     },
-    e1: function() {
+    e1: function () {
       return `\\frac{-${MF.maybeBracket(
         this.suvat.u
       )}\\pm\\sqrt{${MF.maybeBracket(
@@ -61,23 +61,23 @@ export default {
         this.suvat.s
       )}}}{${MF.maybeBracket(this.suvat.a)}}`;
     },
-    e2: function() {
+    e2: function () {
       return `${MF.maybeBracket(this.suvat.u)}^2+2\\times ${MF.maybeBracket(
         this.suvat.a
       )}\\times ${MF.maybeBracket(this.suvat.s)}<0`;
     },
-    soloution: function() {
+    soloution: function () {
       return (-this.suvat.u + Math.sqrt(this.u22as)) / this.a2;
     },
-    soloution2: function() {
+    soloution2: function () {
       return (-this.suvat.u - Math.sqrt(this.u22as)) / this.a2;
     },
-    a2: function() {
+    a2: function () {
       return this.suvat.a;
     },
-    u22as: function() {
+    u22as: function () {
       return Math.pow(this.suvat.u, 2) + 2 * this.suvat.a * this.suvat.s;
-    }
-  }
+    },
+  },
 };
 </script>

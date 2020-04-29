@@ -5,7 +5,7 @@ module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "" : "/",
   pwa: {
     name: "SUVAT app",
-    themeColor: "#1c6ea4"
+    themeColor: "#1c6ea4",
   },
   pages: {
     index: {
@@ -14,7 +14,7 @@ module.exports = {
       // the source template
       template: "public/index.html",
       // output as dist/index.html
-      filename: "index.html"
+      filename: "index.html",
     },
     about: {
       // entry for the page
@@ -22,7 +22,7 @@ module.exports = {
       // the source template
       template: "public/about.html",
       // output as dist/index.html
-      filename: "about.html"
-    }
-  }
+      filename: "about.html",
+    },
+  },
 };

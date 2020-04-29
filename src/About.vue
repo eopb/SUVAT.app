@@ -8,7 +8,7 @@ import Main from "./Main.vue";
 export default {
   name: "about",
   components: {
-    Main
-  }
+    Main,
+  },
 };
 </script>

@@ -31,20 +31,20 @@ export default {
   name: "Tuvt",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionT(this.soloution, this.dp);
     },
-    e1: function() {
+    e1: function () {
       return `\\frac{2\\times${MF.maybeBracket(
         this.suvat.s
       )}}{${MF.maybeBracket(this.suvat.u)}+${MF.maybeBracket(this.suvat.v)}}`;
     },
-    soloution: function() {
+    soloution: function () {
       return (2 * this.suvat.s) / (this.suvat.u + this.suvat.v);
-    }
-  }
+    },
+  },
 };
 </script>

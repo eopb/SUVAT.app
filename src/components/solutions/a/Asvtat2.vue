@@ -42,28 +42,28 @@ export default {
   name: "Asvtat2",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionA(this.soloution, this.dp);
     },
-    e1: function() {
+    e1: function () {
       return `\\frac{${MF.maybeBracket(this.suvat.v)}\\times${MF.maybeBracket(
         this.suvat.t
       )}-${MF.maybeBracket(this.suvat.s)}}{\\frac{1}{2}\\times${MF.maybeBracket(
         this.suvat.t
       )}^2}`;
     },
-    e2: function() {
+    e2: function () {
       return `\\frac{1}{2}\\times${MF.maybeBracket(this.suvat.t)}^2=0`;
     },
-    soloution: function() {
+    soloution: function () {
       return (
         (this.suvat.v * this.suvat.t - this.suvat.s) /
         (0.5 * Math.pow(this.suvat.t, 2))
       );
-    }
-  }
+    },
+  },
 };
 </script>

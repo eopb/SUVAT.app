@@ -30,27 +30,27 @@ export default {
   name: "Uv2u22as",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionV(Math.abs(Math.sqrt(this.inRoot)), "\\pm", this.dp);
     },
-    e1: function() {
+    e1: function () {
       return `\\sqrt{${MF.maybeBracket(
         this.suvat.u
       )}^2+2\\times${MF.maybeBracket(this.suvat.a)}\\times${MF.maybeBracket(
         this.suvat.s
       )}}`;
     },
-    e2: function() {
+    e2: function () {
       return `${MF.maybeBracket(this.suvat.u)}^2+2\\times${MF.maybeBracket(
         this.suvat.a
       )}\\times${MF.maybeBracket(this.suvat.s)}<0`;
     },
-    inRoot: function() {
+    inRoot: function () {
       return Math.pow(this.suvat.u, 2) + 2 * this.suvat.a * this.suvat.s;
-    }
-  }
+    },
+  },
 };
 </script>

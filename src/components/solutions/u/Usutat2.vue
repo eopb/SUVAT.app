@@ -38,13 +38,13 @@ export default {
   name: "Usutat2",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionU(this.soloution, "", this.dp);
     },
-    e1: function() {
+    e1: function () {
       return `\\frac{${MF.maybeBracket(
         this.suvat.s
       )}-\\frac{1}{2}\\times${MF.maybeBracket(
@@ -53,12 +53,12 @@ export default {
         this.suvat.t
       )}}`;
     },
-    soloution: function() {
+    soloution: function () {
       return (
         (this.suvat.s - 0.5 * this.suvat.a * Math.pow(this.suvat.t, 2)) /
         this.suvat.t
       );
-    }
-  }
+    },
+  },
 };
 </script>

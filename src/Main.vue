@@ -92,7 +92,7 @@ export default {
   components: {
     LetterBox,
     Solution,
-    About
+    About,
   },
   props: ["about"],
   data: () => ({
@@ -101,9 +101,9 @@ export default {
       u: null,
       v: null,
       a: null,
-      t: null
+      t: null,
     },
-    dp: 3
+    dp: 3,
   }),
 
   methods: {
@@ -129,10 +129,10 @@ export default {
           this.suvat.t = value;
           break;
       }
-    }
+    },
   },
   computed: {
-    numOfInputs: function() {
+    numOfInputs: function () {
       return (
         (this.suvat.s === null ? 0 : 1) +
         (this.suvat.u === null ? 0 : 1) +
@@ -141,16 +141,16 @@ export default {
         (this.suvat.t === null ? 0 : 1)
       );
     },
-    showSoloutions: function() {
+    showSoloutions: function () {
       return this.numOfInputs === 3;
     },
-    inputPrompt: function() {
+    inputPrompt: function () {
       return this.numOfInputs < 3;
     },
-    inputLessPrompt: function() {
+    inputLessPrompt: function () {
       return this.numOfInputs > 3;
-    }
-  }
+    },
+  },
 };
 </script>
 

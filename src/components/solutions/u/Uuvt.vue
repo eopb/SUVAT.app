@@ -38,20 +38,20 @@ export default {
   name: "Uuvt",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionU(this.soloution, "", this.dp);
     },
-    e1: function() {
+    e1: function () {
       return `\\frac{2\\times${MF.maybeBracket(
         this.suvat.s
       )}}{${MF.maybeBracket(this.suvat.t)}}-${MF.maybeBracket(this.suvat.v)}`;
     },
-    soloution: function() {
+    soloution: function () {
       return (2 * this.suvat.s) / this.suvat.t - this.suvat.v;
-    }
-  }
+    },
+  },
 };
 </script>

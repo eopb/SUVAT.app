@@ -20,21 +20,21 @@ export default {
   name: "Vvuat",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionV(
         this.suvat.u + this.suvat.a * this.suvat.t,
         "",
         this.dp
       );
     },
-    e1: function() {
+    e1: function () {
       return `${this.suvat.u}+${MF.maybeBracket(
         this.suvat.a
       )}\\times${MF.maybeBracket(this.suvat.t)}`;
-    }
-  }
+    },
+  },
 };
 </script>

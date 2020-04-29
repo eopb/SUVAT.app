@@ -178,7 +178,7 @@ export default {
     Tvuat,
     Tsutat2,
     Tuvt,
-    Tsvtat2
+    Tsvtat2,
   },
   props: ["suvat", "letter", "dp"],
   data: () => ({
@@ -186,7 +186,7 @@ export default {
     u: "u",
     v: "v",
     a: "a",
-    t: "t"
+    t: "t",
   }),
   methods: {
     formular() {
@@ -328,8 +328,8 @@ export default {
           break;
       }
       return null;
-    }
-  }
+    },
+  },
 };
 </script>
 

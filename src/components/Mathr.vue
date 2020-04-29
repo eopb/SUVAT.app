@@ -8,36 +8,36 @@
 export default {
   props: {
     formula: {
-      type: String
+      type: String,
     },
     safe: {
       type: Boolean,
-      default: true
+      default: true,
     },
     size: {
       type: String,
-      default: "large"
+      default: "large",
     },
     display: {
       type: Boolean,
-      default: false
+      default: false,
     },
     options: {
       type: Object,
-      default: function() {
+      default: function () {
         return {};
-      }
-    }
+      },
+    },
   },
   watch: {
     formula() {
       this.renderMathJax();
-    }
+    },
   },
   computed: {
-    c_formula: function() {
+    c_formula: function () {
       return this.display ? `$$${this.formula}$$` : `$${this.formula}$`;
-    }
+    },
   },
   mounted() {
     this.renderMathJax();
@@ -58,32 +58,32 @@ export default {
           tex2jax: {
             inlineMath: [
               ["$", "$"],
-              ["(", ")"]
+              ["(", ")"],
             ],
             displayMath: [
               ["$$", "$$"],
-              ["[", "]"]
+              ["[", "]"],
             ],
             processEscapes: true,
-            processEnvironments: true
+            processEnvironments: true,
           },
           // Center justify equations in code and markdown cells. Elsewhere
           // we use CSS to left justify single line equations in code cells.
           displayAlign: "center",
           "HTML-CSS": {
             styles: { ".MathJax_Display": { margin: 0 } },
-            linebreaks: { automatic: true }
+            linebreaks: { automatic: true },
           },
-          ...this.options
+          ...this.options,
         });
         window.MathJax.Hub.Queue([
           "Typeset",
           window.MathJax.Hub,
-          this.$refs.mathJaxEl
+          this.$refs.mathJaxEl,
         ]);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped lang="sass">

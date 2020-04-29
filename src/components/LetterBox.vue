@@ -8,7 +8,7 @@
         <Mathr
           :formula="full_letter"
           :display="true"
-          style="font-size: 0.6em; margin: 0; padding: 0"
+          style="font-size: 0.6em; margin: 0; padding: 0;"
         />
       </h1>
       <input
@@ -28,21 +28,21 @@ export default {
   name: "LetterValue",
   props: ["letter", "name", "unit"],
   components: {
-    Mathr
+    Mathr,
   },
   data: () => ({
-    letterValue: null
+    letterValue: null,
   }),
   methods: {
-    valuechange: function() {
+    valuechange: function () {
       this.$emit("letter-value-changed", this.letterValue, this.letter);
-    }
+    },
   },
   computed: {
-    full_letter: function() {
+    full_letter: function () {
       return `\\Huge{${this.letter}}\\mathrm{\\tiny{(${this.unit})}}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

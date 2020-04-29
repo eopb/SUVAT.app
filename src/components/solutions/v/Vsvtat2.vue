@@ -39,25 +39,25 @@ export default {
   name: "Vsvtat2",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr
+    Mathr,
   },
   computed: {
-    soloution_r: function() {
+    soloution_r: function () {
       return MF.solutionV(this.soloution, "", this.dp);
     },
-    e1: function() {
+    e1: function () {
       return `\\frac{${MF.maybeBracket(
         this.suvat.s
       )}+\\frac{1}{2}\\times${MF.maybeBracket(
         this.suvat.a
       )}\\times${MF.maybeBracket(this.suvat.t)}^2}{${this.suvat.t}}`;
     },
-    soloution: function() {
+    soloution: function () {
       return (
         (this.suvat.s + 0.5 * this.suvat.a * Math.pow(this.suvat.t, 2)) /
         this.suvat.t
       );
-    }
-  }
+    },
+  },
 };
 </script>

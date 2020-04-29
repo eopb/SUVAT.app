@@ -1,11 +1,11 @@
 import { Math } from "core-js";
 
 class MF {
-  static maybeBracket = i => (i < 0 ? `(${i})` : i);
+  static maybeBracket = (i) => (i < 0 ? `(${i})` : i);
 
   static todp = (i, dp) => Math.round(i * Math.pow(10, dp)) / Math.pow(10, dp);
 
-  static solution = function(l, bef, solution, dp, unit) {
+  static solution = function (l, bef, solution, dp, unit) {
     return `${l} = ${bef}{${this.todp(
       solution,
       dp
