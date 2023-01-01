@@ -31,5 +31,10 @@
         "sass-loader": "^8.0.2",
         "vue-cli-plugin-pug": "^1.0.7",
         "vue-template-compiler": "^2.6.11"
+    },
+    "eslintConfig": {
+        "vue/multi-word-component-names": ["error", {
+            "ignores": ["Vvuat"]
+        }]
     }
 }
