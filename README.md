@@ -4,11 +4,9 @@
 
 [https://suvat.app/](https://suvat.app/)
 
-[![pipeline status](https://gitlab.com/efunb/suvat-app/badges/master/pipeline.svg)](https://gitlab.com/efunb/suvat-app/commits/master)
-
 ## Help
 
-If you run into any issues with this web app please email [incoming+efunb-suvat-app-15193084-issue-@incoming.gitlab.com](mailto:incoming+efunb-suvat-app-15193084-issue-@incoming.gitlab.com)
+If you run into any issues with this web app please [open an issue](https://github.com/eopb/SUVAT.app/issues/new/choose)
 
 ## What is it?
 
@@ -23,7 +21,3 @@ SUVAT.app also explains the concepts around suvat such as [how the suvat equatio
 ## Why make this when there are existing online suvat calculators?
 
 This suvat calculator has not only a better design than the others I have seen. It also provides step by step solutions explaining exactly how you could solve the same problem without the calculator.
-
-## **Warning**
-
-**If you are viewing this from GitHub then this is a read only copy. Please contribute to the GitLab copy [here](https://gitlab.com/efunb/suvat-app).**
