@@ -4,6 +4,8 @@
 
 [https://suvat.app/](https://suvat.app/)
 
+[![pipeline status](https://github.com/eopb/SUVAT.app/actions)](https://github.com/eopb/SUVAT.app/actions/workflows/node.js.yml/badge.svg)
+
 ## Help
 
 If you run into any issues with this web app please [open an issue](https://github.com/eopb/SUVAT.app/issues/new/choose).
