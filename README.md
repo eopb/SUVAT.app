@@ -4,7 +4,7 @@
 
 [https://suvat.app/](https://suvat.app/)
 
-[![pipeline status](https://github.com/eopb/SUVAT.app/actions)](https://github.com/eopb/SUVAT.app/actions/workflows/node.js.yml/badge.svg)
+[![pipeline status](https://github.com/eopb/SUVAT.app/actions/workflows/node.js.yml/badge.svg)](https://github.com/eopb/SUVAT.app/actions)
 
 ## Help
 
