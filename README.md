@@ -6,7 +6,7 @@
 
 ## Help
 
-If you run into any issues with this web app please [open an issue](https://github.com/eopb/SUVAT.app/issues/new/choose)
+If you run into any issues with this web app please [open an issue](https://github.com/eopb/SUVAT.app/issues/new/choose).
 
 ## What is it?
 
