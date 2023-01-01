@@ -12,9 +12,7 @@ and -g followed by a number for decimal places// rebuild
       <div id="about">
         <p>
           <a v-if="!about" href="/about.html" class="button"> About suvat</a
-          ><a v-else href="/" class="button">
-            Back
-          </a>
+          ><a v-else href="/" class="button"> Back </a>
         </p>
       </div>
       <aside>
