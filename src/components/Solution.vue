@@ -2,183 +2,183 @@
   <div id="solution">
     <template v-if="formular() !== null">
       <template v-if="letter === s">
-        <Ssutat2
+        <Ssutat2C
           v-if="formular() === 2"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Ssutat2>
-        <Suvt
+        ></Ssutat2C>
+        <SuvtC
           v-else-if="formular() === 3"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Suvt>
-        <Sv2u22as
+        ></SuvtC>
+        <Sv2u22asC
           v-else-if="formular() === 4"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Sv2u22as>
-        <Ssvtat2
+        ></Sv2u22asC>
+        <Ssvtat2C
           v-if="formular() === 5"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Ssvtat2>
+        ></Ssvtat2C>
       </template>
       <template v-if="letter === u">
-        <Uvuat
+        <UvuatC
           v-if="formular() === 1"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Uvuat>
-        <Usutat2
+        ></UvuatC>
+        <Usutat2C
           v-if="formular() === 2"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Usutat2>
-        <Uuvt
+        ></Usutat2C>
+        <UuvtC
           v-if="formular() === 3"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Uuvt>
-        <Uv2u22as
+        ></UuvtC>
+        <Uv2u22asC
           v-if="formular() === 4"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Uv2u22as>
+        ></Uv2u22asC>
       </template>
       <template v-if="letter === v">
-        <Vvuat
+        <VvuatC
           v-if="formular() === 1"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Vvuat>
-        <Vuvt
+        ></VvuatC>
+        <VuvtC
           v-if="formular() === 3"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Vuvt>
-        <Vuv2u22as
+        ></VuvtC>
+        <Vuv2u22asC
           v-if="formular() === 4"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Vuv2u22as>
-        <Vsvtat2
+        ></Vuv2u22asC>
+        <Vsvtat2C
           v-if="formular() === 5"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Vsvtat2>
+        ></Vsvtat2C>
       </template>
       <template v-if="letter === a">
-        <Avuat
+        <AvuatC
           v-if="formular() === 1"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Avuat>
-        <Asutat2
+        ></AvuatC>
+        <Asutat2C
           v-if="formular() === 2"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Asutat2>
-        <Av2u22as
+        ></Asutat2C>
+        <Av2u22asC
           v-if="formular() === 4"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Av2u22as>
-        <Asvtat2
+        ></Av2u22asC>
+        <Asvtat2C
           v-if="formular() === 5"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Asvtat2>
+        ></Asvtat2C>
       </template>
       <template v-if="letter === t">
-        <Tvuat
+        <TvuatC
           v-if="formular() === 1"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Tvuat>
-        <Tsutat2
+        ></TvuatC>
+        <Tsutat2C
           v-if="formular() === 2"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Tsutat2>
-        <Tuvt
+        ></Tsutat2C>
+        <TuvtC
           v-if="formular() === 3"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Tuvt>
-        <Tsvtat2
+        ></TuvtC>
+        <Tsvtat2C
           v-if="formular() === 5"
           :suvat="suvat"
           :letter="letter"
           :dp="dp"
-        ></Tsvtat2>
+        ></Tsvtat2C>
       </template>
     </template>
   </div>
 </template>
 
 <script>
-import Ssutat2 from "./solutions/s/Ssutat2.vue";
-import Suvt from "./solutions/s/Suvt.vue";
-import Sv2u22as from "./solutions/s/Sv2u22as.vue";
-import Ssvtat2 from "./solutions/s/Ssvtat2.vue";
-import Uvuat from "./solutions/u/Uvuat.vue";
-import Usutat2 from "./solutions/u/Usutat2.vue";
-import Uuvt from "./solutions/u/Uuvt.vue";
-import Uv2u22as from "./solutions/u/Uv2u22as.vue";
-import Vvuat from "./solutions/v/Vvuat.vue";
-import Vuvt from "./solutions/v/Vuvt.vue";
-import Vuv2u22as from "./solutions/v/Vuv2u22as.vue";
-import Vsvtat2 from "./solutions/v/Vsvtat2.vue";
-import Avuat from "./solutions/a/Avuat.vue";
-import Asutat2 from "./solutions/a/Asutat2.vue";
-import Av2u22as from "./solutions/a/Av2u22as.vue";
-import Asvtat2 from "./solutions/a/Asvtat2.vue";
-import Tvuat from "./solutions/t/Tvuat.vue";
-import Tsutat2 from "./solutions/t/Tsutat2.vue";
-import Tuvt from "./solutions/t/Tuvt.vue";
-import Tsvtat2 from "./solutions/t/Tsvtat2.vue";
+import Ssutat2C from "./solutions/s/Ssutat2C.vue";
+import SuvtC from "./solutions/s/SuvtC.vue";
+import Sv2u22asC from "./solutions/s/Sv2u22asC.vue";
+import Ssvtat2C from "./solutions/s/Ssvtat2C.vue";
+import UvuatC from "./solutions/u/UvuatC.vue";
+import Usutat2C from "./solutions/u/Usutat2C.vue";
+import UuvtC from "./solutions/u/UuvtC.vue";
+import Uv2u22asC from "./solutions/u/Uv2u22asC.vue";
+import VvuatC from "./solutions/v/VvuatC.vue";
+import VuvtC from "./solutions/v/VuvtC.vue";
+import Vuv2u22asC from "./solutions/v/Vuv2u22asC.vue";
+import Vsvtat2C from "./solutions/v/Vsvtat2C.vue";
+import AvuatC from "./solutions/a/AvuatC.vue";
+import Asutat2C from "./solutions/a/Asutat2C.vue";
+import Av2u22asC from "./solutions/a/Av2u22asC.vue";
+import Asvtat2C from "./solutions/a/Asvtat2C.vue";
+import TvuatC from "./solutions/t/TvuatC.vue";
+import Tsutat2C from "./solutions/t/Tsutat2C.vue";
+import TuvtC from "./solutions/t/TuvtC.vue";
+import Tsvtat2C from "./solutions/t/Tsvtat2C.vue";
 export default {
-  name: "Solution",
+  name: "SolutionC",
   components: {
-    Ssutat2,
-    Suvt,
-    Sv2u22as,
-    Ssvtat2,
-    Uvuat,
-    Usutat2,
-    Uuvt,
-    Uv2u22as,
-    Vvuat,
-    Vuvt,
-    Vuv2u22as,
-    Vsvtat2,
-    Avuat,
-    Asutat2,
-    Av2u22as,
-    Asvtat2,
-    Tvuat,
-    Tsutat2,
-    Tuvt,
-    Tsvtat2,
+    Ssutat2C,
+    SuvtC,
+    Sv2u22asC,
+    Ssvtat2C,
+    UvuatC,
+    Usutat2C,
+    UuvtC,
+    Uv2u22asC,
+    VvuatC,
+    VuvtC,
+    Vuv2u22asC,
+    Vsvtat2C,
+    AvuatC,
+    Asutat2C,
+    Av2u22asC,
+    Asvtat2C,
+    TvuatC,
+    Tsutat2C,
+    TuvtC,
+    Tsvtat2C,
   },
   props: ["suvat", "letter", "dp"],
   data: () => ({
@@ -371,7 +371,7 @@ export default {
         padding: 10px
       @for $i from 1 through 20
         &:nth-child(#{$i})
-            transition-delay: (($i - 1s) / 10) + .02
+            transition-delay: calc((($i * 1s) - 1s) / 10) + .02
     > h2
       writing-mode: vertical-lr
       text-orientation: sideways

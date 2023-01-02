@@ -1,14 +1,14 @@
 <template>
-  <Main :about="true" />
+  <MainPage :about="true" />
 </template>
 
 <script>
-import Main from "./Main.vue";
+import MainPage from "./MainPage.vue";
 
 export default {
-  name: "about",
+  name: "aboutPage",
   components: {
-    Main,
+    MainPage,
   },
 };
 </script>
