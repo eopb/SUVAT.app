@@ -35,7 +35,7 @@ jobs:
           # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
           cache: 'npm'
       - run: npm ci
-      - run: NODE_OPTIONS=--openssl-legacy-provider npm run build
+      - run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
