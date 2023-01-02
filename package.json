@@ -33,8 +33,6 @@
         "vue-template-compiler": "^2.6.11"
     },
     "eslintConfig": {
-        "vue/multi-word-component-names": ["error", {
-            "ignores": ["about", "About", "Mathr", "Soloution", "Asutat2", "Asvtat2", "Sv2u22as", "Vvuat"]
-        }]
+       
     }
 }

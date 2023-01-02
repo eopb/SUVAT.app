@@ -371,7 +371,7 @@ export default {
         padding: 10px
       @for $i from 1 through 20
         &:nth-child(#{$i})
-            transition-delay: (($i - 1s) / 10) + .02
+            transition-delay: calc((($i * 1s) - 1s) / 10) + .02
     > h2
       writing-mode: vertical-lr
       text-orientation: sideways
