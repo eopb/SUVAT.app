@@ -40,35 +40,35 @@ and -g followed by a number for decimal places// rebuild
         name="Displacement"
         unit="m"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="s" />
+      <SolutionC v-show="showSolutions" :suvat="suvat" :dp="dp" letter="s" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="u"
         name="Initial velocity"
         unit="ms^{-1}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="u" />
+      <SolutionC v-show="showSolutions" :suvat="suvat" :dp="dp" letter="u" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="v"
         name="Final velocity"
         unit="ms^{-1}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="v" />
+      <SolutionC v-show="showSolutions" :suvat="suvat" :dp="dp" letter="v" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="a"
         name="Acceleration"
         unit="ms^{-2}"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="a" />
+      <SolutionC v-show="showSolutions" :suvat="suvat" :dp="dp" letter="a" />
       <LetterBox
         @letter-value-changed="updateLater"
         letter="t"
         name="Time"
         unit="s"
       />
-      <Solution v-show="showSoloutions" :suvat="suvat" :dp="dp" letter="t" />
+      <SolutionC v-show="showSolutions" :suvat="suvat" :dp="dp" letter="t" />
       <div class="inputerr" v-if="inputPrompt">
         <h1>Input three values to get solutions</h1>
       </div>
@@ -76,21 +76,21 @@ and -g followed by a number for decimal places// rebuild
         <h1>Input only three values to get solutions</h1>
       </div>
     </div>
-    <About id="about" v-else></About>
+    <AboutPage id="about" v-else></AboutPage>
   </div>
 </template>
 
 <script>
 import LetterBox from "./components/LetterBox.vue";
-import Solution from "./components/Solution.vue";
-import About from "./components/About.vue";
+import SolutionC from "./components/Solution.vue";
+import AboutPage from "./components/About.vue";
 
 export default {
   name: "app",
   components: {
     LetterBox,
-    Solution,
-    About,
+    SolutionC,
+    AboutPage,
   },
   props: ["about"],
   data: () => ({
@@ -139,7 +139,7 @@ export default {
         (this.suvat.t === null ? 0 : 1)
       );
     },
-    showSoloutions: function () {
+    showSolutions: function () {
       return this.numOfInputs === 3;
     },
     inputPrompt: function () {

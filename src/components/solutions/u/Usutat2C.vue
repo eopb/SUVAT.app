@@ -3,42 +3,42 @@ include ../mixins.pug
 div
   +th1
     template(v-if="isFinite(soloution)")
-      Mathr(:formula="soloution_r" size="small")
+      MathR(:formula="soloution_r" size="small")
     template(v-else) Can't solve for u
   +sue
   +tmath 
-    Mathr(formula="s=ut+\\frac{1}{2}at^2")
+    MathR(formula="s=ut+\\frac{1}{2}at^2")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="\\frac{1}{2}at^2" size="small")
+    MathR(formula="\\frac{1}{2}at^2" size="small")
     | from both sides.
   +tmath 
-    Mathr(formula="s-\\frac{1}{2}at^2=ut")
+    MathR(formula="s-\\frac{1}{2}at^2=ut")
   +th3
     | First lets rearrange this equation by dividing both sides by
-    Mathr(formula="t" size="small")
+    MathR(formula="t" size="small")
   +tmath 
-    Mathr(formula="\\frac{s-\\frac{1}{2}at^2}{t}=u")
+    MathR(formula="\\frac{s-\\frac{1}{2}at^2}{t}=u")
   +th3
     | Lastly enter known values.
   +tmath 
-    Mathr(:formula="e1")
+    MathR(:formula="e1")
   template(v-if="!isFinite(soloution)")
     +th3
       | Can't solve as denominator
-      Mathr(formula="=0" size="small")
+      MathR(formula="=0" size="small")
       | Can't divide by zero.
 
 </template>
 
 <script>
-import Mathr from "../../Mathr.vue";
+import MathR from "../../MathR.vue";
 import MF from "../../math.js";
 export default {
-  name: "Usutat2",
+  name: "Usutat2C",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr,
+    MathR,
   },
   computed: {
     soloution_r: function () {

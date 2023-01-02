@@ -2,24 +2,24 @@
 include ../mixins.pug
 div
   +th1
-    Mathr(:formula="soloution_r" size="small")
+    MathR(:formula="soloution_r" size="small")
   +sue
   +tmath 
-    Mathr(formula="s=\\frac{1}{2}(u+v)t")
+    MathR(formula="s=\\frac{1}{2}(u+v)t")
   +th3
     | Enter known values.
   +tmath
-    Mathr(:formula="e1")
+    MathR(:formula="e1")
 </template>
 
 <script>
-import Mathr from "../../Mathr.vue";
+import MathR from "../../MathR.vue";
 import MF from "../../math";
 export default {
-  name: "Suvt",
+  name: "SuvtC",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr,
+    MathR,
   },
   computed: {
     soloution_r: function () {

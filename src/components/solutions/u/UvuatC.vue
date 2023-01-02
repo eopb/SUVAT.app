@@ -2,31 +2,31 @@
 include ../mixins.pug
 div
   +th1
-    Mathr(:formula="soloution_r" size="small")
+    MathR(:formula="soloution_r" size="small")
   +sue
   +tmath 
-    Mathr(formula="v=u+at")
+    MathR(formula="v=u+at")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="at" size="small")
+    MathR(formula="at" size="small")
     | from both sides.
   +tmath 
-    Mathr(formula="v-at=u")
+    MathR(formula="v-at=u")
   +th3
     | Lastly enter known values.
   +tmath 
-    Mathr(:formula="e1")
+    MathR(:formula="e1")
 
 </template>
 
 <script>
-import Mathr from "../../Mathr.vue";
+import MathR from "../../MathR.vue";
 import MF from "../../math";
 export default {
-  name: "Uvuat",
+  name: "UvuatC",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr,
+    MathR,
   },
   computed: {
     soloution_r: function () {

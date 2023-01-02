@@ -3,42 +3,42 @@ include ../mixins.pug
 div
   +th1
     template(v-if="isFinite(soloution)")
-      Mathr(:formula="soloution_r" size="small")
+      MathR(:formula="soloution_r" size="small")
     template(v-else) Can't solve for t
   +sue
   +tmath 
-    Mathr(formula="v=u+at")
+    MathR(formula="v=u+at")
   +th3
     | First lets rearrange this equation by subtracting
-    Mathr(formula="u" size="small")
+    MathR(formula="u" size="small")
     | from both sides.
   +tmath 
-    Mathr(formula="v-u=at")
+    MathR(formula="v-u=at")
   +th3
     | Next divide both sides by
-    Mathr(formula="a" size="small")
+    MathR(formula="a" size="small")
   +tmath 
-    Mathr(formula="\\frac{v-u}{a}=t")
+    MathR(formula="\\frac{v-u}{a}=t")
   +th3
     | Enter known values.
   +tmath 
-    Mathr(:formula="e1")
+    MathR(:formula="e1")
   template(v-if="!isFinite(soloution)")
     +th3
       | Can't solve as the denominator
-      Mathr(formula="=0" size="small")
+      MathR(formula="=0" size="small")
       | Can't divide by zero.
 
 </template>
 
 <script>
-import Mathr from "../../Mathr.vue";
+import MathR from "../../MathR.vue";
 import MF from "../../math.js";
 export default {
-  name: "Tvuat",
+  name: "TvuatC",
   props: ["suvat", "letter", "dp"],
   components: {
-    Mathr,
+    MathR,
   },
   computed: {
     soloution_r: function () {

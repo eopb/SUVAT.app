@@ -5,7 +5,7 @@
     </div>
     <div id="input-area">
       <h1>
-        <Mathr
+        <MathR
           :formula="full_letter"
           :display="true"
           style="font-size: 0.6em; margin: 0; padding: 0"
@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import Mathr from "./Mathr.vue";
+import MathR from "./MathR.vue";
 export default {
   name: "LetterValue",
   props: ["letter", "name", "unit"],
   components: {
-    Mathr,
+    MathR,
   },
   data: () => ({
     letterValue: null,
