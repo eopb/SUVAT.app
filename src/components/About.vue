@@ -152,10 +152,9 @@
       </p>
 
       <p class="smalltext">
-        If you run into any issues with this calculator please email
-        <a
-          href="mailto:incoming+efunb-suvat-app-15193084-issue-@incoming.gitlab.com"
-          >incoming+efunb-suvat-app-15193084-issue-@incoming.gitlab.com</a
+        If you run into any issues with this calculator please
+        <a href="https://github.com/eopb/SUVAT.app/issues/new/choose"
+          >open an issue</a
         >.
       </p>
     </div>

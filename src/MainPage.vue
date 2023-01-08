@@ -29,7 +29,7 @@ and -g followed by a number for decimal places// rebuild
         </template>
         <p class="credit">
           Designed by
-          <a href="https://github.com/ethanboxx">Ethan Brierley</a>
+          <a href="https://github.com/eopb">Ethan Brierley</a>
         </p>
       </aside>
     </header>
